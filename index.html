@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Metadise Academy – Learn. Build. Grow. Explore our expert-led courses in web development, design, and more." />
+  <title>Metadise Academy</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#" class="nav__logo">Metadise<span>Academy</span></a>
+
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#features">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#courses" class="nav__cta">Get Started</a></li>
+        </ul>
+
+        <button class="nav__toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ============================= -->
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="container">
+      <h1 class="hero__title" id="hero-title">Learn. Build. Grow.</h1>
+      <p class="hero__subtitle">
+        Unlock your potential with expert-led courses in web development,
+        design, and technology — from beginner to pro.
+      </p>
+      <a href="#courses" class="btn btn--primary">Browse Courses</a>
+      <a href="#contact"  class="btn btn--outline">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- ===================== COURSES ========================== -->
+  <section class="courses" id="courses" aria-labelledby="courses-title">
+    <div class="container">
+      <h2 class="section-title" id="courses-title">Featured Courses</h2>
+      <p class="section-subtitle">Hand-picked learning paths to accelerate your career.</p>
+
+      <div class="cards-grid">
+
+        <!-- Course Card 1 -->
+        <article class="card">
+          <img
+            class="card__image"
+            src="assets/images/course-webdev.jpg"
+            alt="Web Development course thumbnail"
+            onerror="this.style.display='none'"
+          />
+          <div class="card__body">
+            <span class="card__tag">Web Dev</span>
+            <h3 class="card__title">Full-Stack Web Development</h3>
+            <p class="card__text">
+              Master HTML, CSS, JavaScript, Node.js and databases to build
+              complete, production-ready applications.
+            </p>
+            <div class="card__footer">
+              <span>⏱ 12 weeks</span>
+              <a href="#contact">Enroll →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Course Card 2 -->
+        <article class="card">
+          <img
+            class="card__image"
+            src="assets/images/course-uiux.jpg"
+            alt="UI/UX Design course thumbnail"
+            onerror="this.style.display='none'"
+          />
+          <div class="card__body">
+            <span class="card__tag">Design</span>
+            <h3 class="card__title">UI/UX Design Fundamentals</h3>
+            <p class="card__text">
+              Learn user research, wireframing, prototyping and design systems
+              using Figma and industry best practices.
+            </p>
+            <div class="card__footer">
+              <span>⏱ 8 weeks</span>
+              <a href="#contact">Enroll →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Course Card 3 -->
+        <article class="card">
+          <img
+            class="card__image"
+            src="assets/images/course-js.jpg"
+            alt="JavaScript course thumbnail"
+            onerror="this.style.display='none'"
+          />
+          <div class="card__body">
+            <span class="card__tag">JavaScript</span>
+            <h3 class="card__title">Modern JavaScript & Frameworks</h3>
+            <p class="card__text">
+              Deep-dive into ES2024+, React, and modern tooling to write
+              clean, scalable front-end code.
+            </p>
+            <div class="card__footer">
+              <span>⏱ 10 weeks</span>
+              <a href="#contact">Enroll →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ========================= -->
+  <section class="features" id="features" aria-labelledby="features-title">
+    <div class="container">
+      <h2 class="section-title" id="features-title">Why Metadise Academy?</h2>
+      <p class="section-subtitle">Everything you need to succeed in tech.</p>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-item__icon" aria-hidden="true">🎓</div>
+          <h3 class="feature-item__title">Expert Instructors</h3>
+          <p class="feature-item__text">Learn from seasoned practitioners with real-world industry experience.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon" aria-hidden="true">🛠️</div>
+          <h3 class="feature-item__title">Project-Based Learning</h3>
+          <p class="feature-item__text">Build a portfolio of real projects you can show to employers.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon" aria-hidden="true">🤝</div>
+          <h3 class="feature-item__title">Community Support</h3>
+          <p class="feature-item__text">Join a thriving community of learners, mentors, and alumni.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon" aria-hidden="true">📜</div>
+          <h3 class="feature-item__title">Certificates</h3>
+          <p class="feature-item__text">Earn recognized certificates to boost your professional profile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ========================== -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <h2 class="section-title" id="contact-title">Get In Touch</h2>
+      <p class="section-subtitle">Have questions? We'd love to hear from you.</p>
+
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Jane Doe" autocomplete="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="course">Interested Course</label>
+          <select id="course" name="course">
+            <option value="">— Select a course —</option>
+            <option value="fullstack">Full-Stack Web Development</option>
+            <option value="uiux">UI/UX Design Fundamentals</option>
+            <option value="javascript">Modern JavaScript &amp; Frameworks</option>
+            <option value="other">Other / Not sure yet</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" placeholder="Tell us a bit about yourself and your goals…" required></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER =========================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> Metadise Academy. All rights reserved.</p>
+      <p style="margin-top:0.4rem;">
+        <a href="#home">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Inject current year into footer without modifying main.js
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
