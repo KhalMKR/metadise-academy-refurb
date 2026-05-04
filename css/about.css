@@ -1,0 +1,323 @@
+/* ===================== About Us Page ===================== */
+/* ===================== HISTORY ===================== */
+
+.about-history {
+  background-color: #ffffff;
+  padding-block: 6rem;
+}
+
+.about-history__container {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.about-history__image img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.about-history__content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 0.06em;
+  margin-bottom: 1.25rem;
+}
+
+.about-history__content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+
+/* ===================== VISION & MISSION ===================== */
+
+.vision-mission {
+  background-color: var(--color-bg);
+  padding-block: 5rem;
+  text-align: center;
+}
+
+.vision-mission__container {
+  max-width: 1000px;
+}
+
+.vision-mission__block {
+  margin-bottom: 3rem;
+}
+
+.vision-mission__block:last-child {
+  margin-bottom: 0;
+}
+
+.vision-mission h2 {
+  font-size: clamp(1.8rem, 4vw, 2.3rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 0.06em;
+  margin-bottom: 1.25rem;
+}
+
+.vision-mission p {
+  max-width: 850px;
+  margin-inline: auto;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+
+/* ===================== TEAM ===================== */
+
+.team {
+  background-color: #ffffff;
+  padding-block: 5.5rem;
+  text-align: center;
+}
+
+.team__title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+
+.team__subtitle {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.team-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px -8px rgba(15, 23, 42, 0.2);
+}
+
+.team-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  background-color: var(--color-border);
+}
+
+.team-card__body {
+  padding: 1.5rem;
+}
+
+.team-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.35rem;
+}
+
+.team-card p {
+  color: var(--color-primary);
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 900px) {
+  .about-history__container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-history__image img {
+    height: 340px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .about-hero {
+    min-height: 250px;
+  }
+
+  .about-history,
+  .vision-mission,
+  .team {
+    padding-block: 4rem;
+  }
+
+  .about-history__image img {
+    height: 260px;
+    border-radius: 1rem;
+  }
+
+  .about-history__content h2,
+  .vision-mission h2,
+  .team__title {
+    text-align: center;
+  }
+
+  .about-history__content p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .vision-mission p,
+  .team__subtitle {
+    font-size: 1rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card img {
+    height: 280px;
+  }
+}
+
+/* ===================== POWERED BY METADISE MARQUEE ===================== */
+
+.metadise-marquee {
+  background-color: #ffffff;
+  padding-block: 5rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.metadise-marquee h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 0.06em;
+  margin-bottom: 3rem;
+}
+
+.metadise-marquee__wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.metadise-marquee__wrapper::before,
+.metadise-marquee__wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 140px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.metadise-marquee__wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.metadise-marquee__wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+
+.metadise-marquee__track {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  width: max-content;
+  animation: metadiseSlide 22s linear infinite;
+}
+
+.metadise-marquee__item {
+  flex: 0 0 auto;
+  width: 280px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metadise-marquee__item img {
+  max-width: 100%;
+  max-height: 95px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.9;
+  transition: transform var(--transition), filter var(--transition), opacity var(--transition);
+}
+
+.metadise-marquee__item img:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.metadise-marquee__wrapper:hover .metadise-marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes metadiseSlide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .metadise-marquee {
+    padding-block: 4rem;
+  }
+
+  .metadise-marquee h2 {
+    margin-bottom: 2rem;
+  }
+
+  .metadise-marquee__track {
+    gap: 3rem;
+    animation-duration: 18s;
+  }
+
+  .metadise-marquee__item {
+    width: 200px;
+    height: 90px;
+  }
+
+  .metadise-marquee__item img {
+    max-height: 70px;
+  }
+
+  .metadise-marquee__wrapper::before,
+  .metadise-marquee__wrapper::after {
+    width: 60px;
+  }
+}
