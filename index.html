@@ -7,34 +7,25 @@
   <title>Metadise Academy</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/why-section.css" />
   <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/header.css" />
 </head>
 <body>
 
-  <!-- ===================== HEADER / NAV ===================== -->
-  <header class="site-header">
-    <div class="container">
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#" class="nav__logo">Metadise<span>Academy</span></a>
-
-        <ul class="nav__links" id="nav-links">
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#features">Why Us</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#courses" class="nav__cta">Get Started</a></li>
-        </ul>
-
-        <button class="nav__toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
+  <!-- ===================== HEADER ============================= -->
+  <div data-component data-src="components/header.html"></div>
 
   <!-- ===================== HERO ============================= -->
   <div data-component="hero" data-src="components/hero.html"></div>
+
+  <!-- ===================== WELCOME ========================== -->
+  <section class="welcome" id="welcome" aria-labelledby="welcome-title">
+    <div class="container">
+      <h1 class="welcome-title" id="welcome-title">Welcome to Metadise Academy</h1>
+      <p class="welcome-text">Welcome to Metadise Academy — empowering learners to learn, build, and grow with industry-led courses and a supportive community.</p>
+    </div>
+  </section>
 
   <!-- ===================== COURSES ========================== -->
   <section class="courses" id="courses" aria-labelledby="courses-title">
@@ -114,36 +105,34 @@
     </div>
   </section>
 
-  <!-- ===================== FEATURES ========================= -->
-  <section class="features" id="features" aria-labelledby="features-title">
-    <div class="container">
-      <h2 class="section-title" id="features-title">Why Metadise Academy?</h2>
-      <p class="section-subtitle">Everything you need to succeed in tech.</p>
+  <!-- ===================== WHY SECTION ===================== -->
+  <div data-component data-src="components/why-section.html"></div>
 
-      <div class="features-grid">
-        <div class="feature-item">
-          <div class="feature-item__icon" aria-hidden="true">🎓</div>
-          <h3 class="feature-item__title">Expert Instructors</h3>
-          <p class="feature-item__text">Learn from seasoned practitioners with real-world industry experience.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-item__icon" aria-hidden="true">🛠️</div>
-          <h3 class="feature-item__title">Project-Based Learning</h3>
-          <p class="feature-item__text">Build a portfolio of real projects you can show to employers.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-item__icon" aria-hidden="true">🤝</div>
-          <h3 class="feature-item__title">Community Support</h3>
-          <p class="feature-item__text">Join a thriving community of learners, mentors, and alumni.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-item__icon" aria-hidden="true">📜</div>
-          <h3 class="feature-item__title">Certificates</h3>
-          <p class="feature-item__text">Earn recognized certificates to boost your professional profile.</p>
-        </div>
+  <!-- ===================== PARTNERS ======================== -->
+  <section class="partners" id="partners" aria-labelledby="partners-title">
+    <div class="container">
+      <h2 class="section-title" id="partners-title">Our Partners</h2>
+      <p class="section-subtitle">Organizations we collaborate with to support learning, growth, and opportunity.</p>
+
+      <div class="partners-grid" aria-label="Partner logos">
+        <figure class="partner-logo">
+          <img src="assets/images/msr-logo-white.png" alt="MSR logo" loading="lazy" />
+        </figure>
+        <figure class="partner-logo">
+          <img src="assets/images/pangu-logo.png" alt="Pangu logo" loading="lazy" />
+        </figure>
+        <figure class="partner-logo">
+          <img src="assets/images/ukiss%20logo.svg" alt="UKISS logo" loading="lazy" />
+        </figure>
       </div>
     </div>
   </section>
+
+  <!-- ===================== EVENT HIGHLIGHT ================= -->
+  <div data-component data-src="components/event-highlight.html"></div>
+
+  <!-- ===================== PORTFOLIOS ====================== -->
+  <div data-component data-src="components/portfolios.html"></div>
 
   <!-- ===================== CONTACT ========================== -->
   <section class="contact" id="contact" aria-labelledby="contact-title">

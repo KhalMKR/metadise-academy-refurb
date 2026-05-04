@@ -47,6 +47,29 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   /* ----------------------------------------------------------
+     Navbar (new component) mobile navigation toggle
+  ---------------------------------------------------------- */
+  const navbarToggle = document.querySelector('.navbar__toggle');
+  const navbarMenu = document.querySelector('.navbar__menu');
+
+  if (navbarToggle && navbarMenu) {
+    navbarToggle.addEventListener('click', () => {
+      const isOpen = navbarMenu.classList.toggle('is-open');
+      navbarToggle.classList.toggle('is-open', isOpen);
+      navbarToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Close menu when a link is clicked
+    navbarMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navbarMenu.classList.remove('is-open');
+        navbarToggle.classList.remove('is-open');
+        navbarToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  /* ----------------------------------------------------------
      Active nav link based on scroll position
   ---------------------------------------------------------- */
   const navAnchors = document.querySelectorAll('.nav__links a[href^="#"]');

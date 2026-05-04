@@ -290,6 +290,84 @@ section {
   color: var(--color-muted);
 }
 
+/* ----- Blank Section Placeholders -------------------------- */
+.event-highlight,
+.portfolios {
+  display: flex;
+  align-items: center;
+}
+
+.section-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  text-align: center;
+}
+
+/* ----- Partners Section ------------------------------------ */
+.partners {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top, rgba(37, 99, 235, 0.18), transparent 45%),
+    linear-gradient(180deg, #0f172a 0%, #111827 100%);
+  color: #fff;
+}
+
+.partners .section-title,
+.partners .section-subtitle {
+  color: #fff;
+}
+
+.partners .section-subtitle {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 72px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+
+.partner-logo:nth-child(2) img {
+  filter: none;
+}
+
+.partner-logo:nth-child(3) img {
+  filter: none;
+}
+
+@media (min-width: 900px) {
+  .partners-grid {
+    gap: 1.25rem;
+  }
+
+  .partner-logo {
+    min-height: 84px;
+  }
+}
+
 /* ----- Contact Section ------------------------------------- */
 .contact {
   background-color: var(--color-bg);
@@ -396,6 +474,58 @@ section {
 
 .site-footer a:hover {
   color: #fff;
+}
+
+/* ----- Welcome Section ------------------------------------ */
+.welcome {
+  position: relative;
+  padding-block: 3.5rem;
+  color: #fff;
+  text-align: center;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400' preserveAspectRatio='none'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='%23333'/><stop offset='1' stop-color='%23000'/></linearGradient></defs><rect width='100%25' height='100%25' fill='url(%23g)'/><g fill='%23bada55' fill-opacity='0.06'><path d='M0 300 C 300 200, 900 400, 1200 300 L1200 400 L0 400 Z'/></g></svg>");
+  background-size: cover;
+  background-position: center;
+}
+
+.welcome::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3,7,18,0.45), rgba(3,7,18,0.55));
+  z-index: 0;
+}
+
+.welcome .container {
+  position: relative;
+  z-index: 1;
+  padding-block: 1rem;
+}
+
+.welcome-title {
+  font-size: clamp(1.35rem, 4vw, 2.25rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.welcome-text {
+  max-width: 900px;
+  margin: 0.5rem auto 0;
+  color: rgba(255,255,255,0.92);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 900px) {
+  .welcome {
+    padding-block: 5rem;
+  }
+  .welcome-title {
+    font-size: 2.75rem;
+  }
+  .welcome-text {
+    font-size: 1.125rem;
+  }
 }
 
 /* ----- Responsive ------------------------------------------ */
