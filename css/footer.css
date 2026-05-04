@@ -1,0 +1,168 @@
+.footer-cta {
+	background: linear-gradient(90deg, #1a0033, #2b0066);
+	padding: 40px;
+	border-radius: 16px;
+	margin: 40px;
+	color: white;
+}
+
+.footer-cta__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+.footer-cta__button {
+	background: #7c3aed;
+	color: white;
+	padding: 12px 20px;
+	border-radius: 999px;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer {
+	background: #050505;
+	color: #aaa;
+	padding: 60px 40px 20px;
+}
+
+.footer__container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+}
+
+.footer__col h4 {
+	color: white;
+	margin-bottom: 16px;
+}
+
+.footer__col a {
+	display: block;
+	margin-bottom: 8px;
+	color: #aaa;
+	text-decoration: none;
+}
+
+.footer__col a:hover {
+	color: #7c3aed;
+}
+
+.footer__brand {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+
+.footer__logo-box {
+	width: 120px;
+	height: 120px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transform: translateY(-12px);
+	border: 1px solid #222;
+	border-radius: 14px;
+	background: #0b0b0b;
+	color: #fff;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+}
+
+.footer__logo-box span {
+	font-size: 1.25rem;
+}
+
+.footer__socials {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	margin-top: 15px;
+}
+
+.footer__socials a {
+	font-size: 20px;
+	color: #aaa;
+	transition: 0.3s;
+	text-decoration: none;
+}
+
+.footer__socials a:hover {
+	color: #7c3aed;
+}
+
+.footer__bottom {
+	border-top: 1px solid #222;
+	margin-top: 40px;
+	padding-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.footer__bottom a {
+	color: #aaa;
+	text-decoration: none;
+	margin-left: 20px;
+}
+
+.footer__bottom a:hover {
+	color: #7c3aed;
+}
+
+@media (max-width: 768px) {
+	.footer-cta {
+		margin: 20px;
+		padding: 20px;
+	}
+
+	.footer-cta__container {
+		flex-direction: column;
+		text-align: center;
+		gap: 20px;
+	}
+
+	.footer-cta__button {
+		align-self: center;
+	}
+
+	.footer__container {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.footer__bottom {
+		flex-direction: column;
+		text-align: center;
+		gap: 10px;
+	}
+
+	.footer__bottom a {
+		margin-left: 0;
+		margin-right: 10px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.footer__container {
+		max-width: 1400px;
+		padding: 0 2rem;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+	.footer__container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
