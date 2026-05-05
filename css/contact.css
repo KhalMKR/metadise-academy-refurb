@@ -30,7 +30,7 @@
     linear-gradient(
       180deg,
       rgba(15, 23, 42, 0.84),
-      rgba(15, 23, 42, 0.90)
+      rgba(15, 23, 42, 0.9)
     );
 }
 
@@ -45,7 +45,6 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   letter-spacing: 0.04em;
-  margin-bottom: 0;
 }
 
 
@@ -53,31 +52,37 @@
 
 .contact-page {
   background-color: #ffffff;
-  padding-block: 5.5rem;
+  padding: 5.5rem 2rem;
 }
 
 .contact-page__container {
+  width: min(1500px, 100%);
+  margin: 0 auto;
+
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
+  grid-template-columns: minmax(480px, 0.95fr) minmax(620px, 1.05fr);
   align-items: center;
-  gap: 3.5rem;
+  justify-content: center;
+  gap: 5rem;
 }
 
 
 /* ===================== LEFT INFO ===================== */
 
 .contact-info {
-  min-height: 700px;
+  width: 100%;
+  min-height: 620px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   text-align: center;
-  padding-inline: 1rem;
 }
 
 .contact-info__text {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-info h2 {
@@ -96,9 +101,8 @@
 
 .contact-info__image {
   width: 100%;
-  max-width: 700px;
-  min-height: 560px;
-  margin: 0 auto;
+  max-width: 640px;
+  height: 430px;
 
   display: flex;
   align-items: flex-end;
@@ -106,16 +110,19 @@
 
   background: transparent;
   overflow: visible;
+
+  margin-top: 2.5rem;
 }
 
 .contact-info__image img {
-  width: 100%;
-  max-width: 620px;
+  width: 620px;
+  max-width: none;
   height: auto;
+
   object-fit: contain;
   background: transparent;
 
-  transform: scale(1.42);
+  transform: scale(1.25) translateY(35px);
   transform-origin: center bottom;
 }
 
@@ -124,12 +131,12 @@
 
 .contact-card {
   width: 100%;
-  max-width: 1000px;
+  max-width: 760px;
   justify-self: center;
 
   background-color: #ffffff;
-  border-radius: 2rem;
-  padding: 3rem;
+  border-radius: 1.5rem;
+  padding: 3.2rem;
 
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
   border: 1px solid var(--color-border);
@@ -167,14 +174,22 @@
 .contact-page-form select,
 .contact-page-form textarea {
   width: 100%;
-  padding: 0.85rem 1rem;
+  padding: 1rem 1.1rem;
+
   border: 1px solid var(--color-border);
   border-radius: 0.45rem;
+
   font-family: inherit;
   font-size: 1rem;
   color: var(--color-text);
   background-color: #ffffff;
+
   transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.contact-page-form textarea {
+  resize: vertical;
+  min-height: 160px;
 }
 
 .contact-page-form input:focus,
@@ -192,14 +207,18 @@
 
 .contact-submit {
   width: fit-content;
+
   background-color: var(--color-primary);
   color: #ffffff;
+
   padding: 0.85rem 2.4rem;
   border: none;
   border-radius: 0.5rem;
+
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+
   transition: background-color var(--transition), transform var(--transition);
 }
 
@@ -228,13 +247,11 @@
   color: #dc2626;
 }
 
-
 /* ===================== RESPONSIVE ===================== */
-
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .contact-page__container {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 3.5rem;
   }
 
   .contact-info {
@@ -242,48 +259,30 @@
   }
 
   .contact-info__image {
-    max-width: 560px;
-    min-height: 420px;
+    max-width: 520px;
+    height: 360px;
   }
 
   .contact-info__image img {
-    max-width: 500px;
-    transform: scale(1.22);
+    width: 460px;
+    transform: scale(1.15);
   }
 
   .contact-card {
-    max-width: 620px;
+    width: 100%;
+    max-width: 760px;
   }
 }
 
 @media (max-width: 700px) {
-  .contact-hero {
-    min-height: 220px;
-  }
-
-  .contact-page {
-    padding-block: 4rem;
-  }
-
-  .contact-info h2 {
-    font-size: 2rem;
-  }
-
   .contact-info__image {
-    max-width: 360px;
-    min-height: 280px;
+    max-width: 340px;
+    height: 260px;
+    margin-top: 1.5rem;
   }
 
   .contact-info__image img {
-    max-width: 320px;
-    transform: scale(1.08);
-  }
-
-  .contact-card {
-    padding: 2rem 1.5rem;
-  }
-
-  .contact-submit {
-    width: 100%;
+    width: 310px;
+    transform: scale(1.08) translateY(15px);
   }
 }
