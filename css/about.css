@@ -75,6 +75,7 @@
   color: var(--color-primary);
   letter-spacing: 0.06em;
   margin-bottom: 1.25rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .about-history__content p {
@@ -83,6 +84,7 @@
   color: var(--color-text);
   margin-bottom: 1rem;
   text-align: justify;
+  font-family: 'Poppins', sans-serif;
 }
 
 
