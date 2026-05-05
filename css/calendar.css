@@ -155,6 +155,14 @@
   border-color: #f59e0b;
 }
 
+.calendar-day--course {
+  border-color: #10b981;
+}
+
+.calendar-day--booking {
+  border-color: #8b5cf6;
+}
+
 .calendar-day__badge {
   align-self: flex-start;
   font-size: 0.72rem;
@@ -185,6 +193,14 @@
 
 .legend-dot--event {
   background: #f59e0b;
+}
+
+.legend-dot--course {
+  background: #10b981;
+}
+
+.legend-dot--booking {
+  background: #8b5cf6;
 }
 
 .legend-dot--today {

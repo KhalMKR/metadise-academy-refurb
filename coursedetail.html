@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Explore detailed course information at Metadise Academy." />
+	<title>Course Detail – Metadise Academy</title>
+	<link rel="icon" href="assets/images/metadise-acad-logo-black&whitebg.png" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/header.css" />
+	<link rel="stylesheet" href="css/footer.css" />
+	<link rel="stylesheet" href="css/courses.css" />
+	<link rel="stylesheet" href="css/course-detail.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+	<div data-component data-src="components/header.html"></div>
+
+	<main class="course-detail" aria-labelledby="course-detail-title">
+		<section class="course-detail-hero">
+			<div class="course-detail-hero__backdrop" aria-hidden="true"></div>
+			<div class="container course-detail-hero__grid">
+				<div class="course-detail-hero__content">
+					<p class="course-detail__eyebrow">Course overview</p>
+					<div class="course-detail__status" id="courseDetailStatus" aria-live="polite"></div>
+					<h1 id="course-detail-title">Loading course details...</h1>
+					<p class="course-detail__summary" id="courseDetailSummary"></p>
+
+					<div class="course-detail__tags" id="courseDetailTags"></div>
+
+					<div class="course-detail__meta" id="courseDetailMeta"></div>
+
+					<div class="course-detail__actions">
+						<a class="btn btn--primary" href="courses.html">Back to courses</a>
+						<a class="btn course-detail__secondary-action" href="contact.html">Enquire now</a>
+					</div>
+				</div>
+
+				<div class="course-detail-hero__visual">
+					<img id="courseDetailPoster" src="" alt="" />
+				</div>
+			</div>
+		</section>
+
+		<section class="course-detail__body">
+			<div class="container course-detail__grid">
+				<article class="course-detail-panel course-detail-panel--main">
+					<h2>About this course</h2>
+					<p id="courseDetailDescription"></p>
+
+					<div class="course-detail-block">
+						<h3>What you will learn</h3>
+						<ul class="course-detail-list" id="courseDetailOutcomes"></ul>
+					</div>
+
+					<div class="course-detail-block">
+						<h3>Who should join</h3>
+						<p id="courseDetailAudience"></p>
+					</div>
+
+					<div class="course-detail-block">
+						<h3>Upcoming sessions</h3>
+						<div class="course-detail-sessions" id="courseDetailSessions"></div>
+					</div>
+				</article>
+
+				<aside class="course-detail-panel course-detail-panel--side">
+					<h2>Course snapshot</h2>
+					<div class="course-detail-snapshot" id="courseDetailSnapshot"></div>
+				</aside>
+			</div>
+		</section>
+
+		<section class="course-detail__related" aria-labelledby="related-courses-title">
+			<div class="container">
+				<div class="course-detail__section-heading">
+					<h2 id="related-courses-title">Related courses</h2>
+					<p>Continue exploring courses that build on the same skills.</p>
+				</div>
+
+				<div class="courses-grid" id="courseDetailRelatedGrid"></div>
+			</div>
+		</section>
+	</main>
+
+	<div data-component data-src="components/footer.html"></div>
+
+	<script src="js/course-cards.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/course-detail.js"></script>
+</body>
+</html>
