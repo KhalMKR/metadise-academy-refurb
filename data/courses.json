@@ -46,10 +46,7 @@
       ],
       "targetAudience": "General public, small business employees, students",
       "trainer": "Lina Okoro",
-      "sessions": [
-        { "month": "May", "startDate": "2026-05-25", "endDate": "2026-05-26" },
-        { "month": "July", "startDate": "2026-07-20", "endDate": "2026-07-21" }
-      ]
+      "sessions": []
     },
     {
       "id": "course-007",
@@ -69,10 +66,7 @@
       ],
       "targetAudience": "HR professionals, people managers, HR tech enthusiasts",
       "trainer": "Daniela Santos",
-      "sessions": [
-        { "month": "June", "startDate": "2026-06-15", "endDate": "2026-06-17" },
-        { "month": "September", "startDate": "2026-09-07", "endDate": "2026-09-09" }
-      ]
+      "sessions": []
     },
     {
       "id": "course-008",
@@ -92,10 +86,7 @@
       ],
       "targetAudience": "IT staff, aspiring security analysts, system administrators",
       "trainer": "Mohammed Ibrahim",
-      "sessions": [
-        { "month": "July", "startDate": "2026-07-05", "endDate": "2026-07-07" },
-        { "month": "October", "startDate": "2026-10-04", "endDate": "2026-10-06" }
-      ]
+      "sessions": []
     },
     {
       "id": "course-009",
@@ -115,10 +106,7 @@
       ],
       "targetAudience": "Business owners, managers, operations staff",
       "trainer": "Grace Mensah",
-      "sessions": [
-        { "month": "June", "startDate": "2026-06-10", "endDate": "2026-06-11" },
-        { "month": "August", "startDate": "2026-08-10", "endDate": "2026-08-11" }
-      ]
+      "sessions": []
     },
     {
       "id": "course-010",
@@ -138,10 +126,7 @@
       ],
       "targetAudience": "Tech enthusiasts, finance professionals, entrepreneurs",
       "trainer": "Prof. Henry Okonkwo",
-      "sessions": [
-        { "month": "July", "startDate": "2026-07-08", "endDate": "2026-07-10" },
-        { "month": "September", "startDate": "2026-09-02", "endDate": "2026-09-04" }
-      ]
+      "sessions": []
     }
   ]
 }

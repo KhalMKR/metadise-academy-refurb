@@ -1,35 +1,5 @@
 {
   "events": [
 
-    {
-      "id": "booking-001",
-      "title": "Private booking",
-      "date": "2026-05-15",
-      "time": "All day",
-      "location": "Metadise Academy, The Podium",
-      "category": "Private Booking",
-      "type": "booking",
-      "companyName": "Northbridge Logistics"
-    },
-    {
-      "id": "booking-002",
-      "title": "Private booking",
-      "date": "2026-06-17",
-      "time": "9:00 AM",
-      "location": "Metadise Academy, The Podium",
-      "category": "Private Booking",
-      "type": "booking",
-      "companyName": "Apex Creative Studio"
-    },
-    {
-      "id": "booking-003",
-      "title": "Private booking",
-      "date": "2026-07-11",
-      "time": "All day",
-      "location": "Metadise Academy, The Podium",
-      "category": "Private Booking",
-      "type": "booking",
-      "companyName": "Kuching Retail Group"
-    }
   ]
 }

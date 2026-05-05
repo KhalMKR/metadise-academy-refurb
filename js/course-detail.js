@@ -95,7 +95,19 @@
   function buildSessions(course) {
     if (!elements.sessions) return;
 
-    elements.sessions.innerHTML = course.sessions.map((session) => `
+    const sessions = Array.isArray(course.sessions) ? course.sessions : [];
+
+    if (!sessions.length) {
+      elements.sessions.innerHTML = `
+      <article class="course-detail-session course-detail-session--tba">
+        <p class="course-detail-session__month">Coming soon</p>
+        <p>Dates to be announced. Contact us to register your interest.</p>
+      </article>
+    `;
+      return;
+    }
+
+    elements.sessions.innerHTML = sessions.map((session) => `
       <article class="course-detail-session">
         <p class="course-detail-session__month">${session.month}</p>
         <p>${formatSession(session)}</p>

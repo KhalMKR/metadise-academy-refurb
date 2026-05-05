@@ -1,0 +1,22 @@
+{
+  "news": [
+    {
+      "id": "news-001",
+      "title": "Homegrown tech platform Metadise aims to drive Sarawak's digital leap forward",
+      "excerpt": "Metadise is highlighted as a homegrown platform supporting Sarawak's digital transformation through practical technology initiatives.",
+      "source": "The Borneo Post",
+      "publishedDate": "2025-05-17",
+      "thumbnail": "assets/images/news/metadise-borneopost-2025-05-17.jpg",
+      "url": "https://www.theborneopost.com/2025/05/17/homegrown-tech-platform-metadise-aims-to-drive-sarawaks-digital-leap-forward/"
+    },
+    {
+      "id": "news-002",
+      "title": "Metadise's grand opening a boost for Sarawak's tech future",
+      "excerpt": "Sarawak Tribune covers the launch of Metadise's headquarters and academy, highlighting its mission to accelerate digital talent development in Sarawak.",
+      "source": "Sarawak Tribune",
+      "publishedDate": "2025-05-17",
+      "thumbnail": "assets/images/news/metadise-sarawaktribune-2025-05-17.webp",
+      "url": "https://www.sarawaktribune.com/metadises-grand-opening-a-boost-for-sarawaks-tech-future/"
+    }
+  ]
+}
