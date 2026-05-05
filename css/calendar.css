@@ -1,14 +1,34 @@
 .calendar-hero {
+  position: relative;
   padding: 4.5rem 0 3.5rem;
   
+  background-image: 
+    linear-gradient(rgba(248, 250, 252, 0.5), rgba(248, 250, 252, 0.9)),
+    url("../assets/images/body-background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
+/* overlay using pseudo-element so HTML doesn't need extra markup */
+.calendar-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.84), rgba(15, 23, 42, 0.9));
+  z-index: 0;
+}
+
 .calendar-hero__container {
   text-align: center;
   max-width: 760px;
+  position: relative;
+  z-index: 1;
+
+}
+
+.calendar-page {
+  background: #ffffff;
 }
 
 
@@ -19,14 +39,17 @@
   line-height: 1.1;
 }
 
-.calendar-hero p {
-  color: rgba(255, 255, 255, 0.95);
+.calendar-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #ffffff;
   margin-top: 0.8rem;
+  line-height: 1.1;
 }
 
-.calendar-page {
-  padding: 2.5rem 0 4.5rem;
-  background: white;
+.calendar-hero p {
+  margin-top: 0 auto;
+  color: rgba(255,255,255,0.95);
+
 }
 
 .calendar-layout {
