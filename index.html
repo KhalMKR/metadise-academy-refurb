@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/why-section.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/courses.css" />
 </head>
 <body>
 
@@ -27,83 +28,7 @@
     </div>
   </section>
 
-  <!-- ===================== COURSES ========================== -->
-  <section class="courses" id="courses" aria-labelledby="courses-title">
-    <div class="container">
-      <h2 class="section-title" id="courses-title">Featured Courses</h2>
-      <p class="section-subtitle">Hand-picked learning paths to accelerate your career.</p>
-
-      <div class="cards-grid">
-
-        <!-- Course Card 1 -->
-        <article class="card">
-          <img
-            class="card__image"
-            src="assets/images/course-webdev.jpg"
-            alt="Web Development course thumbnail"
-            onerror="this.style.display='none'"
-          />
-          <div class="card__body">
-            <span class="card__tag">Web Dev</span>
-            <h3 class="card__title">Full-Stack Web Development</h3>
-            <p class="card__text">
-              Master HTML, CSS, JavaScript, Node.js and databases to build
-              complete, production-ready applications.
-            </p>
-            <div class="card__footer">
-              <span>⏱ 12 weeks</span>
-              <a href="#contact">Enroll →</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Course Card 2 -->
-        <article class="card">
-          <img
-            class="card__image"
-            src="assets/images/course-uiux.jpg"
-            alt="UI/UX Design course thumbnail"
-            onerror="this.style.display='none'"
-          />
-          <div class="card__body">
-            <span class="card__tag">Design</span>
-            <h3 class="card__title">UI/UX Design Fundamentals</h3>
-            <p class="card__text">
-              Learn user research, wireframing, prototyping and design systems
-              using Figma and industry best practices.
-            </p>
-            <div class="card__footer">
-              <span>⏱ 8 weeks</span>
-              <a href="#contact">Enroll →</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Course Card 3 -->
-        <article class="card">
-          <img
-            class="card__image"
-            src="assets/images/course-js.jpg"
-            alt="JavaScript course thumbnail"
-            onerror="this.style.display='none'"
-          />
-          <div class="card__body">
-            <span class="card__tag">JavaScript</span>
-            <h3 class="card__title">Modern JavaScript & Frameworks</h3>
-            <p class="card__text">
-              Deep-dive into ES2024+, React, and modern tooling to write
-              clean, scalable front-end code.
-            </p>
-            <div class="card__footer">
-              <span>⏱ 10 weeks</span>
-              <a href="#contact">Enroll →</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
+  <div data-component data-src="components/featured-courses.html"></div>
 
   <!-- ===================== WHY SECTION ===================== -->
   <div data-component data-src="components/why-section.html"></div>
@@ -156,7 +81,9 @@
       <div class="footer__col">
         <div class="footer__brand">
           <div class="footer__logo-box" aria-hidden="true">
-            <span>MA</span>
+            <span>
+              <img src="assets/images/metadise-acad-logo-black.png" alt="Metadise Academy" />
+            </span>
           </div>
         </div>
 
@@ -208,6 +135,7 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="js/main.js"></script>
+  <script src="js/index-courses.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta
+		name="description"
+		content="View upcoming Metadise Academy events, workshops, and key dates in our calendar."
+	/>
+	<title>Calendar - Metadise Academy</title>
+
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/header.css" />
+	<link rel="stylesheet" href="css/footer.css" />
+	<link rel="stylesheet" href="css/calendar.css" />
+</head>
+<body>
+	<div data-component data-src="components/header.html"></div>
+
+	<section class="calendar-hero" aria-labelledby="calendar-title">
+		<div class="container calendar-hero__container">
+			<p class="calendar-hero__eyebrow">Plan Ahead</p>
+			<h1 id="calendar-title">Academy Calendar</h1>
+			<p>
+				Keep track of training dates, workshops, onboarding sessions, and public events.
+			</p>
+		</div>
+	</section>
+
+	<section class="calendar-page" aria-labelledby="calendar-month-label">
+		<div class="container calendar-layout">
+			<article class="calendar-card" aria-label="Monthly calendar">
+				<header class="calendar-toolbar">
+					<div class="calendar-toolbar__controls">
+						<button type="button" class="calendar-btn" id="prevMonthBtn" aria-label="Previous month">
+							Prev
+						</button>
+						<button type="button" class="calendar-btn" id="todayBtn" aria-label="Jump to current month">
+							Today
+						</button>
+						<button type="button" class="calendar-btn" id="nextMonthBtn" aria-label="Next month">
+							Next
+						</button>
+					</div>
+
+					<h2 id="calendar-month-label" class="calendar-month"></h2>
+				</header>
+
+				<div class="calendar-grid" id="calendarGrid" role="grid" aria-live="polite"></div>
+
+				<div class="calendar-legend" aria-label="Calendar legend">
+					<span><i class="legend-dot legend-dot--event" aria-hidden="true"></i> Event day</span>
+					<span><i class="legend-dot legend-dot--today" aria-hidden="true"></i> Today</span>
+				</div>
+			</article>
+
+			<aside class="calendar-sidebar" aria-labelledby="upcoming-events-title">
+				<h2 id="upcoming-events-title">Upcoming Events</h2>
+				<p class="calendar-sidebar__subtitle">Template entries from events data</p>
+				<ul class="event-list" id="eventList"></ul>
+			</aside>
+		</div>
+	</section>
+
+	<div data-component data-src="components/footer.html"></div>
+
+	<script src="js/main.js"></script>
+	<script src="js/calendar.js"></script>
+</body>
+</html>

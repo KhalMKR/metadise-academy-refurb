@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Browse media updates from Metadise Academy including press releases, news coverage, and gallery highlights." />
+	<title>Media - Metadise Academy</title>
+
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/header.css" />
+	<link rel="stylesheet" href="css/footer.css" />
+	<link rel="stylesheet" href="css/media.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+</head>
+<body>
+
+	<div data-component data-src="components/header.html"></div>
+
+	<section class="media-hero" aria-labelledby="media-title">
+		<div class="container media-hero__container">
+			<h1 id="media-title">Media Center</h1>
+			<p>Explore our press releases, external news coverage, and image gallery.</p>
+		</div>
+	</section>
+
+	<section class="media-page" aria-labelledby="media-content-title">
+		<div class="container media-page__container">
+			<h2 id="media-content-title" class="sr-only">Media content categories</h2>
+
+			<aside class="media-sidebar" aria-label="Media categories">
+				<h3 class="media-sidebar__title">Categories</h3>
+				<div class="media-sidebar__list" role="tablist" aria-orientation="vertical">
+					<button
+						type="button"
+						class="media-sidebar__button is-active"
+						role="tab"
+						id="tab-press"
+						aria-controls="panel-press"
+						aria-selected="true"
+						data-media-tab="press"
+					>
+						Press Releases
+					</button>
+
+					<button
+						type="button"
+						class="media-sidebar__button"
+						role="tab"
+						id="tab-news"
+						aria-controls="panel-news"
+						aria-selected="false"
+						data-media-tab="news"
+					>
+						News
+					</button>
+
+					<button
+						type="button"
+						class="media-sidebar__button"
+						role="tab"
+						id="tab-gallery"
+						aria-controls="panel-gallery"
+						aria-selected="false"
+						data-media-tab="gallery"
+					>
+						Gallery
+					</button>
+				</div>
+			</aside>
+
+			<div class="media-content">
+				<article
+					class="media-panel is-active"
+					id="panel-press"
+					role="tabpanel"
+					aria-labelledby="tab-press"
+					data-media-panel="press"
+				>
+					<div data-component data-src="components/media-press-releases.html"></div>
+				</article>
+
+				<article
+					class="media-panel"
+					id="panel-news"
+					role="tabpanel"
+					aria-labelledby="tab-news"
+					data-media-panel="news"
+					hidden
+				>
+					<div data-component data-src="components/media-news.html"></div>
+				</article>
+
+				<article
+					class="media-panel"
+					id="panel-gallery"
+					role="tabpanel"
+					aria-labelledby="tab-gallery"
+					data-media-panel="gallery"
+					hidden
+				>
+					<div data-component data-src="components/media-gallery.html"></div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<div data-component data-src="components/footer.html"></div>
+
+	<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/media.js"></script>
+</body>
+</html>
