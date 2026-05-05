@@ -18,6 +18,13 @@
   --color-text:      #1e293b;
   --color-muted:     #64748b;
   --color-border:    #e2e8f0;
+  /* Header-specific palette (from poster) */
+  --header-bg:       #ffffff;
+  --header-primary:  #0A4FD8;
+  --header-accent:   #1977FF;
+  --header-text:     #0f1724;
+  --header-cta:      #1977FF;
+  --header-cta-text: #ffffff;
   --radius:          0.5rem;
   --shadow:          0 4px 6px -1px rgb(0 0 0 / .1),
                      0 2px 4px -2px rgb(0 0 0 / .1);

@@ -5,7 +5,7 @@
       "name": "Boost Productivity with Gen AI",
       "level": "Beginner",
       "price": 14000,
-      "duration": "3 days",
+      "duration": "2 days",
       "thumbnail": "assets/images/courses/thumbnail/GenAI.png",
       "poster": "assets/images/courses/poster/GenAIBen.png",
       "description": "Unlock growth with our Gen AI workshop — gain skills to build models, predict trends, and automate tasks.",
@@ -17,11 +17,15 @@
         "Deploy a basic model and interpret results"
       ],
       "targetAudience": "Beginners interested in data science, analysts, developers",
-      "trainer": "Chan Lee Shyan",
+      "trainer": "Ben Chan",
       "sessions": [
-        { "month": "June", "startDate": "2026-06-01", "endDate": "2026-06-03" },
-        { "month": "August", "startDate": "2026-08-03", "endDate": "2026-08-05" },
-        { "month": "November", "startDate": "2026-11-02", "endDate": "2026-11-04" }
+        { "month": "May", "startDate": "2026-05-13", "endDate": "2026-05-14" },
+        { "month": "June", "startDate": "2026-06-01", "endDate": "2026-06-02" },
+        { "month": "July", "startDate": "2026-07-01", "endDate": "2026-07-02" },
+        { "month": "August", "startDate": "2026-08-03", "endDate": "2026-08-04" },
+        { "month": "September", "startDate": "2026-09-03", "endDate": "2026-09-04" },
+        { "month": "October", "startDate": "2026-10-03", "endDate": "2026-10-04" },
+        { "month": "November", "startDate": "2026-11-02", "endDate": "2026-11-03" }
       ]
     },
     {
