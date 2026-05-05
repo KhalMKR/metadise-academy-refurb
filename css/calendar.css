@@ -1,49 +1,46 @@
+/* ===================== CALENDAR HERO ===================== */
+
 .calendar-hero {
   position: relative;
-  padding: 4.5rem 0 3.5rem;
-  
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
   background-image: 
     linear-gradient(rgba(248, 250, 252, 0.5), rgba(248, 250, 252, 0.9)),
     url("../assets/images/body-background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  color: #ffffff;
 }
 
-/* overlay using pseudo-element so HTML doesn't need extra markup */
-.calendar-hero::before {
-  content: "";
+.calendar-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.84), rgba(15, 23, 42, 0.9));
-  z-index: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 23, 42, 0.84),
+      rgba(15, 23, 42, 0.9)
+    );
 }
 
-.calendar-hero__container {
-  text-align: center;
-  max-width: 760px;
+.calendar-hero__content {
   position: relative;
   z-index: 1;
-
-}
-
-.calendar-page {
-  background: #ffffff;
-}
-
-
-.calendar-hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  color: rgba(255, 255, 255, 0.95);
-  margin-top: 0.8rem;
-  line-height: 1.1;
+  max-width: 900px;
+  padding-inline: 1.25rem;
 }
 
 .calendar-hero h1 {
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #ffffff;
-  margin-top: 0.8rem;
-  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 0;
 }
 
 .calendar-hero p {

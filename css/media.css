@@ -14,44 +14,49 @@
   border: 0;
 }
 
+/* ===================== MEDIA HERO ===================== */
+
 .media-hero {
   position: relative;
-  padding: 3rem 0;
-  color: #fff;
+  min-height: 280px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+
   background-image: 
     linear-gradient(rgba(248, 250, 252, 0.5), rgba(248, 250, 252, 0.9)),
     url("../assets/images/body-background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
-
-/* overlay using pseudo-element so HTML doesn't need extra markup */
-.media-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.84), rgba(15, 23, 42, 0.9));
-  z-index: 0;
-}
-
-.media-hero__container {
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.media-hero__container h1 {
-  font-size: clamp(2rem, 5vw, 2.7rem);
-  margin-bottom: 0.6rem;
   color: #ffffff;
 }
 
-.media-hero__container p {
-  max-width: 680px;
-  margin: 0 auto;
-  color: rgba(255,255,255,0.95);
+.media-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 23, 42, 0.84),
+      rgba(15, 23, 42, 0.9)
+    );
+}
+
+.media-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  padding-inline: 1.25rem;
+}
+
+.media-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 0;
 }
 
 .media-page {

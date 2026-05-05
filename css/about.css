@@ -1,9 +1,10 @@
 /* ===================== About Us Page ===================== */
-/* ===================== HERO ===================== */
+
+/* ===================== ABOUT HERO ===================== */
 
 .about-hero {
   position: relative;
-  min-height: 300px;
+  min-height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,6 +42,7 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   letter-spacing: 0.04em;
+  font-family: 'Orbitron', sans-serif;
   margin-bottom: 0;
   color: #ffffff;
 }
@@ -248,19 +250,26 @@
   }
 }
 
-/* ===================== POWERED BY METADISE MARQUEE ===================== */
+
+/* ===================== EMPOWERED BY / LOGO CAROUSEL ===================== */
 
 .metadise-marquee {
-  background-color: #ffffff;
-  padding-block: 5rem;
+  background: linear-gradient(
+    135deg,
+    #10213f 0%,
+    #17345f 45%,
+    #1d4f7a 100%
+  );
+  padding: 5rem 0;
   overflow: hidden;
-  text-align: center;
+  position: relative;
 }
 
 .metadise-marquee h2 {
+  color: #ffffff;
+  text-align: center;
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 800;
-  color: var(--color-primary);
   letter-spacing: 0.06em;
   margin-bottom: 3rem;
 }
@@ -271,39 +280,19 @@
   position: relative;
 }
 
-.metadise-marquee__wrapper::before,
-.metadise-marquee__wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 140px;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.metadise-marquee__wrapper::before {
-  left: 0;
-  background: linear-gradient(to right, #ffffff, transparent);
-}
-
-.metadise-marquee__wrapper::after {
-  right: 0;
-  background: linear-gradient(to left, #ffffff, transparent);
-}
-
 .metadise-marquee__track {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 6rem;
   width: max-content;
-  animation: metadiseSlide 22s linear infinite;
+  animation: metadiseSlide 28s linear infinite;
 }
 
 .metadise-marquee__item {
   flex: 0 0 auto;
-  width: 280px;
-  height: 110px;
+  width: 300px;
+  height: 120px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -313,19 +302,7 @@
   max-width: 100%;
   max-height: 95px;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.9;
-  transition: transform var(--transition), filter var(--transition), opacity var(--transition);
-}
-
-.metadise-marquee__item img:hover {
-  transform: scale(1.05);
-  filter: grayscale(0%);
-  opacity: 1;
-}
-
-.metadise-marquee__wrapper:hover .metadise-marquee__track {
-  animation-play-state: paused;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25));
 }
 
 @keyframes metadiseSlide {
@@ -336,6 +313,10 @@
   to {
     transform: translateX(-50%);
   }
+}
+
+.metadise-marquee__wrapper:hover .metadise-marquee__track {
+  animation-play-state: paused;
 }
 
 /* Mobile */
