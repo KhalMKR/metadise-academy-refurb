@@ -14,18 +14,21 @@
 	<link rel="stylesheet" href="css/footer.css" />
 	<link rel="stylesheet" href="css/calendar.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div data-component data-src="components/header.html"></div>
 
-	<section class="calendar-hero" aria-labelledby="calendar-title">
-		<div class="container calendar-hero__container">
-			<h1 id="calendar-title">Academy Calendar</h1>
-			<p>
-				Keep track of training dates, workshops, onboarding sessions, and public events.
-			</p>
-		</div>
-	</section>
+	 <!-- CALENDAR HERO -->
+  <section class="calendar-hero" aria-labelledby="calendar-hero-title">
+    <div class="calendar-hero__overlay"></div>
+
+    <div class="calendar-hero__content">
+      <h1 id="calendar-hero-title">Academy Calendar</h1>
+    </div>
+  </section>
 
 	<section class="calendar-page" aria-labelledby="calendar-month-label">
 		<div class="container calendar-layout">
