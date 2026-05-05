@@ -64,10 +64,12 @@
 	font-size: 0.98rem;
 	font-weight: 500;
 	transition: color 0.2s ease;
+	
 }
 
 .navbar__link:hover {
 	color: rgb(111, 0, 255);
+	text-decoration: none;
 }
 
 .navbar__toggle {
