@@ -1,0 +1,148 @@
+{
+  "courses": [
+    {
+      "id": "course-001",
+      "name": "Full-Stack Web Development",
+      "level": "Intermediate",
+      "price": 15000,
+      "duration": "8 weeks",
+      "thumbnail": "assets/images/course-webdev.jpg",
+      "poster": "assets/images/course-webdev-poster.jpg",
+      "description": "Master HTML, CSS, JavaScript, Node.js and databases to build complete web applications.",
+      "learningOutcomes": [
+        "Build responsive websites with modern CSS",
+        "Master JavaScript and DOM manipulation",
+        "Create RESTful APIs with Node.js",
+        "Work with databases (MongoDB/PostgreSQL)",
+        "Deploy applications to production"
+      ],
+      "targetAudience": "Beginners to Intermediate developers, career switchers",
+      "trainer": "Sarah Johnson",
+      "sessions": [
+        {
+          "month": "June",
+          "startDate": "2026-06-01",
+          "endDate": "2026-07-19"
+        },
+        {
+          "month": "August",
+          "startDate": "2026-08-01",
+          "endDate": "2026-09-19"
+        },
+        {
+          "month": "October",
+          "startDate": "2026-10-01",
+          "endDate": "2026-11-19"
+        }
+      ]
+    },
+    {
+      "id": "course-002",
+      "name": "UI/UX Design Fundamentals",
+      "level": "Beginner",
+      "price": 10000,
+      "duration": "6 weeks",
+      "thumbnail": "assets/images/course-design.jpg",
+      "poster": "assets/images/course-design-poster.jpg",
+      "description": "Learn the principles of user-centered design, wireframing, prototyping, and creating beautiful interfaces.",
+      "learningOutcomes": [
+        "Understand design principles and color theory",
+        "Create wireframes and prototypes",
+        "Master design tools (Figma/Adobe XD)",
+        "Conduct user research and testing",
+        "Build design systems"
+      ],
+      "targetAudience": "Aspiring designers, career switchers, developers interested in design",
+      "trainer": "Marcus Lee",
+      "sessions": [
+        {
+          "month": "May",
+          "startDate": "2026-05-15",
+          "endDate": "2026-06-26"
+        },
+        {
+          "month": "July",
+          "startDate": "2026-07-10",
+          "endDate": "2026-08-21"
+        },
+        {
+          "month": "September",
+          "startDate": "2026-09-12",
+          "endDate": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": "course-003",
+      "name": "React.js Advanced",
+      "level": "Advanced",
+      "price": 12000,
+      "duration": "5 weeks",
+      "thumbnail": "assets/images/course-react.jpg",
+      "poster": "assets/images/course-react-poster.jpg",
+      "description": "Deep dive into React.js with hooks, state management, and advanced patterns for building scalable applications.",
+      "learningOutcomes": [
+        "Master React hooks and functional components",
+        "Implement state management with Redux/Context",
+        "Build custom hooks",
+        "Optimize performance and lazy loading",
+        "Test React applications"
+      ],
+      "targetAudience": "Intermediate JavaScript developers, React beginners",
+      "trainer": "Emily Chen",
+      "sessions": [
+        {
+          "month": "June",
+          "startDate": "2026-06-08",
+          "endDate": "2026-07-12"
+        },
+        {
+          "month": "August",
+          "startDate": "2026-08-10",
+          "endDate": "2026-09-14"
+        },
+        {
+          "month": "October",
+          "startDate": "2026-10-05",
+          "endDate": "2026-11-09"
+        }
+      ]
+    },
+    {
+      "id": "course-004",
+      "name": "Digital Marketing Essentials",
+      "level": "Beginner",
+      "price": 8000,
+      "duration": "4 weeks",
+      "thumbnail": "assets/images/course-marketing.jpg",
+      "poster": "assets/images/course-marketing-poster.jpg",
+      "description": "Learn the fundamentals of digital marketing including SEO, social media, email marketing, and analytics.",
+      "learningOutcomes": [
+        "Understand SEO and content marketing",
+        "Master social media marketing strategies",
+        "Create effective email campaigns",
+        "Analyze data with Google Analytics",
+        "Build a marketing funnel"
+      ],
+      "targetAudience": "Marketing professionals, entrepreneurs, business owners",
+      "trainer": "Alex Rodriguez",
+      "sessions": [
+        {
+          "month": "May",
+          "startDate": "2026-05-20",
+          "endDate": "2026-06-17"
+        },
+        {
+          "month": "July",
+          "startDate": "2026-07-15",
+          "endDate": "2026-08-12"
+        },
+        {
+          "month": "September",
+          "startDate": "2026-09-10",
+          "endDate": "2026-10-08"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "events": [
+    {
+      "id": "event-001",
+      "title": "Digital Skills Open Day",
+      "date": "2026-05-12",
+      "time": "10:00 AM",
+      "location": "Metadise Academy, Kuching",
+      "category": "Open Day"
+    },
+    {
+      "id": "event-002",
+      "title": "UI/UX Design Workshop",
+      "date": "2026-05-18",
+      "time": "2:00 PM",
+      "location": "Training Lab B",
+      "category": "Workshop"
+    },
+    {
+      "id": "event-003",
+      "title": "Web Development Bootcamp Intake",
+      "date": "2026-05-25",
+      "time": "9:00 AM",
+      "location": "Main Hall",
+      "category": "Course Intake"
+    },
+    {
+      "id": "event-004",
+      "title": "Industry Talk: AI for Business",
+      "date": "2026-06-03",
+      "time": "4:00 PM",
+      "location": "Auditorium",
+      "category": "Talk"
+    },
+    {
+      "id": "event-005",
+      "title": "Student Portfolio Review",
+      "date": "2026-06-11",
+      "time": "11:00 AM",
+      "location": "Online",
+      "category": "Review"
+    },
+    {
+      "id": "event-006",
+      "title": "Digital Marketing Masterclass",
+      "date": "2026-06-20",
+      "time": "3:00 PM",
+      "location": "Seminar Room 2",
+      "category": "Masterclass"
+    },
+    {
+      "id": "event-007",
+      "title": "Academy Networking Night",
+      "date": "2026-07-02",
+      "time": "7:30 PM",
+      "location": "Metadise Lounge",
+      "category": "Networking"
+    }
+  ]
+}
