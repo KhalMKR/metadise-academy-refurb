@@ -1,147 +1,142 @@
 {
   "courses": [
     {
-      "id": "course-001",
-      "name": "Full-Stack Web Development",
-      "level": "Intermediate",
-      "price": 15000,
-      "duration": "8 weeks",
-      "thumbnail": "assets/images/course-webdev.jpg",
-      "poster": "assets/images/course-webdev-poster.jpg",
-      "description": "Master HTML, CSS, JavaScript, Node.js and databases to build complete web applications.",
-      "learningOutcomes": [
-        "Build responsive websites with modern CSS",
-        "Master JavaScript and DOM manipulation",
-        "Create RESTful APIs with Node.js",
-        "Work with databases (MongoDB/PostgreSQL)",
-        "Deploy applications to production"
-      ],
-      "targetAudience": "Beginners to Intermediate developers, career switchers",
-      "trainer": "Sarah Johnson",
-      "sessions": [
-        {
-          "month": "June",
-          "startDate": "2026-06-01",
-          "endDate": "2026-07-19"
-        },
-        {
-          "month": "August",
-          "startDate": "2026-08-01",
-          "endDate": "2026-09-19"
-        },
-        {
-          "month": "October",
-          "startDate": "2026-10-01",
-          "endDate": "2026-11-19"
-        }
-      ]
-    },
-    {
-      "id": "course-002",
-      "name": "UI/UX Design Fundamentals",
+      "id": "course-005",
+      "name": "AI & Machine Learning",
       "level": "Beginner",
-      "price": 10000,
+      "price": 14000,
       "duration": "6 weeks",
-      "thumbnail": "assets/images/course-design.jpg",
-      "poster": "assets/images/course-design-poster.jpg",
-      "description": "Learn the principles of user-centered design, wireframing, prototyping, and creating beautiful interfaces.",
+      "thumbnail": "assets/images/course-ai-ml.jpg",
+      "poster": "assets/images/course-ai-ml-poster.jpg",
+      "description": "Unlock growth with our AI & ML workshop — gain skills to build models, predict trends, and automate tasks.",
       "learningOutcomes": [
-        "Understand design principles and color theory",
-        "Create wireframes and prototypes",
-        "Master design tools (Figma/Adobe XD)",
-        "Conduct user research and testing",
-        "Build design systems"
+        "Understand core ML concepts and workflows",
+        "Build and evaluate simple models (classification/regression)",
+        "Preprocess data and feature engineering",
+        "Use Python libraries (scikit-learn, pandas)",
+        "Deploy a basic model and interpret results"
       ],
-      "targetAudience": "Aspiring designers, career switchers, developers interested in design",
-      "trainer": "Marcus Lee",
+      "targetAudience": "Beginners interested in data science, analysts, developers",
+      "trainer": "Dr. Aisha Bello",
       "sessions": [
-        {
-          "month": "May",
-          "startDate": "2026-05-15",
-          "endDate": "2026-06-26"
-        },
-        {
-          "month": "July",
-          "startDate": "2026-07-10",
-          "endDate": "2026-08-21"
-        },
-        {
-          "month": "September",
-          "startDate": "2026-09-12",
-          "endDate": "2026-10-24"
-        }
+        { "month": "June", "startDate": "2026-06-01", "endDate": "2026-07-12" },
+        { "month": "August", "startDate": "2026-08-03", "endDate": "2026-09-13" },
+        { "month": "November", "startDate": "2026-11-02", "endDate": "2026-12-14" }
       ]
     },
     {
-      "id": "course-003",
-      "name": "React.js Advanced",
-      "level": "Advanced",
-      "price": 12000,
-      "duration": "5 weeks",
-      "thumbnail": "assets/images/course-react.jpg",
-      "poster": "assets/images/course-react-poster.jpg",
-      "description": "Deep dive into React.js with hooks, state management, and advanced patterns for building scalable applications.",
-      "learningOutcomes": [
-        "Master React hooks and functional components",
-        "Implement state management with Redux/Context",
-        "Build custom hooks",
-        "Optimize performance and lazy loading",
-        "Test React applications"
-      ],
-      "targetAudience": "Intermediate JavaScript developers, React beginners",
-      "trainer": "Emily Chen",
-      "sessions": [
-        {
-          "month": "June",
-          "startDate": "2026-06-08",
-          "endDate": "2026-07-12"
-        },
-        {
-          "month": "August",
-          "startDate": "2026-08-10",
-          "endDate": "2026-09-14"
-        },
-        {
-          "month": "October",
-          "startDate": "2026-10-05",
-          "endDate": "2026-11-09"
-        }
-      ]
-    },
-    {
-      "id": "course-004",
-      "name": "Digital Marketing Essentials",
+      "id": "course-006",
+      "name": "Click Wisely: Everyday Internet Safety",
       "level": "Beginner",
-      "price": 8000,
-      "duration": "4 weeks",
-      "thumbnail": "assets/images/course-marketing.jpg",
-      "poster": "assets/images/course-marketing-poster.jpg",
-      "description": "Learn the fundamentals of digital marketing including SEO, social media, email marketing, and analytics.",
+      "price": 5000,
+      "duration": "2 weeks",
+      "thumbnail": "assets/images/course-cyber-safety.jpg",
+      "poster": "assets/images/course-cyber-safety-poster.jpg",
+      "description": "Learn essential cybersecurity skills to stay safe online and protect yourself and your organisation from cyber threats.",
       "learningOutcomes": [
-        "Understand SEO and content marketing",
-        "Master social media marketing strategies",
-        "Create effective email campaigns",
-        "Analyze data with Google Analytics",
-        "Build a marketing funnel"
+        "Identify common online threats and scams",
+        "Apply basic account and device security best-practices",
+        "Secure passwords and use multi-factor authentication",
+        "Recognize phishing and social engineering",
+        "Safely manage personal and organisational data"
       ],
-      "targetAudience": "Marketing professionals, entrepreneurs, business owners",
-      "trainer": "Alex Rodriguez",
+      "targetAudience": "General public, small business employees, students",
+      "trainer": "Lina Okoro",
       "sessions": [
-        {
-          "month": "May",
-          "startDate": "2026-05-20",
-          "endDate": "2026-06-17"
-        },
-        {
-          "month": "July",
-          "startDate": "2026-07-15",
-          "endDate": "2026-08-12"
-        },
-        {
-          "month": "September",
-          "startDate": "2026-09-10",
-          "endDate": "2026-10-08"
-        }
+        { "month": "May", "startDate": "2026-05-25", "endDate": "2026-06-08" },
+        { "month": "July", "startDate": "2026-07-20", "endDate": "2026-08-03" }
+      ]
+    },
+    {
+      "id": "course-007",
+      "name": "AI in Human Resources Management",
+      "level": "Beginner",
+      "price": 12000,
+      "duration": "4 weeks",
+      "thumbnail": "assets/images/course-ai-hr.jpg",
+      "poster": "assets/images/course-ai-hr-poster.jpg",
+      "description": "Transform your HR game with our AI in HR workshop — automate hiring, boost engagement, and make smarter decisions with data-driven tools.",
+      "learningOutcomes": [
+        "Learn AI use-cases in recruitment and talent management",
+        "Apply automation to streamline HR workflows",
+        "Use people analytics to improve engagement",
+        "Understand ethical considerations and bias mitigation",
+        "Build simple ML prototypes for HR tasks"
+      ],
+      "targetAudience": "HR professionals, people managers, HR tech enthusiasts",
+      "trainer": "Daniela Santos",
+      "sessions": [
+        { "month": "June", "startDate": "2026-06-15", "endDate": "2026-07-13" },
+        { "month": "September", "startDate": "2026-09-07", "endDate": "2026-10-05" }
+      ]
+    },
+    {
+      "id": "course-008",
+      "name": "Cybersecurity Essentials",
+      "level": "Beginner",
+      "price": 9000,
+      "duration": "5 weeks",
+      "thumbnail": "assets/images/course-cybersec.jpg",
+      "poster": "assets/images/course-cybersec-poster.jpg",
+      "description": "Secure your future with our Cybersecurity Course — learn to protect systems, detect threats, and defend against cyber attacks.",
+      "learningOutcomes": [
+        "Understand networking fundamentals and threat models",
+        "Perform basic vulnerability assessments",
+        "Implement defensive controls and incident response",
+        "Harden systems and practice secure configuration",
+        "Follow security best-practices for organisations"
+      ],
+      "targetAudience": "IT staff, aspiring security analysts, system administrators",
+      "trainer": "Mohammed Ibrahim",
+      "sessions": [
+        { "month": "July", "startDate": "2026-07-05", "endDate": "2026-08-09" },
+        { "month": "October", "startDate": "2026-10-04", "endDate": "2026-11-07" }
+      ]
+    },
+    {
+      "id": "course-009",
+      "name": "Digitalisation 101",
+      "level": "Beginner",
+      "price": 6000,
+      "duration": "3 weeks",
+      "thumbnail": "assets/images/course-digitalisation.jpg",
+      "poster": "assets/images/course-digitalisation-poster.jpg",
+      "description": "Learn how digitisation can address organisational challenges, and discover ways to enhance competitive advantage.",
+      "learningOutcomes": [
+        "Understand digital transformation strategies",
+        "Identify opportunities for process digitisation",
+        "Adopt digital tools for collaboration and efficiency",
+        "Measure impact and ROI of digital initiatives",
+        "Plan small-scale digital projects"
+      ],
+      "targetAudience": "Business owners, managers, operations staff",
+      "trainer": "Grace Mensah",
+      "sessions": [
+        { "month": "June", "startDate": "2026-06-10", "endDate": "2026-06-30" },
+        { "month": "August", "startDate": "2026-08-10", "endDate": "2026-08-30" }
+      ]
+    },
+    {
+      "id": "course-010",
+      "name": "Bitcoin & Blockchain 101",
+      "level": "Beginner",
+      "price": 7000,
+      "duration": "3 weeks",
+      "thumbnail": "assets/images/course-blockchain.jpg",
+      "poster": "assets/images/course-blockchain-poster.jpg",
+      "description": "An introduction to Bitcoin and blockchain technology — learn how decentralized systems work, and practical use-cases for business and finance.",
+      "learningOutcomes": [
+        "Explain how blockchain and Bitcoin work at a technical level",
+        "Differentiate public, private, and permissioned ledgers",
+        "Understand wallets, keys, and transaction basics",
+        "Explore real-world blockchain applications and limitations",
+        "Assess security and regulatory considerations"
+      ],
+      "targetAudience": "Tech enthusiasts, finance professionals, entrepreneurs",
+      "trainer": "Prof. Henry Okonkwo",
+      "sessions": [
+        { "month": "July", "startDate": "2026-07-08", "endDate": "2026-07-29" },
+        { "month": "September", "startDate": "2026-09-02", "endDate": "2026-09-23" }
       ]
     }
   ]
