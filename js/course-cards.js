@@ -30,7 +30,7 @@
     `;
 
     card.addEventListener('click', () => {
-      window.location.href = `course-details.html?id=${course.id}`;
+      window.location.href = `coursedetail.html?id=${course.id}`;
     });
 
     return card;
