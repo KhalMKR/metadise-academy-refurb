@@ -4,7 +4,10 @@
 
 /* ----- Page Header ----------------------------------------- */
 .courses-page {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: white;
   padding: 3rem 0;
   text-align: center;

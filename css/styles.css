@@ -34,6 +34,13 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   background-color: var(--color-bg);
+  background-image: 
+    linear-gradient(rgba(0,0,0, 0.6), rgba(248, 250, 252, 0.9)),
+    url('../../assets/images/body-background.png');
+  backdrop-filter: blur(6px);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--color-text);
 }
 

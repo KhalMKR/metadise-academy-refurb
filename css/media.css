@@ -18,7 +18,10 @@
   margin-top: 80px;
   padding: 3rem 0;
   color: #fff;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .media-hero__container h1 {
@@ -33,6 +36,7 @@
 
 .media-page {
   padding: 3rem 0 4rem;
+  background: white;
 }
 
 .media-page__container {
@@ -40,6 +44,7 @@
   grid-template-columns: minmax(220px, 260px) 1fr;
   gap: 2.4rem;
   align-items: start;
+  
 }
 
 .media-sidebar {
