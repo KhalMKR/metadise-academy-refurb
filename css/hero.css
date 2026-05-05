@@ -12,7 +12,8 @@
 .hero__stage {
   position: relative;
   width: 100%;
-  height: clamp(18rem, 62vw, 39rem);
+  aspect-ratio: 16 / 9;
+  height: auto;
   overflow: hidden;
   background: #0f172a;
 }
@@ -39,8 +40,9 @@
 .hero__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  background: #0f172a;
 }
 
 .hero__control {
@@ -74,7 +76,7 @@
 
 @media (max-width: 700px) {
   .hero__stage {
-    height: clamp(16rem, 68vw, 28rem);
+    aspect-ratio: 16 / 9;
   }
 
   .hero__control--prev {

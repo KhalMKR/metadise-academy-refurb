@@ -3,7 +3,6 @@
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', async () => {
-
   /* ----------------------------------------------------------
      Load HTML components into placeholders
   ---------------------------------------------------------- */
@@ -26,6 +25,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   }));
 
   window.dispatchEvent(new CustomEvent('metadise:components-loaded'));
+
+  if (window.AOS) {
+    AOS.init({
+      once: true,
+      duration: 700,
+      offset: 80,
+    });
+  }
 
   /* ----------------------------------------------------------
      Mobile navigation toggle

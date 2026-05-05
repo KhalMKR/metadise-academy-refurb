@@ -72,6 +72,10 @@
   
 }
 
+.media-page .container {
+  max-width: 1200px;
+}
+
 .media-sidebar {
   padding: 0.4rem 0;
   position: sticky;
