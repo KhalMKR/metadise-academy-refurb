@@ -1,9 +1,9 @@
 .calendar-hero {
   padding: 4.5rem 0 3.5rem;
-  background:
-    radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.16), transparent 42%),
-    radial-gradient(circle at 10% 80%, rgba(245, 158, 11, 0.18), transparent 40%),
-    linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+  
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .calendar-hero__container {
@@ -11,31 +11,22 @@
   max-width: 760px;
 }
 
-.calendar-hero__eyebrow {
-  display: inline-block;
-  padding: 0.28rem 0.7rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #1d4ed8;
-  background: #dbeafe;
-}
 
 .calendar-hero h1 {
   font-size: clamp(2rem, 5vw, 3rem);
+  color: rgba(255, 255, 255, 0.95);
   margin-top: 0.8rem;
   line-height: 1.1;
 }
 
 .calendar-hero p {
-  color: var(--color-muted);
+  color: rgba(255, 255, 255, 0.95);
   margin-top: 0.8rem;
 }
 
 .calendar-page {
   padding: 2.5rem 0 4.5rem;
+  background: white;
 }
 
 .calendar-layout {
