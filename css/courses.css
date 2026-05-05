@@ -306,6 +306,10 @@ position: relative;
   font-size: 1.1rem;
 }
 
+.featured-courses {
+  padding: 4rem 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
 /* Featured courses on the index page: show up to 4 in a row */
 .featured-courses-grid {
   display: grid;

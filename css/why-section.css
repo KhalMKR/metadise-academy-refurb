@@ -3,9 +3,7 @@
   overflow: hidden;
   padding-block: 4rem;
   color: var(--color-text);
-  background:
-    radial-gradient(circle at top, rgba(59, 130, 246, 0.12), transparent 45%),
-    linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .why-section__inner {
