@@ -19,10 +19,10 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- ===================== HEADER ===================== -->
   <div data-component data-src="components/header.html"></div>
 
-  <!-- CONTACT HERO -->
+  <!-- ===================== CONTACT HERO ===================== -->
   <section class="contact-hero" aria-labelledby="contact-hero-title">
     <div class="contact-hero__overlay"></div>
 
@@ -31,30 +31,23 @@
     </div>
   </section>
 
-  <!-- CONTACT MAIN -->
+  <!-- ===================== CONTACT MAIN ===================== -->
   <section class="contact-page">
     <div class="container contact-page__container">
 
       <!-- LEFT SIDE -->
       <div class="contact-info">
-        <h2>Get in Touch with Us</h2>
-        <p>We’ll do our best to respond within 1–2 working days.</p>
+        <div class="contact-info__text">
+          <h2>Get in Touch with Us</h2>
+          <p>We’ll do our best to respond within 1–2 working days.</p>
+        </div>
 
         <div class="contact-info__image">
           <img
-            src="assets/images/contact-character.png"
-            alt="Metadise Academy contact illustration"
+            src="assets/images/customer-service.png"
+            alt="Customer support representative"
             onerror="this.style.display='none'"
           />
-        </div>
-
-        <div class="contact-details">
-          <a href="tel:+60138026696">☎ +60 13-802 6696</a>
-          <a href="mailto:academy@metadise.io">✉ academy@metadise.io</a>
-          <p>
-            📍 THE PODIUM, Block C-2-7 &amp; C-2-8, Lot 21, Block 208,
-            Kuching North Land District, 93350 Kuching, Sarawak
-          </p>
         </div>
       </div>
 
@@ -66,17 +59,35 @@
 
           <div class="form-group">
             <label for="name">Full Name <span>*</span></label>
-            <input type="text" id="name" name="from_name" required />
+            <input
+              type="text"
+              id="name"
+              name="from_name"
+              autocomplete="name"
+              required
+            />
           </div>
 
           <div class="form-group">
             <label for="email">Email <span>*</span></label>
-            <input type="email" id="email" name="from_email" required />
+            <input
+              type="email"
+              id="email"
+              name="from_email"
+              autocomplete="email"
+              required
+            />
           </div>
 
           <div class="form-group">
             <label for="phone">Phone Number <span>*</span></label>
-            <input type="tel" id="phone" name="phone_number" required />
+            <input
+              type="tel"
+              id="phone"
+              name="phone_number"
+              autocomplete="tel"
+              required
+            />
           </div>
 
           <div class="form-group">
@@ -107,16 +118,16 @@
           </button>
 
           <p id="formStatus" class="form-status"></p>
-
         </form>
       </div>
 
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="footer__container">
+
       <div class="footer__col">
         <div class="footer__brand">
           <div class="footer__logo-box" aria-hidden="true">
@@ -130,14 +141,15 @@
         </p>
 
         <div class="footer__socials" aria-label="Social media links">
-          <a href="https://www.instagram.com/metadiseacademy/" target="_blank" rel="noreferrer">IG</a>
-          <a href="https://my.linkedin.com/company/metadise-academy" target="_blank" rel="noreferrer">in</a>
-          <a href="https://www.tiktok.com/@metadise_academy" target="_blank" rel="noreferrer">TT</a>
+          <a href="https://www.instagram.com/metadiseacademy/" target="_blank" rel="noreferrer" aria-label="Instagram">IG</a>
+          <a href="https://my.linkedin.com/company/metadise-academy" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+          <a href="https://www.tiktok.com/@metadise_academy" target="_blank" rel="noreferrer" aria-label="TikTok">TT</a>
         </div>
       </div>
 
       <div class="footer__col">
         <h4>Useful Links</h4>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="index.html#courses">Courses</a>
         <a href="contact.html">Contact Us</a>
@@ -146,14 +158,17 @@
 
       <div class="footer__col">
         <h4>Contact Us</h4>
+
         <a href="tel:+60138026696">☎ +60 13-802 6696</a>
         <a href="mailto:academy@metadise.io">✉ academy@metadise.io</a>
-        <a href="contact.html">
+
+        <a href="https://maps.google.com/?q=THE+PODIUM+Block+C-2-7+Kuching+Sarawak" target="_blank" rel="noreferrer">
           📍<br />
-          THE PODIUM, Block C-2-7 &amp; C-2-8, Lot 21, Block 208, Kuching North
-          Land District, 93350 Kuching, Sarawak
+          THE PODIUM, Block C-2-7 &amp; C-2-8, Lot 21, Block 208,
+          Kuching North Land District, 93350 Kuching, Sarawak
         </a>
       </div>
+
     </div>
 
     <div class="footer__bottom">
