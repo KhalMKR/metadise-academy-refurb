@@ -43,9 +43,10 @@
   margin-bottom: 0;
 }
 
-.calendar-page {
-  padding: 2.5rem 0 4.5rem;
-  background: white;
+.calendar-hero p {
+  margin-top: 0 auto;
+  color: rgba(255,255,255,0.95);
+
 }
 
 .calendar-layout {

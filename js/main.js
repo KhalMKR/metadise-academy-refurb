@@ -213,83 +213,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   const coursesGrid = document.getElementById('coursesGrid');
 
   if (coursesGrid) {
-    async function loadCourses() {
-      try {
-        const response = await fetch('data/courses.json');
-        if (!response.ok) throw new Error('Failed to load courses');
-
-        const data = await response.json();
-        renderCourses(data.courses);
-      } catch (error) {
-        console.error('Error loading courses:', error);
-        coursesGrid.innerHTML = '<p class="courses-empty__text">Unable to load courses. Please try again later.</p>';
-      }
+    if (window.MetadiseCourseCards) {
+      window.MetadiseCourseCards.renderCoursesIntoGrid(coursesGrid);
     }
-
-    function renderCourses(courses) {
-      coursesGrid.innerHTML = '';
-
-      courses.forEach(course => {
-        const courseCard = createCourseCard(course);
-        coursesGrid.appendChild(courseCard);
-      });
-    }
-
-    /**
-     * Create a course card DOM element from course data
-     * @param {Object} course - Course data object
-     * @returns {HTMLElement} - Course card element
-     */
-    function createCourseCard(course) {
-      const card = document.createElement('article');
-      card.className = 'course-card';
-      card.dataset.courseId = course.id;
-
-      card.innerHTML = `
-        <div class="course-card__image-wrapper">
-          <img 
-            class="course-card__image" 
-            src="${course.thumbnail}" 
-            alt="${course.name} thumbnail"
-            onerror="this.style.display='none'"
-          />
-          <span class="course-card__level">${course.level}</span>
-        </div>
-        
-        <div class="course-card__body">
-          <h3 class="course-card__title">${course.name}</h3>
-          <p class="course-card__description">${course.description}</p>
-          
-          <div class="course-card__meta">
-            <div class="course-card__meta-item">
-              <strong>Duration:</strong>
-              <span class="course-card__duration">${course.duration}</span>
-            </div>
-            <div class="course-card__meta-item">
-              <strong>Trainer:</strong>
-              <span class="course-card__trainer">${course.trainer}</span>
-            </div>
-          </div>
-          
-          <div class="course-card__footer">
-            <span class="course-card__price">₱${course.price.toLocaleString()}</span>
-            <button class="course-card__button" aria-label="View ${course.name} course details">
-              View Details →
-            </button>
-          </div>
-        </div>
-      `;
-
-      // Add click event to navigate to course details page
-      card.addEventListener('click', () => {
-        window.location.href = `course-details.html?id=${course.id}`;
-      });
-
-      return card;
-    }
-
-    // Load courses on page load
-    loadCourses();
   }
 
   /* ----------------------------------------------------------
