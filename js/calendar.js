@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const weekdayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const today = new Date();
+  const currentMonthStart = new Date(today.getFullYear(), today.getMonth(), 1);
   let visibleMonth = new Date(today.getFullYear(), today.getMonth(), 1);
   let calendarEvents = [];
 
@@ -210,6 +211,10 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const renderCalendar = () => {
+    if (visibleMonth < currentMonthStart) {
+      visibleMonth = new Date(currentMonthStart);
+    }
+
     const year = visibleMonth.getFullYear();
     const month = visibleMonth.getMonth();
 
@@ -284,6 +289,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     calendarGrid.innerHTML = cells.join('');
+
+    if (prevMonthBtn) {
+      const isAtCurrentMonth =
+        visibleMonth.getFullYear() === currentMonthStart.getFullYear() &&
+        visibleMonth.getMonth() === currentMonthStart.getMonth();
+      prevMonthBtn.disabled = isAtCurrentMonth;
+      prevMonthBtn.setAttribute('aria-disabled', String(isAtCurrentMonth));
+    }
   };
 
   const loadCalendar = async () => {
@@ -293,7 +306,11 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   prevMonthBtn?.addEventListener('click', () => {
-    visibleMonth = new Date(visibleMonth.getFullYear(), visibleMonth.getMonth() - 1, 1);
+    const previousMonth = new Date(visibleMonth.getFullYear(), visibleMonth.getMonth() - 1, 1);
+    if (previousMonth < currentMonthStart) {
+      return;
+    }
+    visibleMonth = previousMonth;
     renderCalendar();
   });
 

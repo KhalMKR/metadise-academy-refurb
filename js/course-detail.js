@@ -28,6 +28,10 @@
     year: 'numeric',
   });
 
+  function getTrainerLabel(course) {
+    return course.trainer && String(course.trainer).trim() ? course.trainer : 'TBA';
+  }
+
   function setStatus(message, isError = false) {
     if (!elements.status) return;
     elements.status.textContent = message;
@@ -41,11 +45,12 @@
   }
 
   function buildSnapshot(course) {
+    const trainerLabel = getTrainerLabel(course);
     const entries = [
       ['Level', course.level],
       ['Duration', course.duration],
       ['Price', currency.format(course.price)],
-      ['Trainer', course.trainer],
+      ['Trainer', trainerLabel],
       ['Audience', course.targetAudience],
     ];
 
@@ -77,7 +82,8 @@
   }
 
   function buildTags(course) {
-    const tags = [course.level, course.duration, `Trainer: ${course.trainer}`];
+    const trainerLabel = getTrainerLabel(course);
+    const tags = [course.level, course.duration, `Trainer: ${trainerLabel}`];
 
     if (elements.tags) {
       elements.tags.innerHTML = tags.map((tag) => `

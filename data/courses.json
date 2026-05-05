@@ -45,7 +45,6 @@
         "Safely manage personal and organisational data"
       ],
       "targetAudience": "General public, small business employees, students",
-      "trainer": "Lina Okoro",
       "sessions": []
     },
     {
@@ -65,7 +64,6 @@
         "Build simple ML prototypes for HR tasks"
       ],
       "targetAudience": "HR professionals, people managers, HR tech enthusiasts",
-      "trainer": "Daniela Santos",
       "sessions": []
     },
     {
@@ -74,7 +72,7 @@
       "level": "Beginner",
       "price": 9000,
       "duration": "3 days",
-      "thumbnail": "assets/images/course-cybersec.jpg",
+      "thumbnail": "assets/images/courses/thumbnail/cybersec-essentials.png",
       "poster": "assets/images/course-cybersec-poster.jpg",
       "description": "Secure your future with our Cybersecurity Course — learn to protect systems, detect threats, and defend against cyber attacks.",
       "learningOutcomes": [
@@ -85,7 +83,6 @@
         "Follow security best-practices for organisations"
       ],
       "targetAudience": "IT staff, aspiring security analysts, system administrators",
-      "trainer": "Mohammed Ibrahim",
       "sessions": []
     },
     {
@@ -105,7 +102,6 @@
         "Plan small-scale digital projects"
       ],
       "targetAudience": "Business owners, managers, operations staff",
-      "trainer": "Grace Mensah",
       "sessions": []
     },
     {
@@ -126,6 +122,44 @@
       ],
       "targetAudience": "Tech enthusiasts, finance professionals, entrepreneurs",
       "trainer": "Prof. Henry Okonkwo",
+      "sessions": []
+    },
+    {
+      "id": "course-011",
+      "name": "Big Data Analytics",
+      "level": "Beginner",
+      "price": 7000,
+      "duration": "3 days",
+      "thumbnail": "assets/images/courses/thumbnail/big-data-analytics.png",
+      "poster": "assets/images/courses/poster/alks.png",
+      "description": "Master the tools and techniques to analyse and visualise large datasets — uncover patterns, trends, and actionable insights from structured and unstructured data.",
+      "learningOutcomes": [
+        "Understand data architecture and storage solutions",
+        "Apply statistical methods to analyse large datasets",
+        "Visualise data with dashboards and reports",
+        "Implement machine learning algorithms for predictive analytics",
+        "Evaluate data quality and security measures"
+      ],
+      "targetAudience": "Tech enthusiasts, finance professionals, entrepreneurs",
+      "sessions": []
+    },
+    {
+      "id": "course-011",
+      "name": "Principles of E-commerce",
+      "level": "Intermediate",
+      "price": 7000,
+      "duration": "3 days",
+      "thumbnail": "assets/images/courses/thumbnail/principles-ecommerce.png",
+      "poster": "assets/images/courses/poster/alks.png",
+      "description": "Master the principles of e-commerce and how to build a successful online business.",
+      "learningOutcomes": [
+        "Understand the basics of e-commerce",
+        "Differentiate between B2B and B2C e-commerce",
+        "Understand the e-commerce value chain",
+        "Apply e-commerce marketing strategies",
+        "Evaluate e-commerce security and compliance"
+      ],
+      "targetAudience": "Business owners, managers, operations staff",
       "sessions": []
     }
   ]
