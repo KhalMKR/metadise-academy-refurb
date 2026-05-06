@@ -3,25 +3,60 @@
     {
       "id": "press-001",
       "type": "external",
-      "title": "Metadise Grand Launch Highlights",
-      "excerpt": "A recap of our grand launch moments and milestones, shared on our official Instagram channel.",
-      "source": "Instagram",
-      "publishedDate": "2025-05-17",
+      "category": "Press Release",
+      "title": "Metadise Academy Unveils New Home and Enhanced Facilities at The Podium",
+      "excerpt": "Metadise Academy announced its relocation to The Podium, introducing an upgraded training and lifestyle academy designed to support professional learning, creativity, collaboration, and digital skills development.",
+      "source": "Sarawak Tribune",
+      "publishedDate": "2025-04-13",
       "thumbnail": "",
-      "url": "https://www.instagram.com/p/DX8U8rAkS2M/?img_index=3&igsh=MXJ5OWw0NGwyOGpyYw=="
+      "url": "https://www.sarawaktribune.com/metadise-academy-unveils-new-home-enhanced-facilities/"
     },
     {
       "id": "press-002",
+      "type": "external",
+      "category": "News",
+      "title": "Metadise Grand Opening Marks a Milestone for Sarawak’s Tech Future",
+      "excerpt": "Metadise marked the grand launch of its headquarters at The Podium, highlighting its role in Sarawak’s growing digital innovation ecosystem.",
+      "source": "Sarawak Tribune",
+      "publishedDate": "2025-05-17",
+      "thumbnail": "",
+      "url": "https://www.sarawaktribune.com/metadises-grand-opening-a-boost-for-sarawaks-tech-future/"
+    },
+    {
+      "id": "press-003",
+      "type": "external",
+      "category": "News",
+      "title": "Metadise Digital Innovation Hub Launches at The Podium",
+      "excerpt": "Metadise was introduced as a digital innovation hub in Kuching, supporting digital transformation, community engagement, and future-ready talent development.",
+      "source": "Utusan Borneo",
+      "publishedDate": "2025-05-15",
+      "thumbnail": "",
+      "url": "https://www.utusanborneo.com.my/2025/05/15/metadise-hab-inovasi-digital-utama-di-kuching-bakal-dilancar-17-mei-ini-0"
+    },
+    {
+      "id": "press-004",
+      "type": "external",
+      "category": "Press Release",
+      "title": "Metadise to Represent Malaysia at Global Augmented Reality Expo",
+      "excerpt": "Metadise was selected by MDEC to showcase its immersive metaverse project, Tech Me To Sarawak, at Augmented World Expo in California.",
+      "source": "Sarawak Tribune",
+      "publishedDate": "2025-05-17",
+      "thumbnail": "",
+      "url": "https://www.sarawaktribune.com/metadise-to-represent-malaysia-at-global-ar-expo/"
+    },
+    {
+      "id": "press-005",
       "type": "internal",
-      "title": "Metadise Expands Academy Offerings for 2026",
-      "excerpt": "Metadise Academy announces expanded training tracks to support Sarawak's growing digital talent pipeline.",
+      "category": "Academy Update",
+      "title": "Metadise Academy Expands Future-Ready Training Programmes",
+      "excerpt": "Metadise Academy continues to provide practical training in key digital areas including AI, cybersecurity, blockchain, and digital literacy.",
       "source": "Metadise Academy",
       "publishedDate": "2026-01-10",
       "thumbnail": "",
       "content": [
-        "Metadise Academy is expanding its 2026 course offerings to meet growing demand for practical digital skills across industries.",
-        "The expanded lineup includes programmes in AI, cybersecurity, blockchain, digitalisation, and e-commerce, designed for learners and teams at different experience levels.",
-        "This initiative reflects Metadise's commitment to accessible, impact-driven training and talent development in Sarawak."
+        "Metadise Academy continues to support digital skills development through specialised training programmes in artificial intelligence, cybersecurity, blockchain, and digital literacy.",
+        "The academy’s course offerings are designed to help learners, professionals, and organisations build practical knowledge for the modern digital economy.",
+        "This initiative reflects Metadise Academy’s commitment to accessible, industry-relevant training and talent development in Sarawak."
       ]
     }
   ]

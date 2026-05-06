@@ -1,122 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="Browse media updates from Metadise Academy including press releases, news coverage, and gallery highlights." />
-	<title>Media - Metadise Academy</title>
-	<link rel="icon" href="assets/images/metadise-acad-logo-black&whitebg.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel="stylesheet" href="css/styles.css" />
-	<link rel="stylesheet" href="css/header.css" />
-	<link rel="stylesheet" href="css/footer.css" />
-	<link rel="stylesheet" href="css/media.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Browse media updates from Metadise Academy including press releases, news coverage, and gallery highlights."
+  />
+
+  <title>Media | Metadise Academy</title>
+
+  <link rel="icon" href="assets/images/metadise-acad-logo-black&whitebg.png" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/media.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+    rel="stylesheet"
+  />
 </head>
+
 <body>
 
-	<div data-component data-src="components/header.html"></div>
+  <!-- HEADER -->
+  <div data-component data-src="components/header.html"></div>
 
-	 <!-- MEDIA HERO -->
+  <!-- MEDIA HERO -->
   <section class="media-hero" aria-labelledby="media-hero-title">
     <div class="media-hero__overlay"></div>
 
     <div class="media-hero__content">
-      <h1 id="media-hero-title" data-aos="fade-up" data-aos-delay="100">Media Center</h1>
+      <h1 id="media-hero-title" data-aos="fade-up" data-aos-delay="100">
+        Media Center
+      </h1>
     </div>
   </section>
 
-	<section class="media-page" aria-labelledby="media-content-title">
-		<div class="container media-page__container">
-			<h2 id="media-content-title" class="sr-only">Media content categories</h2>
+  <!-- MEDIA PAGE -->
+  <main class="media-page" aria-labelledby="media-content-title">
+    <div class="container media-page__container">
 
-			<aside class="media-sidebar" aria-label="Media categories">
-				<h3 class="media-sidebar__title">Categories</h3>
-				<div class="media-sidebar__list" role="tablist" aria-orientation="vertical">
-					<button
-						type="button"
-						class="media-sidebar__button is-active"
-						role="tab"
-						id="tab-press"
-						aria-controls="panel-press"
-						aria-selected="true"
-						data-media-tab="press"
-					>
-						Press Releases
-					</button>
+      <h2 id="media-content-title" class="sr-only">
+        Media content categories
+      </h2>
 
-					<button
-						type="button"
-						class="media-sidebar__button"
-						role="tab"
-						id="tab-news"
-						aria-controls="panel-news"
-						aria-selected="false"
-						data-media-tab="news"
-					>
-						News
-					</button>
+      <!-- SIDEBAR -->
+      <aside class="media-sidebar" aria-label="Media categories">
+        <h3 class="media-sidebar__title">Categories</h3>
 
-					<button
-						type="button"
-						class="media-sidebar__button"
-						role="tab"
-						id="tab-gallery"
-						aria-controls="panel-gallery"
-						aria-selected="false"
-						data-media-tab="gallery"
-					>
-						Gallery
-					</button>
-				</div>
-			</aside>
+        <div class="media-sidebar__list" role="tablist" aria-orientation="vertical">
 
-			<div class="media-content">
-				<article
-					class="media-panel is-active"
-					id="panel-press"
-					role="tabpanel"
-					aria-labelledby="tab-press"
-					data-media-panel="press"
-				>
-					<div data-component data-src="components/media-press-releases.html"></div>
-				</article>
+          <button
+            type="button"
+            class="media-sidebar__button is-active"
+            role="tab"
+            id="tab-press"
+            aria-controls="panel-press"
+            aria-selected="true"
+            data-media-tab="press"
+          >
+            Press Releases
+          </button>
 
-				<article
-					class="media-panel"
-					id="panel-news"
-					role="tabpanel"
-					aria-labelledby="tab-news"
-					data-media-panel="news"
-					hidden
-				>
-					<div data-component data-src="components/media-news.html"></div>
-				</article>
+          <button
+            type="button"
+            class="media-sidebar__button"
+            role="tab"
+            id="tab-news"
+            aria-controls="panel-news"
+            aria-selected="false"
+            data-media-tab="news"
+          >
+            News
+          </button>
 
-				<article
-					class="media-panel"
-					id="panel-gallery"
-					role="tabpanel"
-					aria-labelledby="tab-gallery"
-					data-media-panel="gallery"
-					hidden
-				>
-					<div data-component data-src="components/media-gallery.html"></div>
-				</article>
-			</div>
-		</div>
-	</section>
+          <button
+            type="button"
+            class="media-sidebar__button"
+            role="tab"
+            id="tab-gallery"
+            aria-controls="panel-gallery"
+            aria-selected="false"
+            data-media-tab="gallery"
+          >
+            Gallery
+          </button>
 
-	<div data-component data-src="components/footer.html"></div>
+        </div>
+      </aside>
 
-	<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-	<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/media.js"></script>
+      <!-- CONTENT -->
+      <div class="media-content">
+
+        <!-- PRESS RELEASES -->
+        <article
+          class="media-panel is-active"
+          id="panel-press"
+          role="tabpanel"
+          aria-labelledby="tab-press"
+          data-media-panel="press"
+        >
+          <div data-component data-src="components/media-press-releases.html"></div>
+        </article>
+
+        <!-- NEWS -->
+        <article
+          class="media-panel"
+          id="panel-news"
+          role="tabpanel"
+          aria-labelledby="tab-news"
+          data-media-panel="news"
+          hidden
+        >
+          <div data-component data-src="components/media-news.html"></div>
+        </article>
+
+        <!-- GALLERY -->
+        <article
+          class="media-panel"
+          id="panel-gallery"
+          role="tabpanel"
+          aria-labelledby="tab-gallery"
+          data-media-panel="gallery"
+          hidden
+        >
+          <div data-component data-src="components/media-gallery.html"></div>
+        </article>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div data-component data-src="components/footer.html"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/media.js"></script>
+
 </body>
 </html>
