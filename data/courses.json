@@ -34,8 +34,8 @@
       "level": "Beginner",
       "price": 5000,
       "duration": "2 days",
-      "thumbnail": "assets/images/course-cyber-safety.jpg",
-      "poster": "assets/images/course-cyber-safety-poster.jpg",
+      "thumbnail": "assets/images/courses/thumbnail/clickwisely.png",
+      "poster": "",
       "description": "Learn essential cybersecurity skills to stay safe online and protect yourself and your organisation from cyber threats.",
       "learningOutcomes": [
         "Identify common online threats and scams",
@@ -53,8 +53,8 @@
       "level": "Beginner",
       "price": 12000,
       "duration": "3 days",
-      "thumbnail": "assets/images/course-ai-hr.jpg",
-      "poster": "assets/images/course-ai-hr-poster.jpg",
+      "thumbnail": "assets/images/courses/thumbnail/ai-hr-management.png",
+      "poster": "",
       "description": "Transform your HR game with our AI in HR workshop — automate hiring, boost engagement, and make smarter decisions with data-driven tools.",
       "learningOutcomes": [
         "Learn AI use-cases in recruitment and talent management",
