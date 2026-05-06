@@ -13,8 +13,7 @@
 .hero__stage {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
+  aspect-ratio: 1015 / 444;
   overflow: hidden;
   background: #0f172a;
 }
@@ -75,10 +74,6 @@
 }
 
 @media (max-width: 700px) {
-  .hero__stage {
-    aspect-ratio: 16 / 9;
-  }
-
   .hero__control--prev {
     left: 0.6rem;
   }
