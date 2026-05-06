@@ -286,9 +286,9 @@
 
 @media (max-width: 700px) {
   .media-hero {
-    margin-top: 74px;
     padding: 2.5rem 0;
   }
+  
 
   .media-panel h3 {
     font-size: clamp(1.6rem, 8vw, 2.4rem);
