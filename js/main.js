@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const slides = Array.from(heroCarousel.querySelectorAll('[data-hero-slide]'));
     const prevButton = heroCarousel.querySelector('[data-hero-prev]');
     const nextButton = heroCarousel.querySelector('[data-hero-next]');
+    const HERO_SLIDE_INTERVAL_MS = 5000;
     let currentSlide = 0;
     let slideTimer;
 
@@ -128,18 +129,22 @@ document.addEventListener('DOMContentLoaded', async () => {
       });
     };
 
+    const advanceSlide = (step) => {
+      setActiveSlide(currentSlide + step);
+    };
+
     const goToNextSlide = () => {
-      setActiveSlide(currentSlide + 1);
+      advanceSlide(1);
     };
 
     const restartTimer = () => {
       clearInterval(slideTimer);
-      slideTimer = setInterval(goToNextSlide, 5000);
+      slideTimer = setInterval(goToNextSlide, HERO_SLIDE_INTERVAL_MS);
     };
 
     if (prevButton) {
       prevButton.addEventListener('click', () => {
-        setActiveSlide(currentSlide - 1);
+        advanceSlide(-1);
         restartTimer();
       });
     }
