@@ -8,13 +8,7 @@
   function matchesSearch(course, query) {
     if (!query) return true;
 
-    const haystack = [
-      course.name,
-      course.description,
-      course.level,
-      course.trainer,
-      course.targetAudience,
-    ]
+    const haystack = [course.name, course.level, course.trainer]
       .map(normalizeText)
       .join(' ');
 
