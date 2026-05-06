@@ -28,8 +28,15 @@
     year: 'numeric',
   });
 
+  /**
+   * Helper to ensure we don't display empty strings or nulls
+   */
+  function fallback(value, message = 'TBA') {
+    return value && String(value).trim() ? value : message;
+  }
+
   function getTrainerLabel(course) {
-    return course.trainer && String(course.trainer).trim() ? course.trainer : 'TBA';
+    return fallback(course.trainer, 'TBA');
   }
 
   function setStatus(message, isError = false) {
@@ -46,12 +53,14 @@
 
   function buildSnapshot(course) {
     const trainerLabel = getTrainerLabel(course);
+    const priceLabel = course.price ? currency.format(course.price) : 'Contact for Price';
+    
     const entries = [
-      ['Level', course.level],
-      ['Duration', course.duration],
-      ['Price', currency.format(course.price)],
+      ['Level', fallback(course.level)],
+      ['Duration', fallback(course.duration)],
+      ['Price', priceLabel],
       ['Trainer', trainerLabel],
-      ['Audience', course.targetAudience],
+      ['Audience', fallback(course.targetAudience, 'Open to all')],
     ];
 
     if (elements.snapshot) {
@@ -65,10 +74,11 @@
   }
 
   function buildMeta(course) {
+    const priceLabel = course.price ? currency.format(course.price) : 'TBA';
     const metaItems = [
-      { icon: 'fa-solid fa-clock', label: course.duration },
-      { icon: 'fa-solid fa-signal', label: course.level },
-      { icon: 'fa-solid fa-wallet', label: currency.format(course.price) },
+      { icon: 'fa-solid fa-clock', label: fallback(course.duration) },
+      { icon: 'fa-solid fa-signal', label: fallback(course.level) },
+      { icon: 'fa-solid fa-wallet', label: priceLabel },
     ];
 
     if (elements.meta) {
@@ -83,7 +93,11 @@
 
   function buildTags(course) {
     const trainerLabel = getTrainerLabel(course);
-    const tags = [course.level, course.duration, `Trainer: ${trainerLabel}`];
+    const tags = [
+      fallback(course.level), 
+      fallback(course.duration), 
+      `Trainer: ${trainerLabel}`
+    ];
 
     if (elements.tags) {
       elements.tags.innerHTML = tags.map((tag) => `
@@ -95,7 +109,14 @@
   function buildOutcomes(course) {
     if (!elements.outcomes) return;
 
-    elements.outcomes.innerHTML = course.learningOutcomes.map((outcome) => `<li>${outcome}</li>`).join('');
+    const outcomes = Array.isArray(course.learningOutcomes) ? course.learningOutcomes : [];
+
+    if (outcomes.length === 0) {
+      elements.outcomes.innerHTML = `<li>Learning outcomes to be announced.</li>`;
+      return;
+    }
+
+    elements.outcomes.innerHTML = outcomes.map((outcome) => `<li>${outcome}</li>`).join('');
   }
 
   function buildSessions(course) {
@@ -189,11 +210,14 @@
 
       if (elements.status) elements.status.textContent = `Now viewing ${course.name}`;
       if (elements.title) elements.title.textContent = course.name;
-      if (elements.summary) elements.summary.textContent = course.description;
-      if (elements.description) elements.description.textContent = course.description;
-      if (elements.audience) elements.audience.textContent = course.targetAudience;
+      
+      // Applying text fallbacks here
+      if (elements.summary) elements.summary.textContent = fallback(course.description, 'No description provided.');
+      if (elements.description) elements.description.textContent = fallback(course.description, 'No additional details available.');
+      if (elements.audience) elements.audience.textContent = fallback(course.targetAudience, 'Information coming soon.');
+      
       if (elements.poster) {
-        elements.poster.src = course.poster || course.thumbnail;
+        elements.poster.src = course.poster || course.thumbnail || 'assets/images/body-background.png';
         elements.poster.alt = `${course.name} course poster`;
       }
 

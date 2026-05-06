@@ -1,6 +1,39 @@
 (() => {
   const COURSE_SOURCE = 'data/courses.json';
 
+  function normalizeText(value) {
+    return String(value || '').toLowerCase().trim();
+  }
+
+  function matchesSearch(course, query) {
+    if (!query) return true;
+
+    const haystack = [
+      course.name,
+      course.description,
+      course.level,
+      course.trainer,
+      course.targetAudience,
+    ]
+      .map(normalizeText)
+      .join(' ');
+
+    return haystack.includes(query);
+  }
+
+  function renderCourseGrid(grid, courses, emptyMessage) {
+    grid.innerHTML = '';
+
+    if (!courses.length) {
+      grid.innerHTML = `<p class="courses-empty__text">${emptyMessage}</p>`;
+      return;
+    }
+
+    courses.forEach((course) => {
+      grid.appendChild(createCourseCard(course));
+    });
+  }
+
   function createCourseCard(course) {
     const card = document.createElement('article');
     card.className = 'course-card';
@@ -65,9 +98,59 @@
     }
   }
 
+  async function initCourseSearch(options = {}) {
+    const {
+      grid,
+      searchInput,
+      clearButton,
+      resultsLabel,
+      emptyMessage = 'No courses match your search.',
+    } = options;
+
+    if (!grid || !searchInput) return;
+
+    try {
+      const courses = await fetchCourses();
+
+      const updateResults = () => {
+        const query = normalizeText(searchInput.value);
+        const visibleCourses = courses.filter((course) => matchesSearch(course, query));
+
+        renderCourseGrid(grid, visibleCourses, emptyMessage);
+
+        if (resultsLabel) {
+          if (query) {
+            resultsLabel.textContent = `Showing ${visibleCourses.length} of ${courses.length} courses for "${searchInput.value.trim()}".`;
+          } else {
+            resultsLabel.textContent = `Showing all ${courses.length} courses.`;
+          }
+        }
+      };
+
+      searchInput.addEventListener('input', updateResults);
+
+      if (clearButton) {
+        clearButton.addEventListener('click', () => {
+          searchInput.value = '';
+          searchInput.focus();
+          updateResults();
+        });
+      }
+
+      updateResults();
+    } catch (error) {
+      console.error(error);
+      grid.innerHTML = `<p class="courses-empty__text">Unable to load courses. Please try again later.</p>`;
+      if (resultsLabel) {
+        resultsLabel.textContent = 'Unable to load courses right now.';
+      }
+    }
+  }
+
   window.MetadiseCourseCards = {
     createCourseCard,
     fetchCourses,
     renderCoursesIntoGrid,
+    initCourseSearch,
   };
 })();
