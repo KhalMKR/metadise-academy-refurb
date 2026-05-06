@@ -139,6 +139,7 @@
 }
 
 .view-courses-button:hover {
+	text-decoration: none;
 	background-color: var(--header-primary);
 	border-color: rgba(0,0,0,0.06);
 	box-shadow: 0 6px 20px rgba(10, 79, 216, 0.12);
