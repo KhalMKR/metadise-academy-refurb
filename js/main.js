@@ -218,10 +218,22 @@ document.addEventListener('DOMContentLoaded', async () => {
      Load and Render Courses from JSON
   ---------------------------------------------------------- */
   const coursesGrid = document.getElementById('coursesGrid');
+  const courseSearchInput = document.getElementById('courseSearchInput');
+  const courseSearchClear = document.getElementById('courseSearchClear');
+  const courseSearchResults = document.getElementById('courseSearchResults');
 
   if (coursesGrid) {
     if (window.MetadiseCourseCards) {
-      window.MetadiseCourseCards.renderCoursesIntoGrid(coursesGrid);
+      if (courseSearchInput) {
+        window.MetadiseCourseCards.initCourseSearch({
+          grid: coursesGrid,
+          searchInput: courseSearchInput,
+          clearButton: courseSearchClear,
+          resultsLabel: courseSearchResults,
+        });
+      } else {
+        window.MetadiseCourseCards.renderCoursesIntoGrid(coursesGrid);
+      }
     }
   }
 
