@@ -114,11 +114,13 @@
   color: var(--color-primary);
   letter-spacing: 0.06em;
   margin-bottom: 1.25rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .vision-mission p {
   max-width: 850px;
   margin-inline: auto;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.08rem;
   line-height: 1.8;
   color: var(--color-text);
@@ -139,6 +141,7 @@
   color: var(--color-primary);
   letter-spacing: 0.06em;
   margin-bottom: 0.75rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .team__subtitle {
@@ -147,6 +150,7 @@
   color: var(--color-muted);
   font-size: 1.05rem;
   line-height: 1.7;
+  font-family: 'Poppins', sans-serif;
 }
 
 .team-grid {
@@ -256,11 +260,11 @@
 /* ===================== EMPOWERED BY / LOGO CAROUSEL ===================== */
 
 .metadise-marquee {
-  background: linear-gradient(
+ background: linear-gradient(
     135deg,
-    #10213f 0%,
-    #17345f 45%,
-    #1d4f7a 100%
+    #0f2a5f 0%,
+    #1d4ed8 55%,
+    #2563eb 100%
   );
   padding: 5rem 0;
   overflow: hidden;
@@ -274,6 +278,7 @@
   font-weight: 800;
   letter-spacing: 0.06em;
   margin-bottom: 3rem;
+  font-family:'Orbitron', sans-serif;
 }
 
 .metadise-marquee__wrapper {
@@ -313,13 +318,10 @@
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(-25%);
   }
 }
 
-.metadise-marquee__wrapper:hover .metadise-marquee__track {
-  animation-play-state: paused;
-}
 
 /* Mobile */
 @media (max-width: 700px) {
