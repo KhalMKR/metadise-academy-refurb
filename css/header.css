@@ -223,24 +223,37 @@
 
 /* Extra small - 480px and below */
 @media (max-width: 480px) {
-	.navbar__container {
-		padding: 0.5rem 1rem;
-	}
+  .navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-	.navbar__logo {
-		width: 2.5rem;
-		height: 2.5rem;
-	}
+    padding: 0.5rem 1rem;
+  }
 
-	.navbar__link {
-		padding: 0.75rem 1rem;
-		font-size: 0.9rem;
-	}
+  .navbar__brand {
+    margin-right: auto;
+  }
 
-	.view-courses-button {
-		padding: 0.6rem 1rem;
-		font-size: 0.9rem;
-	}
+  .navbar__toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .navbar__logo {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .navbar__link {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .view-courses-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* Large - 1920px and above */
