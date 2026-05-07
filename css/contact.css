@@ -124,14 +124,14 @@
 }
 
 .contact-info__image img {
-  width: 1000px;
+  width: 370px;
   max-width: none;
   height: auto;
 
   object-fit: contain;
   background: transparent;
 
-  transform: scale(1.5) translateY(330px);
+  transform: scale(1.5) translateY(170px);
   transform-origin: center bottom;
   
 }
@@ -139,7 +139,7 @@
 .faded-image-container {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 80%;
   height: 500px;
   background:linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, #ffffff 90%);
   pointer-events: none;
@@ -148,7 +148,7 @@
   background-repeat: no-repeat;
   overflow: hidden;
   z-index: 5;
-  transform: translateY(300px);
+  transform: translateY(250px);
 }
 
 
