@@ -23,7 +23,7 @@
 
     // We add a click listener to the whole card as your CSS suggests (cursor: pointer)
     card.addEventListener('click', () => {
-      window.location.href = `course-detail.html?id=${course.id}`;
+      window.location.href = `coursedetail.html?id=${course.id}`;
     });
 
     // --- DESIGN MATCH: Using your exact CSS classes ---
