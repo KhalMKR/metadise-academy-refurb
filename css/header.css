@@ -225,7 +225,7 @@
 @media (max-width: 480px) {
   .navbar__container {
     display: flex;
-    align-items: center;
+    align-items: right;
     justify-content: space-between;
 
     padding: 0.5rem 1rem;
