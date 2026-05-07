@@ -68,6 +68,8 @@
   }
 
   window.MetadiseCourseCards = {
+    createCourseCard,
+
     renderCoursesIntoGrid: async (grid, options = {}) => {
       const { limit, emptyMessage = 'No courses available.' } = options;
       const data = await coursesPromise;
