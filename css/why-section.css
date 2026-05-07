@@ -154,7 +154,7 @@
   opacity: 0.94;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .why-section__description {
     max-width: 90%;
   }
@@ -169,7 +169,7 @@
   .why-section__grid:hover .info-card:nth-child(5) { transform: translateX(70px) translateY(8px) rotate(12deg); }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .why-section {
     padding-block: 3.25rem;
   }

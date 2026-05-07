@@ -61,7 +61,7 @@
   line-height: 1.7;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .press-release-detail {
     padding-top: 2.7rem;
   }
