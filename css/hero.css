@@ -74,7 +74,7 @@
   right: 1rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .hero__control--prev {
     left: 0.6rem;
   }

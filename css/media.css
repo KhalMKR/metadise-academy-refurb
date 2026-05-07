@@ -487,7 +487,7 @@
   background: #fef2f2;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .media-list--press {
     grid-template-columns: 1fr;
   }
@@ -496,7 +496,7 @@
 
 /* ===================== RESPONSIVE ===================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .media-page__container {
     grid-template-columns: 1fr;
   }
@@ -532,7 +532,7 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .media-hero {
     padding: 2.5rem 0;
   }
@@ -554,7 +554,7 @@
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
   .media-gallery {
     grid-template-columns: 1fr;
   }
