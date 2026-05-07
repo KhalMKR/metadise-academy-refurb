@@ -190,6 +190,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     setActiveSlide(0);
     restartTimer();
+
+    // Restart the slider when the page becomes visible again (tab switch,
+    // history navigation / back-forward cache). Also clear the timer when
+    // the page is hidden to avoid duplicate timers.
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        restartTimer();
+      } else {
+        clearInterval(slideTimer);
+      }
+    });
+
+    // `pageshow` fires when navigating back/forward and the page is loaded from
+    // the bfcache (e.persisted === true). Ensure autoplay restarts in that case.
+    window.addEventListener('pageshow', (e) => {
+      if (e.persisted) restartTimer();
+    });
   }
 
   /* ----------------------------------------------------------
