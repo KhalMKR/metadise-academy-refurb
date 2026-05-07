@@ -3,10 +3,32 @@
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', async () => {
+
   /* ----------------------------------------------------------
      Load HTML components into placeholders
   ---------------------------------------------------------- */
   const componentSlots = document.querySelectorAll('[data-component]');
+
+  /**
+   * Performance Fix: YouTube Facade Pattern
+   * Swaps preview image for actual iframe only on click.
+   */
+  function initVideoFacades() {
+    const facades = document.querySelectorAll('.video-facade');
+    facades.forEach(facade => {
+      facade.addEventListener('click', function() {
+        const videoId = this.dataset.videoId;
+        // Use youtube-nocookie for performance & privacy
+        this.innerHTML = `
+          <iframe 
+            title="YouTube video player"
+            src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>`;
+      });
+    });
+  }
 
   await Promise.all(Array.from(componentSlots).map(async (slot) => {
     const source = slot.getAttribute('data-src');
@@ -25,6 +47,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   }));
 
   window.dispatchEvent(new CustomEvent('metadise:components-loaded'));
+  initVideoFacades();
+
+  window.addEventListener('metadise:components-loaded', () => {
+    initVideoFacades();
+  }, { once: true });
 
   if (window.AOS) {
     AOS.init({
@@ -33,6 +60,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       offset: 80,
     });
   }
+
+  
 
   /* ----------------------------------------------------------
      Mobile navigation toggle

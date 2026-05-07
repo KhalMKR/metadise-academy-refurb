@@ -40,6 +40,58 @@
 	display: block;
 }
 
+/* --- Facade Pattern Styles --- */
+.video-facade {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-facade img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.video-facade:hover img {
+    opacity: 1;
+}
+
+.play-button-overlay {
+    position: absolute;
+    width: 68px;
+    height: 48px;
+    background-color: rgba(33, 33, 33, 0.85);
+    border-radius: 12%;
+    transition: background-color 0.3s ease;
+    pointer-events: none; /* Allows click to pass through to the facade div */
+}
+
+.video-facade:hover .play-button-overlay {
+    background-color: #FF0000;
+}
+
+.play-button-overlay::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #ffffff;
+}
+
+/* Ensure iframe fills the same frame when it loads */
+.video-facade iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 @media (max-width: 640px) {
 	.event-highlight-grid {
 		grid-template-columns: 1fr;
