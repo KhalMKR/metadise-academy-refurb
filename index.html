@@ -23,7 +23,14 @@
   <div data-component data-src="components/header.html"></div>
 
   <!-- ===================== HERO ============================= -->
-  <div data-component="hero" data-src="components/hero.html"></div>
+  <div data-component="hero" data-src="components/hero.html">
+    <!-- Loading skeleton shown while hero component and images load -->
+    <div class="hero-skeleton" aria-hidden="true">
+      <div class="hero-skeleton__stage">
+        <div class="hero-skeleton__slide"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- ===================== WELCOME ========================== -->
   <section class="welcome" id="welcome" aria-labelledby="welcome-title">
