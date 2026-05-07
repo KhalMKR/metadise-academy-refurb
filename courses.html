@@ -3,45 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore our comprehensive courses at Metadise Academy." />
+
+  <meta
+    name="description"
+    content="Explore our comprehensive courses at Metadise Academy."
+  />
+
   <title>Courses – Metadise Academy</title>
+
   <link rel="icon" href="assets/images/metadise-acad-logo-black&whitebg.png" />
+
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/courses.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+    rel="stylesheet"
+  />
 </head>
+
 <body>
 
   <!-- ===================== HEADER ============================= -->
   <div data-component data-src="components/header.html"></div>
 
-  <!-- ===================== COURSES PAGE ============================= -->
-   <!-- COURSE HERO -->
+  <!-- ===================== COURSE HERO ============================= -->
   <section class="course-hero" aria-labelledby="course-hero-title">
     <div class="course-hero__overlay"></div>
 
     <div class="course-hero__content">
-      <h1 id="course-hero-title" data-aos="fade-up" data-aos-delay="100">Our Courses</h1>
+      <h1 id="course-hero-title" data-aos="fade-up" data-aos-delay="100">
+        Our Courses
+      </h1>
     </div>
   </section>
 
   <!-- ===================== COURSES LISTING ============================= -->
   <section class="courses-listing" aria-labelledby="courses-list-title">
     <div class="container">
-      <h2 class="section-title" id="courses-list-title" data-aos="fade-up" data-aos-delay="100">Featured Courses</h2>
 
+      <h2
+        class="section-title"
+        id="courses-list-title"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Featured Courses
+      </h2>
 
-      <!-- Course search form (currently applicated) -->
-       
-       <div class="course-search" data-aos="fade-up" data-aos-delay="150">
-        <form class="course-search__form" id="courseSearchForm" role="search" aria-label="Search courses">
-          <label class="course-search__label" for="courseSearchInput">Search courses</label>
+      <!-- ===================== COURSE SEARCH ============================= -->
+      <div class="course-search" data-aos="fade-up" data-aos-delay="150">
+        <form
+          class="course-search__form"
+          id="courseSearchForm"
+          role="search"
+          aria-label="Search courses"
+        >
+          <label class="course-search__label" for="courseSearchInput">
+            Search courses
+          </label>
+
           <div class="course-search__controls">
             <input
               class="course-search__input"
@@ -51,17 +87,109 @@
               placeholder="Search by course name, level, trainer"
               autocomplete="off"
             />
-            <button class="course-search__clear" id="courseSearchClear" type="button">Clear</button>
+
+            <button
+              class="course-search__clear"
+              id="courseSearchClear"
+              type="button"
+            >
+              Clear
+            </button>
           </div>
         </form>
 
-        <p class="course-search__results" id="courseSearchResults" aria-live="polite"></p>
+        <p
+          class="course-search__results"
+          id="courseSearchResults"
+          aria-live="polite"
+        ></p>
       </div>
-    
-      
-      <div class="courses-grid" id="coursesGrid">
-        <!-- Course cards will be rendered here by JavaScript -->
+
+      <!-- ===================== COURSES LAYOUT ============================= -->
+      <div class="courses-layout" data-aos="fade-up" data-aos-delay="180">
+
+        <!-- LEFT SIDE CATEGORY CONTAINER -->
+        <aside class="courses-sidebar" aria-label="Course categories">
+          <div class="courses-sidebar__outer">
+            <div class="courses-sidebar__inner">
+
+              <h3 class="courses-sidebar__title">
+                Categories
+              </h3>
+
+              <div
+                class="course-tabs"
+                role="tablist"
+                aria-label="Course categories"
+              >
+                <button
+                  class="course-tab is-active"
+                  type="button"
+                  data-course-category="featured"
+                  aria-selected="true"
+                >
+                  Featured
+                </button>
+
+                <button
+                  class="course-tab"
+                  type="button"
+                  data-course-category="ai"
+                  aria-selected="false"
+                >
+                  AI
+                </button>
+
+                <button
+                  class="course-tab"
+                  type="button"
+                  data-course-category="blockchain"
+                  aria-selected="false"
+                >
+                  Blockchain
+                </button>
+
+                <button
+                  class="course-tab"
+                  type="button"
+                  data-course-category="cybersecurity"
+                  aria-selected="false"
+                >
+                  Cybersecurity
+                </button>
+
+                <button
+                  class="course-tab"
+                  type="button"
+                  data-course-category="digital-business"
+                  aria-selected="false"
+                >
+                  Digital Business
+                </button>
+
+                <button
+                  class="course-tab"
+                  type="button"
+                  data-course-category="general"
+                  aria-selected="false"
+                >
+                  General
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </aside>
+
+        <!-- RIGHT SIDE COURSE CARDS -->
+        <div class="courses-content">
+          <div class="courses-grid" id="coursesGrid">
+            <!-- Course cards will be rendered here by JavaScript -->
+          </div>
+        </div>
+
       </div>
+
     </div>
   </section>
 
@@ -71,5 +199,6 @@
   <script src="js/course-cards.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 </html>
