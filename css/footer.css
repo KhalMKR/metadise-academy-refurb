@@ -18,12 +18,29 @@
 .footer-cta__button {
 	background: var(--color-primary);
 	color: #fff;
-	padding: 12px 20px;
+	padding: 14px 22px;
 	border-radius: 999px;
 	text-decoration: none;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	gap: 8px;
+	font-weight: 700;
+	line-height: 1;
+	white-space: nowrap;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+	box-shadow: 0 10px 20px rgba(37, 99, 235, 0.18);
+}
+
+.footer-cta__button i {
+	font-size: 1.05em;
+}
+
+.footer-cta__button:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 14px 24px rgba(37, 99, 235, 0.22);
+	background: #1d4ed8;
+	text-decoration: none;
 }
 
 .footer {
