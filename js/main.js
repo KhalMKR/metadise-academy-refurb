@@ -40,7 +40,56 @@ document.addEventListener('DOMContentLoaded', async () => {
         throw new Error(`Failed to load ${source}`);
       }
 
-      slot.outerHTML = await response.text();
+      const html = await response.text();
+
+      // Keep the original placeholder for the hero so the skeleton can remain
+      // visible until hero images finish loading. Other components replace
+      // the slot entirely as before.
+      const isHeroSlot = slot.getAttribute('data-component') === 'hero';
+
+      if (isHeroSlot) {
+        slot.innerHTML = html;
+
+        const heroEl = slot.querySelector('[data-hero-carousel]');
+        if (heroEl) {
+          heroEl.classList.add('is-hidden');
+
+          const imgs = Array.from(heroEl.querySelectorAll('img'));
+
+          const reveal = () => {
+            // small delay to allow CSS transitions
+            setTimeout(() => {
+              heroEl.classList.remove('is-hidden');
+              const sk = slot.querySelector('.hero-skeleton');
+              if (sk) sk.remove();
+            }, 120);
+          };
+
+          if (!imgs.length) {
+            requestAnimationFrame(reveal);
+          } else {
+            let remaining = imgs.length;
+
+            const check = () => {
+              remaining -= 1;
+              if (remaining <= 0) reveal();
+            };
+
+            imgs.forEach(img => {
+              if (img.complete) {
+                remaining -= 1;
+              } else {
+                img.addEventListener('load', check, { once: true });
+                img.addEventListener('error', check, { once: true });
+              }
+            });
+
+            if (remaining <= 0) reveal();
+          }
+        }
+      } else {
+        slot.outerHTML = html;
+      }
     } catch (error) {
       console.error(error);
     }

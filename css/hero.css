@@ -83,3 +83,43 @@
     right: 0.6rem;
   }
 }
+
+/* Loading skeleton (simple shimmer) */
+.hero-skeleton {
+  display: block;
+  width: 100%;
+  background: linear-gradient(90deg, #0b1020 0%, #0f172a 50%, #0b1020 100%);
+}
+
+.hero-skeleton__stage {
+  width: 100%;
+  aspect-ratio: 1015 / 444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0b1020;
+}
+
+.hero-skeleton__slide {
+  width: 90%;
+  height: 80%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #111827 0%, #1f2937 50%, #111827 100%);
+  animation: skeleton-shimmer 1.4s infinite linear;
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* When hero is inserted, hide it until images finish loading to avoid layout jank */
+.hero.is-hidden {
+  opacity: 0;
+  transition: opacity 360ms ease-in-out;
+}
+
+.hero {
+  transition: opacity 360ms ease-in-out;
+}
