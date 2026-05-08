@@ -186,6 +186,34 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   /* ----------------------------------------------------------
+     Navbar dropdowns (desktop) – open on hover, close on mouse leave
+  ---------------------------------------------------------- */
+const dropdowns = document.querySelectorAll('.navbar__dropdown');
+
+dropdowns.forEach(dropdown => {
+  const menu = dropdown.querySelector('.navbar__dropdown-menu');
+
+  dropdown.addEventListener('mouseenter', () => {
+    if (window.innerWidth > 768) {
+      dropdown.setAttribute('open', ''); // Keep the element 'open' for accessibility
+      menu.classList.add('is-visible');
+    }
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    if (window.innerWidth > 768) {
+      menu.classList.remove('is-visible');
+      // Delay removing the 'open' attribute until the CSS transition finishes
+      setTimeout(() => {
+        if (!menu.classList.contains('is-visible')) {
+          dropdown.removeAttribute('open');
+        }
+      }, 300); // Match this to your CSS transition time
+    }
+  });
+});
+
+  /* ----------------------------------------------------------
      Active nav link based on scroll position
   ---------------------------------------------------------- */
   const navAnchors = document.querySelectorAll('.nav__links a[href^="#"]');
