@@ -192,23 +192,30 @@ const dropdowns = document.querySelectorAll('.navbar__dropdown');
 
 dropdowns.forEach(dropdown => {
   const menu = dropdown.querySelector('.navbar__dropdown-menu');
+  let closeTimer;
 
+  // We listen to the whole 'dropdown' container
   dropdown.addEventListener('mouseenter', () => {
     if (window.innerWidth > 768) {
-      dropdown.setAttribute('open', ''); // Keep the element 'open' for accessibility
-      menu.classList.add('is-visible');
+      clearTimeout(closeTimer); // Stop any pending close action
+      dropdown.setAttribute('open', '');
+      
+      requestAnimationFrame(() => {
+        menu.classList.add('is-visible');
+      });
     }
   });
 
   dropdown.addEventListener('mouseleave', () => {
     if (window.innerWidth > 768) {
       menu.classList.remove('is-visible');
-      // Delay removing the 'open' attribute until the CSS transition finishes
-      setTimeout(() => {
+      
+      // Give the user 300ms to move their mouse back in or across gaps
+      closeTimer = setTimeout(() => {
         if (!menu.classList.contains('is-visible')) {
           dropdown.removeAttribute('open');
         }
-      }, 300); // Match this to your CSS transition time
+      }, 300); 
     }
   });
 });
