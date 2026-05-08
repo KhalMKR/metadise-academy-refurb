@@ -88,7 +88,36 @@ document.addEventListener('DOMContentLoaded', async () => {
           }
         }
       } else {
-        slot.outerHTML = html;
+        // Parse the fetched HTML so any <script> tags can be executed
+        const tmp = document.createElement('div');
+        tmp.innerHTML = html;
+
+        // Extract and execute scripts found within the component HTML
+        const scripts = Array.from(tmp.querySelectorAll('script'));
+        scripts.forEach(s => {
+          try {
+            if (s.src) {
+              const newScript = document.createElement('script');
+              if (s.type) newScript.type = s.type;
+              // preserve absolute or relative src
+              newScript.src = s.src;
+              // Do not let scripts block; append to body so they execute
+              document.body.appendChild(newScript);
+            } else {
+              const inline = document.createElement('script');
+              if (s.type) inline.type = s.type;
+              inline.textContent = s.textContent;
+              document.body.appendChild(inline);
+            }
+          } catch (err) {
+            console.error('Failed to execute component script', err);
+          }
+          // Remove script tag from the tmp container so it isn't duplicated
+          s.remove();
+        });
+
+        // Replace the slot with the component content (scripts removed)
+        slot.outerHTML = tmp.innerHTML;
       }
     } catch (error) {
       console.error(error);

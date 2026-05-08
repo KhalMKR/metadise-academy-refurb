@@ -1,0 +1,25 @@
+{
+  "testimonies": [
+  {
+    "id": 1,
+    "name": "John Doe",
+    "role": "Product Manager",
+    "testimony": "Believe you can and you're halfway there.",
+    "picture": "https://example.com/john-doe.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "role": "Software Engineer",
+    "testimony": "The future belongs to those who believe in the beauty of their dreams.",
+    "picture": "https://example.com/jane-smith.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Bob Johnson",
+    "role": "UX Designer",
+    "testimony": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    "picture": "https://example.com/bob-johnson.jpg"
+  }
+]
+}
