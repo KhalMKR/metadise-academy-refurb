@@ -15,7 +15,8 @@
     });
 
   let allCourses = [];
-  let activeCategory = "featured";
+  let activeFilterType = "category";
+  let activeFilterValue = "featured";
   let activeSearchQuery = "";
 
   function normalizeText(value) {
@@ -29,6 +30,10 @@
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#039;");
+  }
+
+  function isFeaturedCourse(course) {
+    return course.featured === true || course.featured === "true";
   }
 
   function matchesSearch(course, query) {
@@ -47,20 +52,32 @@
     return haystack.includes(query);
   }
 
-  function matchesCategory(course, category) {
-    if (category === "featured") {
-      return course.featured === true;
+  function matchesFilter(course) {
+    if (activeFilterType === "category") {
+      if (activeFilterValue === "featured") {
+        return isFeaturedCourse(course);
+      }
+
+      if (activeFilterValue === "!featured" || activeFilterValue === "others") {
+        return !isFeaturedCourse(course);
+      }
+
+      return normalizeText(course.category) === normalizeText(activeFilterValue);
     }
 
-    return course.category === category;
+    if (activeFilterType === "level") {
+      return normalizeText(course.level) === normalizeText(activeFilterValue);
+    }
+
+    return true;
   }
 
   function getFilteredCourses() {
     return allCourses.filter((course) => {
-      const categoryMatch = matchesCategory(course, activeCategory);
+      const filterMatch = matchesFilter(course);
       const searchMatch = matchesSearch(course, activeSearchQuery);
 
-      return categoryMatch && searchMatch;
+      return filterMatch && searchMatch;
     });
   }
 
@@ -111,6 +128,15 @@
       </div>
     `;
 
+    const button = card.querySelector(".course-card__button");
+
+    if (button) {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        window.location.href = `coursedetail.html?id=${encodeURIComponent(course.id || "")}`;
+      });
+    }
+
     return card;
   }
 
@@ -135,19 +161,28 @@
     grid.appendChild(fragment);
   }
 
+  function getFilterLabel() {
+    if (activeFilterType === "category") {
+      if (activeFilterValue === "featured") return "Featured";
+      if (activeFilterValue === "!featured" || activeFilterValue === "others") return "Others";
+    }
+
+    return String(activeFilterValue || "")
+      .replace("-", " ")
+      .replace(/\b\w/g, (letter) => letter.toUpperCase());
+  }
+
   function updateResultsLabel(resultsLabel, filteredCourses) {
     if (!resultsLabel) return;
 
-    const categoryName = activeCategory
-      .replace("-", " ")
-      .replace(/\b\w/g, (letter) => letter.toUpperCase());
+    const filterName = getFilterLabel();
 
     if (activeSearchQuery) {
-      resultsLabel.textContent = `Found ${filteredCourses.length} course(s) in ${categoryName}.`;
+      resultsLabel.textContent = `Found ${filteredCourses.length} course(s) in ${filterName}.`;
       return;
     }
 
-    resultsLabel.textContent = `Showing ${filteredCourses.length} ${categoryName} course(s).`;
+    resultsLabel.textContent = `Showing ${filteredCourses.length} ${filterName} course(s).`;
   }
 
   function updateActiveTab(tabs, selectedTab) {
@@ -157,6 +192,17 @@
       tab.classList.toggle("is-active", isActive);
       tab.setAttribute("aria-selected", String(isActive));
     });
+  }
+
+  function closeMobileCourseFilter() {
+    const filterToggle = document.getElementById("courseFilterToggle");
+    const filterPanel = document.getElementById("courseFilterPanel");
+
+    if (!filterToggle || !filterPanel) return;
+
+    filterPanel.classList.remove("is-open");
+    filterToggle.classList.remove("is-open");
+    filterToggle.setAttribute("aria-expanded", "false");
   }
 
   function renderFilteredCourses(options) {
@@ -178,6 +224,20 @@
     return Array.isArray(data) ? data : data.courses || [];
   }
 
+  function initMobileCourseFilter() {
+    const filterToggle = document.getElementById("courseFilterToggle");
+    const filterPanel = document.getElementById("courseFilterPanel");
+
+    if (!filterToggle || !filterPanel) return;
+
+    filterToggle.addEventListener("click", () => {
+      const isOpen = filterPanel.classList.toggle("is-open");
+
+      filterToggle.classList.toggle("is-open", isOpen);
+      filterToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
+
   window.MetadiseCourseCards = {
     createCourseCard,
 
@@ -191,7 +251,7 @@
       const courses = await getCourses();
 
       let toRender = featuredOnly
-        ? courses.filter((course) => course.featured === true)
+        ? courses.filter((course) => isFeaturedCourse(course))
         : courses;
 
       if (limit) {
@@ -214,7 +274,9 @@
 
       allCourses = await getCourses();
 
-      const tabs = Array.from(document.querySelectorAll("[data-course-category]"));
+      const tabs = Array.from(
+        document.querySelectorAll("[data-course-category], [data-course-level]")
+      );
 
       const updateResults = () => {
         activeSearchQuery = normalizeText(searchInput?.value || "");
@@ -228,10 +290,22 @@
 
       tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
-          activeCategory = tab.dataset.courseCategory || "featured";
+          if (tab.dataset.courseCategory) {
+            activeFilterType = "category";
+            activeFilterValue = tab.dataset.courseCategory;
+          }
+
+          if (tab.dataset.courseLevel) {
+            activeFilterType = "level";
+            activeFilterValue = tab.dataset.courseLevel;
+          }
 
           updateActiveTab(tabs, tab);
           updateResults();
+
+          if (window.innerWidth <= 768) {
+            closeMobileCourseFilter();
+          }
         });
       });
 
@@ -253,4 +327,8 @@
       updateResults();
     }
   };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    initMobileCourseFilter();
+  });
 })();

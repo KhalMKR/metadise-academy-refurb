@@ -108,8 +108,24 @@
       <!-- ===================== COURSES LAYOUT ============================= -->
       <div class="courses-layout" data-aos="fade-up" data-aos-delay="180">
 
+        <!-- MOBILE FILTER BUTTON -->
+<button
+  class="course-filter-toggle"
+  type="button"
+  id="courseFilterToggle"
+  aria-expanded="false"
+  aria-controls="courseFilterPanel"
+>
+  <i class="fa-solid fa-filter" aria-hidden="true"></i>
+  Filter
+</button>
+
         <!-- LEFT SIDE CATEGORY CONTAINER -->
-        <aside class="courses-sidebar" aria-label="Course categories">
+        <aside
+  class="courses-sidebar"
+  id="courseFilterPanel"
+  aria-label="Course categories"
+>
           <div class="courses-sidebar__outer">
             <div class="courses-sidebar__inner">
 
@@ -134,7 +150,7 @@
                 <button
                   class="course-tab"
                   type="button"
-                  data-course-category="ai"
+                  data-course-category="AI"
                   aria-selected="false"
                 >
                   AI
@@ -143,7 +159,7 @@
                 <button
                   class="course-tab"
                   type="button"
-                  data-course-category="blockchain"
+                  data-course-category="Blockchain"
                   aria-selected="false"
                 >
                   Blockchain
@@ -152,7 +168,7 @@
                 <button
                   class="course-tab"
                   type="button"
-                  data-course-category="cybersecurity"
+                  data-course-category="Cybersecurity"
                   aria-selected="false"
                 >
                   Cybersecurity
@@ -161,19 +177,37 @@
                 <button
                   class="course-tab"
                   type="button"
-                  data-course-category="digital-business"
+                  data-course-category="Digital Literacy"
                   aria-selected="false"
                 >
-                  Digital Business
+                  Digital Literacy
                 </button>
 
                 <button
                   class="course-tab"
                   type="button"
-                  data-course-category="general"
+                  data-course-level="Beginner"
                   aria-selected="false"
                 >
-                  General
+                  Beginner
+                </button>
+
+                <button
+                  class="course-tab"
+                  type="button"
+                  data-course-level="Intermediate"
+                  aria-selected="false"
+                >
+                  Intermediate
+                </button>
+
+                <button
+                  class="course-tab"
+                  type="button"
+                  data-course-category="!featured"
+                  aria-selected="false"
+                >
+                  Others
                 </button>
               </div>
 
