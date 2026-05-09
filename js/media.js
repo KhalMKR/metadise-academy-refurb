@@ -20,6 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
     renderNews(NEWS_SOURCE);
   });
 
+  /* ===================== RESIZE HANDLER ===================== */
+  window.addEventListener('resize', () => {
+  if (galleryLightbox && galleryLightbox.activeSlide) {
+    // A small delay allows the browser to finish its zoom calculation
+    setTimeout(() => {
+      galleryLightbox.reload(); 
+    }, 100);
+  }
+});
+
   /* ===================== TABS ===================== */
 
   function initMediaTabs() {
@@ -46,9 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
           panel.hidden = !isActive;
         });
 
-        if (target === "gallery") {
-          initLightbox();
-        }
+        // Inside initMediaTabs() in media.js
+if (target === "gallery") {
+    setTimeout(() => {
+        initLightbox();
+        // Force a recalculation of the viewport
+        window.dispatchEvent(new Event('resize'));
+    }, 50); 
+}
       });
     });
   }
@@ -73,9 +88,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     galleryLightbox = GLightbox({
       selector: ".glightbox",
-      touchNavigation: true,
-      loop: true,
-      zoomable: true
+    touchNavigation: true,
+    loop: true,
+    zoomable: true,
+    draggable: true, // Allows moving the image if it's larger than the screen
+    width: 'auto',
+    height: 'auto',
+    autosize: true
     });
   }
 
