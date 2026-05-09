@@ -1,0 +1,47 @@
+.tba-hero {
+  position: relative;
+  min-height: 280px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: #ffffff;
+
+  background-image:
+    linear-gradient(rgba(248, 250, 252, 0.5), rgba(248, 250, 252, 0.9)),
+    url("../assets/images/body-background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.tba-hero__overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 23, 42, 0.84),
+      rgba(15, 23, 42, 0.9)
+    );
+}
+
+.tba-hero__content {
+  position: relative;
+  z-index: 1;
+
+  max-width: 900px;
+  padding-inline: 1.25rem;
+}
+
+.tba-hero__content h1 {
+  margin-bottom: 0;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
