@@ -496,7 +496,7 @@
     justify-content: center !important;
 }
 
-/* Fix for scaled images in gallery to prevent layout shifts during zoom */
+/* Fix for scaled images in gallery to prevent layout shifts during zoom in various scenarios */
 .glightbox-container .gslide-image img {
   max-width: 100vw;
   max-height: 90vh !important;

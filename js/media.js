@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 if (target === "gallery") {
     setTimeout(() => {
         initLightbox();
-        // Force a recalculation of the viewport
+        // Force a recalculation of the viewport to ensure the lightbox sizes correctly after tab switch
         window.dispatchEvent(new Event('resize'));
     }, 50); 
 }
