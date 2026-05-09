@@ -2,7 +2,9 @@
    Metadise Academy – Main JavaScript
    ============================================================ */
 
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', async () => { 
+
+
 
   /* ----------------------------------------------------------
      Load HTML components into placeholders
@@ -401,11 +403,10 @@ dropdowns.forEach(dropdown => {
     }
   }
 
-  /* ----------------------------------------------------------
-     Scroll-reveal animation (lightweight, no library)
+ /* ----------------------------------------------------------
+     Scroll-reveal animation
   ---------------------------------------------------------- */
   const revealElements = document.querySelectorAll('.card, .feature-item, .course-card');
-
   if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -425,4 +426,30 @@ dropdowns.forEach(dropdown => {
     });
   }
 
-});
+/* ----------------------------------------------------------
+     Global WhatsApp Injection (Direct to Body Root)
+  ---------------------------------------------------------- */
+  async function loadWhatsAppGlobal() {
+    try {
+      const response = await fetch('components/whatsapp.html');
+      if (!response.ok) return;
+      const html = await response.text();
+      
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = html;
+      const waBtn = tempDiv.querySelector('.whatsapp-floating_button');
+      
+      if (waBtn) {
+        // 'afterbegin' puts it as the very first child of <body>
+        // This is often safer than 'appendChild' for fixed elements
+        document.body.insertAdjacentElement('afterbegin', waBtn);
+      }
+    } catch (err) {
+      console.warn("WhatsApp load failed:", err);
+    }
+  }
+
+  loadWhatsAppGlobal();
+  highlightNav(); 
+}); // End of DOMContentLoaded
+

@@ -46,7 +46,6 @@ body {
   background-image: 
     linear-gradient(rgba(0,0,0, 0.6), rgba(248, 250, 252, 0.9)),
     url('../../assets/images/body-background.png');
-  backdrop-filter: blur(6px);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -794,6 +793,41 @@ section {
   font-weight: 600;
 }
 
+.whatsapp-floating_button {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    z-index: 9999 !important;
+    
+    /* Look & Feel */
+    background-color: #25d366; /* WhatsApp Green */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-floating_button:hover {
+    transform: scale(1.1);
+    color: white; /* Prevent link color change */
+    text-decoration: none; /* Prevent underline on hover */
+}
+
+/* Hide the text "WhatsApp" and only show the icon for a cleaner look */
+.whatsapp-floating_button span {
+    display: none;
+}
+
+.whatsapp-floating_button i {
+    font-size: 32px;
+}
 
 /* ===================== RESPONSIVE ===================== */
 
