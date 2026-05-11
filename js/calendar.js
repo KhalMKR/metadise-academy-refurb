@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   const calendarGrid = document.getElementById('calendarGrid');
   const monthLabel = document.getElementById('calendar-month-label');
-  const eventList = document.getElementById('eventList');
   const prevMonthBtn = document.getElementById('prevMonthBtn');
   const nextMonthBtn = document.getElementById('nextMonthBtn');
   const todayBtn = document.getElementById('todayBtn');
 
-  if (!calendarGrid || !monthLabel || !eventList) {
+  if (!calendarGrid || !monthLabel) {
     return;
   }
 
@@ -51,15 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
     return 1;
   };
 
-  const getEventTypeLabel = (eventType) => {
-    if (eventType === 'booking') return 'Private booking';
-    if (eventType === 'course') return 'Course session';
-    return 'Event';
-  };
-
   const getEventTypeClass = (eventType) => {
     if (eventType === 'booking') return 'calendar-day--booking';
     if (eventType === 'course') return 'calendar-day--course';
+    if (eventType === 'holiday') return 'calendar-day--holiday';
     return 'calendar-day--event';
   };
 
@@ -180,36 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return map;
   };
 
-  const renderEvents = () => {
-    if (!calendarEvents.length) {
-      eventList.innerHTML = '<li class="event-item">No events available yet.</li>';
-      return;
-    }
-
-    const sortedEvents = [...calendarEvents]
-      .sort((a, b) => a.startDate - b.startDate || getTypePriority(getEventType(b)) - getTypePriority(getEventType(a)))
-      .slice(0, 8);
-
-    eventList.innerHTML = sortedEvents
-      .map((eventItem) => {
-        const location = eventItem.location ? ` - ${eventItem.location}` : '';
-        const time = eventItem.time || 'TBA';
-        const typeLabel = getEventTypeLabel(getEventType(eventItem));
-        const dateLabel = eventItem.endDate && formatDateKey(eventItem.endDate) !== formatDateKey(eventItem.startDate)
-          ? `${formatDateLabel(eventItem.startDate)} - ${formatDateLabel(eventItem.endDate)}`
-          : formatDateLabel(eventItem.startDate);
-
-        return `
-          <li class="event-item">
-            <p class="event-item__date">${dateLabel}</p>
-            <h3 class="event-item__title">${eventItem.title || 'Untitled Event'}</h3>
-            <p class="event-item__meta">${typeLabel} · ${time}${location}</p>
-          </li>
-        `;
-      })
-      .join('');
-  };
-
   const renderCalendar = () => {
     if (visibleMonth < currentMonthStart) {
       visibleMonth = new Date(currentMonthStart);
@@ -223,72 +187,48 @@ document.addEventListener('DOMContentLoaded', () => {
       year: 'numeric'
     });
 
-    const firstDay = new Date(year, month, 1);
-    const startWeekday = firstDay.getDay();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const prevMonthDays = new Date(year, month, 0).getDate();
-    const dayIndex = buildDayIndex();
+    const monthStart = new Date(year, month, 1);
+    const monthEnd = new Date(year, month + 1, 0);
 
-    const cells = [];
-
-    weekdayNames.forEach((dayName) => {
-      cells.push(`<div class="calendar-weekday" role="columnheader">${dayName}</div>`);
+    const visibleEvents = calendarEvents.filter((eventItem) => {
+      const eventStart = eventItem.startDate;
+      const eventEnd = eventItem.endDate || eventItem.startDate;
+      return eventStart <= monthEnd && eventEnd >= monthStart;
     });
 
-    for (let i = startWeekday - 1; i >= 0; i -= 1) {
-      const dateNumber = prevMonthDays - i;
-      cells.push(`
-        <div class="calendar-day calendar-day--outside" role="gridcell" aria-disabled="true">
-          <span class="calendar-day__date">${dateNumber}</span>
-        </div>
-      `);
+    if (!visibleEvents.length) {
+      calendarGrid.innerHTML = '<div class="calendar-agenda__empty">No events found for this month.</div>';
+    } else {
+      const agendaRows = visibleEvents
+        .sort((a, b) => a.startDate - b.startDate || getTypePriority(getEventType(b)) - getTypePriority(getEventType(a)))
+        .map((eventItem) => {
+          const eventType = getEventType(eventItem);
+          const location = eventItem.location || 'Metadise Academy';
+          const start = eventItem.startDate;
+          const end = eventItem.endDate || eventItem.startDate;
+          const monthText = start.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
+          const isRange = formatDateKey(start) !== formatDateKey(end);
+          const dayValue = isRange
+            ? `${String(start.getDate()).padStart(2, '0')} - ${String(end.getDate()).padStart(2, '0')}`
+            : String(start.getDate()).padStart(2, '0');
+
+          return `
+            <article class="calendar-agenda__item calendar-agenda__item--${eventType}">
+              <div class="calendar-agenda__date">
+                <span class="calendar-agenda__month">${monthText}</span>
+                <span class="calendar-agenda__day">${dayValue}</span>
+              </div>
+              <div class="calendar-agenda__content">
+                <h3 class="calendar-agenda__title">${eventItem.title || 'Untitled Event'}</h3>
+                <p class="calendar-agenda__meta">${location}</p>
+              </div>
+            </article>
+          `;
+        })
+        .join('');
+
+      calendarGrid.innerHTML = `<div class="calendar-agenda">${agendaRows}</div>`;
     }
-
-    for (let day = 1; day <= daysInMonth; day += 1) {
-      const currentDate = new Date(year, month, day);
-      const dateKey = formatDateKey(currentDate);
-      const eventsForDay = dayIndex.get(dateKey) || [];
-      const eventType = eventsForDay.length ? getEventType(eventsForDay.reduce((winner, candidate) => {
-        return getTypePriority(getEventType(candidate)) > getTypePriority(getEventType(winner)) ? candidate : winner;
-      }, eventsForDay[0])) : '';
-
-      const isToday =
-        day === today.getDate() &&
-        month === today.getMonth() &&
-        year === today.getFullYear();
-
-      const modifierClass = [
-        'calendar-day',
-        isToday ? 'calendar-day--today' : '',
-        eventType ? getEventTypeClass(eventType) : ''
-      ]
-        .filter(Boolean)
-        .join(' ');
-
-      const badge = eventsForDay.length
-        ? `<span class="calendar-day__badge">${eventsForDay.length} item${eventsForDay.length > 1 ? 's' : ''}</span>`
-        : '';
-
-      cells.push(`
-        <div class="${modifierClass}" role="gridcell" aria-label="${formatDateLabel(currentDate)}">
-          <span class="calendar-day__date">${day}</span>
-          ${badge}
-        </div>
-      `);
-    }
-
-    const usedCells = startWeekday + daysInMonth;
-    const trailingDays = (7 - (usedCells % 7)) % 7;
-
-    for (let i = 1; i <= trailingDays; i += 1) {
-      cells.push(`
-        <div class="calendar-day calendar-day--outside" role="gridcell" aria-disabled="true">
-          <span class="calendar-day__date">${i}</span>
-        </div>
-      `);
-    }
-
-    calendarGrid.innerHTML = cells.join('');
 
     if (prevMonthBtn) {
       const isAtCurrentMonth =
@@ -301,7 +241,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const loadCalendar = async () => {
     await buildCalendarEvents();
-    renderEvents();
     renderCalendar();
   };
 

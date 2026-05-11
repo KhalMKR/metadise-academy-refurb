@@ -1,5 +1,81 @@
 {
   "events": [
-
+    {
+      "id": "public-holiday-hari-raya-aidiladha-2026",
+      "title": "Hari Raya Aidiladha",
+      "type": "holiday",
+      "category": "Public Holidays",
+      "location": "Malaysia",
+      "time": "All day",
+      "date": "2026-05-27",
+      "endDate": "2026-05-27",
+      "notes": "Public holiday"
+    },
+    {
+      "id": "public-holiday-wesak-day-2026",
+      "title": "Wesak Day",
+      "type": "holiday",
+      "category": "Public Holidays",
+      "location": "Malaysia",
+      "time": "All day",
+      "date": "2026-05-31",
+      "endDate": "2026-05-31",
+      "notes": "Public holiday"
+    },
+    {
+      "id": "sesa-event-2026-05-23",
+      "title": "SESA event",
+      "type": "event",
+      "category": "Corporate Event",
+      "location": "Metadise Academy, The Podium",
+      "time": "TBA",
+      "date": "2026-05-23",
+      "endDate": "2026-05-24",
+      "notes": "SESA event"
+    },
+    {
+      "id": "public-holiday-agong-bday-2026",
+      "title": "Agong's Birthday",
+      "type": "holiday",
+      "category": "Public Holidays",
+      "location": "Malaysia",
+      "time": "All day",
+      "date": "2026-06-01",
+      "endDate": "2026-06-01",
+      "notes": "Public holiday"
+    },
+    {
+      "id": "public-holiday-hari-gawai-2026",
+      "title": "Hari Gawai Dayak",
+      "type": "holiday",
+      "category": "Public Holidays",
+      "location": "Malaysia",
+      "time": "All day",
+      "date": "2026-06-02",
+      "endDate": "2026-06-02",
+      "notes": "Public holiday"
+    },
+    {
+      "id": "public-holiday-replacement-2026",
+      "title": "Replacement Holiday for Wesak Day",
+      "type": "holiday",
+      "category": "Public Holidays",
+      "location": "Malaysia",
+      "time": "All day",
+      "date": "2026-06-03",
+      "endDate": "2026-06-03",
+      "notes": "Public holiday"
+    },
+    {
+      "id": "public-holiday-replacement-2026",
+      "title": "Replacement Holiday for Gawai Dayak 1st Day",
+      "type": "holiday",
+      "category": "Public Holidays",
+      "location": "Malaysia",
+      "time": "All day",
+      "date": "2026-06-04",
+      "endDate": "2026-06-04",
+      "notes": "Public holiday"
+    }
   ]
 }
