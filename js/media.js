@@ -4,7 +4,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const NEWS_SOURCE = "data/media-news.json";
-  const PRESS_SOURCE = "data/press-releases.json";
 
   let galleryLightbox;
 
@@ -12,9 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initAOS();
   initLightbox();
 
-  waitForElement("#mediaPressList", () => {
-    renderPressReleases(PRESS_SOURCE);
-  });
 
   waitForElement("#mediaNewsList", () => {
     renderNews(NEWS_SOURCE);
@@ -122,55 +118,7 @@ if (target === "gallery") {
     }, 100);
   }
 
-  /* ===================== PRESS RELEASES ===================== */
-
-  async function renderPressReleases(source) {
-    const pressList = document.getElementById("mediaPressList");
-
-    if (!pressList) return;
-
-    try {
-      const response = await fetch(source, {
-        cache: "no-store"
-      });
-
-      if (!response.ok) {
-        throw new Error(`Failed to load press releases: ${response.status}`);
-      }
-
-      const payload = await response.json();
-
-      const items = Array.isArray(payload.pressReleases)
-        ? payload.pressReleases
-        : [];
-
-      if (!items.length) {
-        pressList.innerHTML = `
-          <div class="media-list__item media-placeholder">
-            No press releases available yet.
-          </div>
-        `;
-        return;
-      }
-
-      pressList.innerHTML = items
-        .map((item) =>
-          buildMediaCard(item, {
-            defaultSource: "Metadise Academy",
-            defaultTypeLabel: "Press Release"
-          })
-        )
-        .join("");
-    } catch (error) {
-      console.error("Press release loading error:", error);
-
-      pressList.innerHTML = `
-        <div class="media-list__item media-placeholder media-error">
-          Unable to load press releases right now. Please check data/press-releases.json.
-        </div>
-      `;
-    }
-  }
+  /* Press releases removed */
 
   /* ===================== NEWS ===================== */
 
@@ -244,15 +192,10 @@ if (target === "gallery") {
     const publishedDate = formatPublishedDate(item.publishedDate);
     const meta = [source, publishedDate].filter(Boolean).join(" · ");
 
-    const href =
-      item.type === "internal"
-        ? `press-release-detail.html?id=${encodeURIComponent(item.id || "")}`
-        : item.url || "#";
+    const href = item.type === "internal" ? "#" : item.url || "#";
 
     const externalAttrs =
-      item.type === "internal"
-        ? ""
-        : ' target="_blank" rel="noopener noreferrer"';
+      item.type === "internal" ? "" : ' target="_blank" rel="noopener noreferrer"';
 
     return `
       <a class="media-list__item media-news-card" href="${href}"${externalAttrs}>
