@@ -73,15 +73,14 @@
       "duration": "2 days",
       "thumbnail": "assets/images/courses/thumbnail/clickwisely.png",
       "poster": "",
-      "description": "Learn essential cybersecurity skills to stay safe online and protect yourself and your organisation from cyber threats.",
+      "description": "The Click Wisely: Everyday Internet Safety course equips participants with essential cybersecurity knowledge to navigate the internet safely and confidently. Participants will gain a clear understanding of key cybersecurity concepts, learn about common cyber threats, and discover practical measures to safeguard themselves and their organisations against potential attacks.",
       "learningOutcomes": [
-        "Identify common online threats and scams",
-        "Apply basic account and device security best-practices",
-        "Secure passwords and use multi-factor authentication",
-        "Recognize phishing and social engineering",
-        "Safely manage personal and organisational data"
+        "Identify key cybersecurity concepts, common cyber threats, and practical measures to protect themselves and their organisations from potential attacks",
+        "Recognise fundamental cybersecurity principles",
+        "Identify various types of cyber threats, such as phishing, malware, and ransomware",
+        "Implement best practices for internet safety, including strong password management, safe browsing habits, and recognising suspicious activity"
       ],
-      "targetAudience": "General public, small business employees, students",
+      "targetAudience": "IT and Non-IT who are interested",
       "sessions": []
     },
     {
@@ -112,18 +111,18 @@
       "featured": true,
       "level": "Intermediate",
       "price": "",
-      "duration": "3 days",
+      "duration": "2 days",
       "thumbnail": "assets/images/courses/thumbnail/cybersec-essentials.png",
       "poster": "assets/images/course-cybersec-poster.jpg",
-      "description": "Secure your future with our Cybersecurity Course — learn to protect systems, detect threats, and defend against cyber attacks.",
+      "description": "The Cybersecurity workshop is designed to equip learners with essential skills that are increasingly in demand within the labor market. As cyber threats continue to evolve, organizations across various sectors are prioritizing cybersecurity measures to protect their sensitive data and maintain operational integrity. This workshop provides participants with a comprehensive understanding of core cybersecurity principles, including risk management, threat analysis, and incident response strategies. By engaging in hands-on activities and real-world scenarios, learners will gain practical experience that enhances their ability to identify vulnerabilities and implement effective security protocols.",
       "learningOutcomes": [
-        "Understand networking fundamentals and threat models",
-        "Perform basic vulnerability assessments",
-        "Implement defensive controls and incident response",
-        "Harden systems and practice secure configuration",
-        "Follow security best-practices for organisations"
+        "Understand the key concepts and terminology related to cybersecurity, including threats, vulnerabilities, and risk management",
+        "Identify common types of cyber threats and attacks, such as phishing, malware, and ransomware, along with their potential impacts on organizations",
+        "Develop skills to implement basic security measures for protecting personal and organizational data against cyber threats",
+        "Recognize the importance of compliance with legal regulations and standards in cybersecurity practices within various industries",
+        "Cultivate an awareness of best practices for maintaining a secure online presence through safe browsing habits and effective password management"
       ],
-      "targetAudience": "IT staff, aspiring security analysts, system administrators",
+      "targetAudience": "IT Professionals, Small Business Owners, Students in Computer Science or IT Programs, Healthcare Workers (especially IT staff), Government Employees (Cybersecurity Roles)",
       "sessions": []
     },
     {
@@ -154,10 +153,10 @@
       "featured": true,
       "level": "Beginner",
       "price": "",
-      "duration": "3 days",
+      "duration": "2 days",
       "thumbnail": "assets/images/courses/thumbnail/Bitcoin101.png",
       "poster": "assets/images/courses/poster/Bitcoin.png",
-      "description": "An introduction to Bitcoin and blockchain technology — learn how decentralized systems work, and practical use-cases for business and finance.",
+      "description": "Learn the basics of Bitcoin and blockchain, including how they work, why they matter, and where they are used in the real world.",
       "learningOutcomes": [
         "Explain how blockchain and Bitcoin work at a technical level",
         "Differentiate public, private, and permissioned ledgers",
@@ -165,7 +164,7 @@
         "Explore real-world blockchain applications and limitations",
         "Assess security and regulatory considerations"
       ],
-      "targetAudience": "Tech enthusiasts, finance professionals, entrepreneurs",
+      "targetAudience": "Financial Investors, Digital Pioneers, Corporate Leaders, Supply Chain Managers, Financial Analysts",
       "trainer": "Dylan Ang Wee Chin",
       "sessions": []
     },
@@ -200,13 +199,13 @@
       "duration": "3 days",
       "thumbnail": "assets/images/courses/thumbnail/principles-ecommerce.png",
       "poster": "assets/images/courses/poster/alks.png",
-      "description": "Master the principles of e-commerce and how to build a successful online business.",
+      "description": "The Principles of E-Commerce workshop is designed to equip learners with essential skills that are increasingly demanded in today's digital economy. As businesses continue to shift towards online platforms, understanding the foundational principles of e-commerce becomes crucial for anyone looking to thrive in the labor market. This workshop covers key topics such as online marketing strategies, payment processing systems, and customer relationship management within an e-commerce context. By engaging with these subjects, participants will gain a comprehensive understanding of how e-commerce operates and the various components that contribute to successful online business practices.",
       "learningOutcomes": [
-        "Understand the basics of e-commerce",
-        "Differentiate between B2B and B2C e-commerce",
-        "Understand the e-commerce value chain",
-        "Apply e-commerce marketing strategies",
-        "Evaluate e-commerce security and compliance"
+        "Understand the fundamental concepts and terminology of e-commerce, including types of e-commerce models such as B2B, B2C, C2C, and C2B",
+        "Analyze the key components of an effective e-commerce strategy, including website design, user experience (UX), digital marketing techniques, and payment processing systems",
+        "Evaluate various legal and ethical considerations in ecommerce operations, such as data privacy laws (e.g., GDPR) and consumer protection regulations",
+        "Develop skills to assess market trends and consumer behavior in the online marketplace using analytical tools and metrics for informed decision-making",
+        "Create a basic business plan for an e-commerce venture that incorporates elements like target audience identification, product sourcing strategies, pricing models, and promotional tactics"
       ],
       "targetAudience": "Business owners, managers, operations staff",
       "sessions": []
@@ -234,12 +233,16 @@
       "featured": true,
       "level": "Intermediate",
       "price": "",
-      "duration": "",
+      "duration": "3 days",
       "thumbnail": "assets/images/courses/thumbnail/Digitalisation.png",
       "poster": "",
-      "description": "",
-      "learningOutcomes": [],
-      "targetAudience": "",
+      "description": "At the end of this 3-day program, participants will understand the fundamentals of digitalisation, learn how digitisation can address organisational challenges, and discover ways to enhance their competitive advantage.",
+      "learningOutcomes": [
+        "Define and explain the fundamental concepts and components of digitalisation",
+        "Identify organisational challenges and areas for improvement using different frameworks",
+        "Develop a tailored digitalisation implementation plan that aligns with their organisation's goals"
+      ],
+      "targetAudience": "SME Business Leaders, Digital Initiative Managers, Operational Leaders",
       "trainer": "",
       "sessions": []
     },
@@ -269,9 +272,15 @@
       "duration": "",
       "thumbnail": "assets/images/courses/thumbnail/IntroGenAI.png",
       "poster": "",
-      "description": "",
-      "learningOutcomes": [],
-      "targetAudience": "",
+      "description": "The Introduction to Generative AI and Large Language Models workshop is designed to equip learners with essential skills that are increasingly in demand within the labor market. As industries continue to embrace digital transformation, understanding generative AI technologies becomes crucial for professionals across various sectors. This workshop provides a foundational knowledge of how large language models operate, their applications, and implications in realworld scenarios. By engaging with these concepts, participants will not only enhance their technical proficiency but also develop critical thinking skills necessary for navigating complex challenges posed by emerging technologies.",
+      "learningOutcomes": [
+        "Understand the fundamental concepts of Generative AI and Large Language Models (LLMs), including their architecture and functioning",
+        "Identify various applications of Generative AI and LLMs across different industries, highlighting real-world use cases",
+        "Analyze ethical considerations and challenges associated with the deployment of Generative AI technologies in society",
+        "Develop basic skills to interact with popular LLM APIs, enabling participants to create simple text generation projects",
+        "Evaluate the performance of different generative models through hands-on exercises, fostering critical thinking about model selection based on specific tasks"
+      ],
+      "targetAudience": "Content Creators, Customer Support Representatives, Data Analysts, Educators/Trainers, Marketing Professionals",
       "trainer": "",
       "sessions": []
     },
@@ -282,12 +291,18 @@
       "featured": false,
       "level": "Intermediate",
       "price": "",
-      "duration": "",
+      "duration": "2 days",
       "thumbnail": "assets/images/courses/thumbnail/bitcoin.png",
       "poster": "",
-      "description": "",
-      "learningOutcomes": [],
-      "targetAudience": "",
+      "description": "The Introduction to Digital Economics workshop is designed to equip learners with essential skills that are increasingly demanded in today’s labor market. As the economy becomes more digitized, understanding digital economics—encompassing concepts such as e-commerce, online consumer behavior, and digital marketing strategies—becomes crucial for job seekers. This workshop will provide participants with a foundational knowledge of how digital platforms operate and influence economic activities, enabling them to navigate the complexities of modern business environments effectively. By engaging with real-world case studies and practical examples, learners will gain insights into current trends and challenges faced by businesses in the digital landscape.",
+      "learningOutcomes": [
+        "Understand the fundamental concepts of digital economics and its impact on traditional economic models",
+        "Analyze the role of data as a key asset in digital economies and how it influences business strategies",
+        "Evaluate various digital platforms and their economic implications for consumers and businesses alike",
+        "Identify emerging trends in digital currencies, blockchain technology, and their potential effects on global markets",
+        "Develop critical thinking skills to assess the ethical considerations surrounding privacy, security, and regulation in the context of digital economics"
+      ],
+      "targetAudience": "Small Business Owners, Freelancers and Gig Workers, Students and Recent Graduates, Marketing Professionals, Non-Profit Organizations Staff",
       "trainer": "",
       "sessions": []
     },
@@ -298,12 +313,18 @@
       "featured": false,
       "level": "Intermediate",
       "price": "",
-      "duration": "",
+      "duration": "2 days",
       "thumbnail": "assets/images/courses/thumbnail/digital-estate-proptech.png",
-      "poster": "",
-      "description": "",
-      "learningOutcomes": [],
-      "targetAudience": "",
+      "poster": "", 
+      "description": "The Digital Real Estate and Proptech workshop is designed to equip learners with essential skills that are increasingly demanded in the modern labor market. As technology continues to reshape various industries, real estate is no exception. This workshop will provide participants with a comprehensive understanding of how digital tools and platforms can enhance property management, investment analysis, and customer engagement. By focusing on practical applications of technology within the real estate sector, learners will gain hands-on experience using software solutions for virtual tours, data analytics for market trends, and blockchain for secure transactions. Such competencies not only make them more attractive candidates but also prepare them to thrive in an evolving job landscape where tech-savvy professionals are highly sought after.",
+      "learningOutcomes": [
+        "Understand the fundamental concepts of digital real estate and how technology is transforming the property market",
+        "Identify key Proptech innovations and their applications in enhancing property management, sales, and investment strategies",
+        "Analyze case studies of successful digital real estate platforms to extract best practices for implementation",
+        "Evaluate the impact of data analytics and artificial intelligence on decision-making processes within the real estate sector",
+        "Develop a strategic plan for integrating Proptech solutions into existing real estate operations to improve efficiency and customer engagement"
+      ],
+      "targetAudience": "Real Estate Agents, Property Managers, Investors in Real Estate, Developers/Builders, Tech Entrepreneurs focusing on Real Estate Solutions",
       "trainer": "",
       "sessions": []
     },
@@ -317,9 +338,15 @@
       "duration": "",
       "thumbnail": "assets/images/courses/thumbnail/blockchain-gov-comp.png",
       "poster": "",
-      "description": "",
-      "learningOutcomes": [],
-      "targetAudience": "",
+      "description": "The Blockchain Governance and Compliance workshop is designed to equip learners with essential skills that are increasingly sought after in the labor market. As organizations across various sectors begin to adopt blockchain technology, there is a growing need for professionals who understand not only the technical aspects of blockchain but also its governance frameworks and compliance requirements. This workshop will provide participants with a comprehensive understanding of how blockchain operates within regulatory environments, enabling them to navigate complex legal landscapes effectively. By focusing on real-world applications and case studies, learners will gain practical insights into how businesses can implement compliant blockchain solutions while adhering to industry standards.",
+      "learningOutcomes": [
+        "Understand the fundamental principles of blockchain technology and its implications for governance and compliance",
+        "Identify key regulatory frameworks affecting blockchain applications across different jurisdictions",
+        "Analyze the role of smart contracts in enhancing transparency and accountability within blockchain systems",
+        "Evaluate best practices for implementing effective governance structures in decentralized organizations using blockchain technology",
+        "Develop strategies to ensure compliance with legal requirements while leveraging the benefits of blockchain innovations"
+      ],
+      "targetAudience": "Compliance Officers, Legal Advisors, IT Security Professionals, Financial Analysts, Project Managers in Tech Firms",
       "trainer": "",
       "sessions": []
     },
@@ -333,9 +360,15 @@
       "duration": "",
       "thumbnail": "assets/images/courses/thumbnail/blockchain-finance.png",
       "poster": "",
-      "description": "",
-      "learningOutcomes": [],
-      "targetAudience": "",
+      "description": "The Blockchain Applications in Finance workshop is designed to equip learners with a comprehensive understanding of how blockchain technology can be leveraged within the financial sector. As the finance industry increasingly adopts digital solutions, knowledge of blockchain becomes essential for professionals seeking to remain competitive. This workshop will cover fundamental concepts such as decentralized ledgers, smart contracts, and cryptocurrency transactions, providing participants with a solid foundation that aligns with current market demands. By engaging in hands-on activities and real-world case studies, learners will not only grasp theoretical aspects but also develop practical skills that are directly applicable in various financial roles.",
+      "learningOutcomes": [
+        "Understand the fundamental principles of blockchain technology and its relevance to the finance sector",
+        "Identify various use cases of blockchain applications in financial services, including payments, lending, and asset management",
+        "Analyze the benefits and challenges associated with implementing blockchain solutions in traditional financial systems",
+        "Evaluate real-world case studies demonstrating successful integration of blockchain technology within financial institutions",
+        "Develop a strategic framework for assessing potential blockchain projects tailored to specific financial business needs"
+      ],
+      "targetAudience": "Financial Analysts, Accountants, Compliance Officers, Investment Bankers, Fintech Entrepreneurs",
       "trainer": "",
       "sessions": []
     }

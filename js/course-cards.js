@@ -32,6 +32,19 @@
       .replaceAll("'", "&#039;");
   }
 
+  function truncateDescription(value, maxWords = 26) {
+    const words = String(value || "")
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean);
+
+    if (words.length <= maxWords) {
+      return words.join(" ");
+    }
+
+    return `${words.slice(0, maxWords).join(" ")}...`;
+  }
+
   function isFeaturedCourse(course) {
     return course.featured === true || course.featured === "true";
   }
@@ -93,7 +106,7 @@
     const thumbnail = course.thumbnail || "assets/images/body-background.png";
     const name = escapeHTML(course.name || "Untitled Course");
     const level = escapeHTML(course.level || "General");
-    const description = escapeHTML(course.description || "");
+    const description = escapeHTML(truncateDescription(course.description || ""));
 
     card.innerHTML = `
       <div class="course-card__image-wrapper">
@@ -302,6 +315,11 @@
 
           updateActiveTab(tabs, tab);
           updateResults();
+
+          grid.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
 
           if (window.innerWidth <= 768) {
             closeMobileCourseFilter();
