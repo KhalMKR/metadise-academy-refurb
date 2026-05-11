@@ -338,54 +338,6 @@
       "targetAudience": "",
       "trainer": "",
       "sessions": []
-    },
-    {
-      "id": "course-022",
-      "name": "AI & Machine Learning Fundamentals",
-      "category": "AI",
-      "featured": true,
-      "level": "Beginner",
-      "price": "",
-      "duration": "",
-      "thumbnail": "assets/images/courses/thumbnail/FundamentalsLLM.png",
-      "poster": "",
-      "description": "",
-      "learningOutcomes": [],
-      "targetAudience": "",
-      "trainer": "",
-      "sessions": []
-    },
-    {
-      "id": "course-023",
-      "name": "Blockchain & Fintech Basics",
-      "category": "Blockchain",
-      "featured": true,
-      "level": "Beginner",
-      "price": "",
-      "duration": "",
-      "thumbnail": "assets/images/courses/thumbnail/blockchain-fintech.png",
-      "poster": "",
-      "description": "",
-      "learningOutcomes": [],
-      "targetAudience": "",
-      "trainer": "",
-      "sessions": []
-    },
-    {
-      "id": "course-024",
-      "name": "Mastering Machine Learning: Algorithms & Models for Next-Gen AI Solutions",
-      "category": "AI",
-      "featured": true,
-      "level": "Intermediate",
-      "price": "",
-      "duration": "",
-      "thumbnail": "assets/images/courses/thumbnail/MasteryML.png",
-      "poster": "",
-      "description": "",
-      "learningOutcomes": [],
-      "targetAudience": "",
-      "trainer": "",
-      "sessions": []
     }
   ]
 }
