@@ -2,46 +2,65 @@
   <h3 data-aos="fade-up" data-aos-delay="100">Gallery</h3>
 </header>
 
-<div class="media-gallery" aria-label="Media gallery images">
-  <a class="media-gallery__link glightbox" href="assets/images/gallery/gallery1.jpg" data-gallery="media-gallery" data-title="Media Gallery Image 1">
-    <img class="media-gallery__item" src="assets/images/gallery/gallery1.jpg" alt="Gallery image 1" loading="lazy" />
-  </a>
+<!-- CATEGORY SELECTION -->
+<div class="media-gallery-categories" id="galleryCategories">
 
-  <a class="media-gallery__link glightbox" href="assets/images/gallery/gallery2.jpg" data-gallery="media-gallery" data-title="Media Gallery Image 2">
-    <img class="media-gallery__item" src="assets/images/gallery/gallery2.jpg" alt="Gallery image 2" loading="lazy" />
-  </a>
+  <button
+    class="media-gallery-category"
+    type="button"
+    data-open-gallery-category="Forum"
+  >
+    <img
+      src="assets/images/gallery/Forum/forum4.jpg"
+      loading="lazy"
+    />
+    <span>Forum</span>
+  </button>
 
-  <a class="media-gallery__link glightbox" href="assets/images/gallery/gallery3.jpg" data-gallery="media-gallery" data-title="Media Gallery Image 3">
-    <img class="media-gallery__item" src="assets/images/gallery/gallery3.jpg" alt="Gallery image 3" loading="lazy" />
-  </a>
+  <button
+    class="media-gallery-category"
+    type="button"
+    data-open-gallery-category="Events"
+  >
+    <img
+      src="assets/images/gallery/Events/Event1.jpg"
+      loading="lazy"
+    />
+    <span>Events</span>
+  </button>
 
-  <a class="media-gallery__link glightbox" href="assets/images/gallery/IMG_0682-scaled.jpg" data-gallery="media-gallery" data-title="Media Gallery Image 4">
-    <img class="media-gallery__item" src="assets/images/gallery/IMG_0682-scaled.jpg" alt="Gallery image 4" loading="lazy" />
-  </a>
+  <button
+    class="media-gallery-category"
+    type="button"
+    data-open-gallery-category="Public"
+  >
+    <img
+      src=""
+      loading="lazy"
+    />
+    <span>Public Training</span>
+  </button>
 
-  <a class="media-gallery__link glightbox" href="assets/images/gallery/media-hero-2.jpg" data-gallery="media-gallery" data-title="Media Gallery Image 5">
-    <img class="media-gallery__item" src="assets/images/gallery/media-hero-2.jpg" alt="Gallery image 5" loading="lazy" />
-  </a>
+</div>
 
-  <a class="media-gallery__link glightbox" href="assets/images/gallery/gallery-20.png" data-gallery="media-gallery" data-title="Media Gallery Image 5">
-    <img class="media-gallery__item" src="assets/images/gallery/gallery-20.png" alt="Gallery image 5" loading="lazy" />
-  </a>
 
-  <a class="media-gallery__link glightbox" href="assets/images/gallery/IMG_0662-scaled.jpg" data-gallery="media-gallery" data-title="Media Gallery Image 5">
-    <img class="media-gallery__item" src="assets/images/gallery/IMG_0662-scaled.jpg" alt="Gallery image 5" loading="lazy" />
-  </a>
 
-  <a class="media-gallery__link glightbox" href="assets/images/gallery/IMG_0674-scaled.jpg" data-gallery="media-gallery" data-title="Media Gallery Image 5">
-    <img class="media-gallery__item" src="assets/images/gallery/IMG_0674-scaled.jpg" alt="Gallery image 5" loading="lazy" />
-  </a>
+</div>
 
-  <a class="media-gallery__link glightbox" href="assets/images/gallery/IMG_0679-scaled.jpg" data-gallery="media-gallery" data-title="Media Gallery Image 5">
-    <img class="media-gallery__item" src="assets/images/gallery/IMG_0679-scaled.jpg" alt="Gallery image 5" loading="lazy" />
-  </a>
-  <!-- ========================= GALLERY MEDIA TEMPLATE ========================== -->
-  <!-- 
-  <a class="media-gallery__link glightbox" href="assets/images/gallery/" data-gallery="media-gallery" data-title="Media Gallery Image 5">
-    <img class="media-gallery__item" src="assets/images/gallery/" alt="Gallery image 5" loading="lazy" />
-  </a>
--->
+<!-- SELECTED CATEGORY GALLERY -->
+<div class="media-gallery-section is-hidden" id="gallerySelectedSection">
+
+  <div class="media-gallery-section__header">
+    <button class="media-gallery-back" type="button" id="galleryBackButton">
+      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+      Back
+    </button>
+
+    <h4 id="gallerySelectedTitle">Gallery</h4>
+  </div>
+
+  <div class="media-gallery" id="galleryImageGrid" aria-label="Media gallery images">
+    <!-- Images will be rendered here by JavaScript -->
+  </div>
+
 </div>
