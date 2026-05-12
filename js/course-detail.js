@@ -51,6 +51,36 @@
     return `${dateFormatter.format(startDate)} - ${dateFormatter.format(endDate)}`;
   }
 
+  function normalizeAudienceList(audience) {
+    if (Array.isArray(audience)) {
+      return audience.map((item) => String(item).trim()).filter(Boolean);
+    }
+
+    if (typeof audience === 'string' && audience.trim()) {
+      return audience.split(',').map((item) => item.trim()).filter(Boolean);
+    }
+
+    return [];
+  }
+
+  function formatAudienceSummary(audience) {
+    const audienceItems = normalizeAudienceList(audience);
+    return audienceItems.length ? audienceItems.join(', ') : 'Open to all';
+  }
+
+  function buildAudience(course) {
+    if (!elements.audience) return;
+
+    const audienceItems = normalizeAudienceList(course.targetAudience);
+
+    if (!audienceItems.length) {
+      elements.audience.innerHTML = '<li>Information coming soon.</li>';
+      return;
+    }
+
+    elements.audience.innerHTML = audienceItems.map((item) => `<li>${item}</li>`).join('');
+  }
+
   function buildSnapshot(course) {
     const trainerLabel = getTrainerLabel(course);
     const priceLabel = course.price ? currency.format(course.price) : 'Contact for Price';
@@ -60,7 +90,7 @@
       ['Duration', fallback(course.duration)],
       ['Price', priceLabel],
       ['Trainer', trainerLabel],
-      ['Audience', fallback(course.targetAudience, 'Open to all')],
+      ['Audience', formatAudienceSummary(course.targetAudience)],
     ];
 
     if (elements.snapshot) {
@@ -134,12 +164,39 @@
       return;
     }
 
-    elements.sessions.innerHTML = sessions.map((session) => `
+    const maxVisibleSessions = 3;
+    const shouldCollapse = sessions.length > maxVisibleSessions;
+    const isExpanded = elements.sessions.dataset.expanded === 'true';
+    const visibleSessions = shouldCollapse && !isExpanded ? sessions.slice(0, maxVisibleSessions) : sessions;
+
+    elements.sessions.innerHTML = visibleSessions.map((session) => `
       <article class="course-detail-session">
         <p class="course-detail-session__month">${session.month}</p>
         <p>${formatSession(session)}</p>
       </article>
     `).join('');
+
+    if (!shouldCollapse) {
+      delete elements.sessions.dataset.expanded;
+      return;
+    }
+
+    const toggleLabel = isExpanded
+      ? 'Show fewer sessions'
+      : `Show all ${sessions.length} sessions`;
+
+    const toggleButton = document.createElement('button');
+    toggleButton.type = 'button';
+    toggleButton.className = 'course-detail-session-toggle';
+    toggleButton.textContent = toggleLabel;
+    toggleButton.setAttribute('aria-expanded', String(isExpanded));
+
+    toggleButton.addEventListener('click', () => {
+      elements.sessions.dataset.expanded = String(!isExpanded);
+      buildSessions(course);
+    });
+
+    elements.sessions.appendChild(toggleButton);
   }
 
   function buildRelatedCourses(course, courses) {
@@ -171,7 +228,7 @@
     if (elements.tags) elements.tags.innerHTML = '';
     if (elements.meta) elements.meta.innerHTML = '';
     if (elements.description) elements.description.textContent = '';
-    if (elements.audience) elements.audience.textContent = '';
+    if (elements.audience) elements.audience.innerHTML = '';
     if (elements.outcomes) elements.outcomes.innerHTML = '';
     if (elements.sessions) elements.sessions.innerHTML = '';
     if (elements.snapshot) elements.snapshot.innerHTML = '';
@@ -214,7 +271,7 @@
       // Applying text fallbacks here
       if (elements.summary) elements.summary.textContent = fallback(course.description, 'No description provided.');
       if (elements.description) elements.description.textContent = fallback(course.description, 'No additional details available.');
-      if (elements.audience) elements.audience.textContent = fallback(course.targetAudience, 'Information coming soon.');
+      buildAudience(course);
       
       if (elements.poster) {
         elements.poster.src = course.poster || course.thumbnail || 'assets/images/body-background.png';
