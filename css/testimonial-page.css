@@ -52,18 +52,25 @@
 }
 
 .testimonial__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    padding: 2rem 0 0 0;
-    justify-items: center;
+  display: grid;
+  /* allow the grid to adapt to available space; items will wrap
+     and the last row will be centered when it has fewer items */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  padding: 2rem 0 0 0;
+  justify-items: center;
+  justify-content: center; /* center the whole grid and short last rows */
+  align-items: start;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .testimonial__image {
-    width: 400px;
-    height: auto;
-    overflow: hidden;
-    border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
