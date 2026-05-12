@@ -255,19 +255,72 @@
     },
     {
       "id": "course-014",
-      "name": "Beginner Content Creator Bootcamp: TikTok, Mobile Videography, Editing & Personal IP",
-      "category": "",
+      "name": "Beginner Content Creator Forum",
+      "category": "Others",
       "featured": true,
       "level": "Beginner",
-      "price": "",
-      "duration": "",
+      "price": 2999,
+      "duration": "2 days",
       "thumbnail": "assets/images/courses/thumbnail/content-creation.png",
       "poster": "",
-      "description": "",
-      "learningOutcomes": [],
-      "targetAudience": [],
+      "description": "This programme equips participants with essential TikTok knowledge, including platform fundamentals and content trends. Participants will learn to create high-quality short-form videos using smartphone filming and basic mobile videography techniques, edit engaging content with beginner-friendly applications, and develop a clear Personal IP by defining their identity and niche. By the end of the programme, participants will be able to produce confident, consistent, and purposeful TikTok content aligned with personal or brand goals.",
+      "learningOutcomes": [
+        "Understand TikTok fundamentals, platform features, and current content trends",
+        "Record high-quality short-form videos using smartphone cameras and basic filming techniques",
+        "Edit engaging short-form videos using beginner-friendly editing application, CapCut",
+        "Develop, build, and position a clear Personal IP (identity, niche, and content direction)",
+        "Create confident, consistent, and relevant TikTok content aligned with personal or brand objectives"
+      ],
+      "targetAudience": [
+        "Beginners",
+        "SME Owners",
+        "Professional Marketing",
+        "Brand Builders",
+        "Skill seekers"
+      ],
       "trainer": "",
-      "sessions": []
+      "sessions": [
+        {
+          "month": "May",
+          "startDate": "2026-05-20",
+          "endDate": "2026-05-21"
+        },
+        {
+          "month": "June",
+          "startDate": "2026-06-10",
+          "endDate": "2026-06-11"
+        },
+        {
+          "month": "July",
+          "startDate": "2026-07-15",
+          "endDate": "2026-07-16"
+        },
+        {
+          "month": "August",
+          "startDate": "2026-08-19",
+          "endDate": "2026-08-20"
+        },
+        {
+          "month": "September",
+          "startDate": "2026-09-09",
+          "endDate": "2026-09-10"
+        },
+        {
+          "month": "October",
+          "startDate": "2026-10-21",
+          "endDate": "2026-10-22"
+        },
+        {
+          "month": "November",
+          "startDate": "2026-11-11",
+          "endDate": "2026-11-12"
+        },
+        {
+          "month": "December",
+          "startDate": "2026-12-02",
+          "endDate": "2026-12-03"
+        }
+      ]
     },
     {
       "id": "course-015",
