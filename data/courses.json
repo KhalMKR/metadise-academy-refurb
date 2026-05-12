@@ -149,31 +149,6 @@
       "sessions": []
     },
     {
-      "id": "course-009",
-      "name": "Digitalisation 101",
-      "category": "",
-      "featured": true,
-      "level": "Beginner",
-      "price": "",
-      "duration": "2 days",
-      "thumbnail": "assets/images/courses/thumbnail/digitalisation-101.png",
-      "poster": "",
-      "description": "Learn how digitisation can address organisational challenges, and discover ways to enhance competitive advantage.",
-      "learningOutcomes": [
-        "Understand digital transformation strategies",
-        "Identify opportunities for process digitisation",
-        "Adopt digital tools for collaboration and efficiency",
-        "Measure impact and ROI of digital initiatives",
-        "Plan small-scale digital projects"
-      ],
-      "targetAudience": [
-        "Business owners",
-        "managers",
-        "operations staff"
-      ],
-      "sessions": []
-    },
-    {
       "id": "course-010",
       "name": "Bitcoin & Blockchain 101",
       "category": "Blockchain",
