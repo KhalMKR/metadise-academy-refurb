@@ -248,6 +248,16 @@ dropdowns.forEach(dropdown => {
   window.addEventListener('scroll', highlightNav, { passive: true });
   highlightNav(); // run once on load
 
+  window.addEventListener('pageshow', (event) => {
+    if (!event.persisted) return;
+
+    highlightNav();
+
+    if (window.AOS && typeof AOS.refreshHard === 'function') {
+      AOS.refreshHard();
+    }
+  });
+
   /* ----------------------------------------------------------
      Hero slideshow with fade transition
   ---------------------------------------------------------- */
@@ -305,6 +315,10 @@ dropdowns.forEach(dropdown => {
 
     setActiveSlide(0);
     restartTimer();
+
+    window.addEventListener('pagehide', () => {
+      clearInterval(slideTimer);
+    });
 
     // Restart the slider when the page becomes visible again (tab switch,
     // history navigation / back-forward cache). Also clear the timer when
