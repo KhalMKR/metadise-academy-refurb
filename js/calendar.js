@@ -39,24 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
       year: 'numeric'
     });
 
-  const getEventType = (eventItem) => {
-    if (!eventItem || !eventItem.type) return 'event';
-    return eventItem.type;
-  };
-
-  const getTypePriority = (eventType) => {
-    if (eventType === 'booking') return 3;
-    if (eventType === 'course') return 2;
-    return 1;
-  };
-
-  const getEventTypeClass = (eventType) => {
-    if (eventType === 'booking') return 'calendar-day--booking';
-    if (eventType === 'course') return 'calendar-day--course';
-    if (eventType === 'holiday') return 'calendar-day--holiday';
-    return 'calendar-day--event';
-  };
-
   const createRangeDates = (startDate, endDate) => {
     const dates = [];
     const currentDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
@@ -68,32 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     return dates;
-  };
-
-  const normalizeStandaloneEvents = (payloadEvents) => {
-    if (!Array.isArray(payloadEvents)) return [];
-
-    return payloadEvents
-      .map((eventItem) => {
-        const startDate = parseDateParts(eventItem.date || eventItem.startDate);
-        const endDate = parseDateParts(eventItem.endDate || eventItem.date);
-
-        if (!startDate) return null;
-
-        return {
-          id: eventItem.id,
-          title: eventItem.title || eventItem.companyName || 'Untitled Event',
-          type: eventItem.type || 'event',
-          category: eventItem.category || '',
-          location: eventItem.location || '',
-          time: eventItem.time || 'TBA',
-          companyName: eventItem.companyName || '',
-          startDate,
-          endDate: endDate || startDate,
-          notes: eventItem.notes || '',
-        };
-      })
-      .filter(Boolean);
   };
 
   const normalizeCourseSessions = (courses) => {
@@ -130,24 +86,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const buildCalendarEvents = async () => {
     try {
-      const [eventsResponse, coursesResponse] = await Promise.all([
-        fetch('data/events.json'),
-        fetch('data/courses.json'),
-      ]);
+      const coursesResponse = await fetch('data/courses.json');
 
-      if (!eventsResponse.ok || !coursesResponse.ok) {
-        throw new Error('Unable to load calendar source data');
+      if (!coursesResponse.ok) {
+        throw new Error('Unable to load calendar course data');
       }
 
-      const eventsPayload = await eventsResponse.json();
       const coursesPayload = await coursesResponse.json();
 
-      const standaloneEvents = normalizeStandaloneEvents(eventsPayload.events);
       const courseSessions = normalizeCourseSessions(coursesPayload.courses);
 
-      calendarEvents = [...standaloneEvents, ...courseSessions].sort(
-        (a, b) => a.startDate - b.startDate || getTypePriority(getEventType(b)) - getTypePriority(getEventType(a))
-      );
+      calendarEvents = courseSessions.sort((a, b) => a.startDate - b.startDate);
     } catch (error) {
       console.error(error);
       calendarEvents = [];
@@ -197,12 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (!visibleEvents.length) {
-      calendarGrid.innerHTML = '<div class="calendar-agenda__empty">No events found for this month.</div>';
+      calendarGrid.innerHTML = '<div class="calendar-agenda__empty">No course sessions found for this month.</div>';
     } else {
       const agendaRows = visibleEvents
-        .sort((a, b) => a.startDate - b.startDate || getTypePriority(getEventType(b)) - getTypePriority(getEventType(a)))
+        .sort((a, b) => a.startDate - b.startDate)
         .map((eventItem) => {
-          const eventType = getEventType(eventItem);
           const location = eventItem.location || 'Metadise Academy';
           const start = eventItem.startDate;
           const end = eventItem.endDate || eventItem.startDate;
@@ -213,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
             : String(start.getDate()).padStart(2, '0');
 
           return `
-            <article class="calendar-agenda__item calendar-agenda__item--${eventType}">
+            <article class="calendar-agenda__item calendar-agenda__item--course">
               <div class="calendar-agenda__date">
                 <span class="calendar-agenda__month">${monthText}</span>
                 <span class="calendar-agenda__day">${dayValue}</span>
