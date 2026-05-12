@@ -164,12 +164,39 @@
       return;
     }
 
-    elements.sessions.innerHTML = sessions.map((session) => `
+    const maxVisibleSessions = 3;
+    const shouldCollapse = sessions.length > maxVisibleSessions;
+    const isExpanded = elements.sessions.dataset.expanded === 'true';
+    const visibleSessions = shouldCollapse && !isExpanded ? sessions.slice(0, maxVisibleSessions) : sessions;
+
+    elements.sessions.innerHTML = visibleSessions.map((session) => `
       <article class="course-detail-session">
         <p class="course-detail-session__month">${session.month}</p>
         <p>${formatSession(session)}</p>
       </article>
     `).join('');
+
+    if (!shouldCollapse) {
+      delete elements.sessions.dataset.expanded;
+      return;
+    }
+
+    const toggleLabel = isExpanded
+      ? 'Show fewer sessions'
+      : `Show all ${sessions.length} sessions`;
+
+    const toggleButton = document.createElement('button');
+    toggleButton.type = 'button';
+    toggleButton.className = 'course-detail-session-toggle';
+    toggleButton.textContent = toggleLabel;
+    toggleButton.setAttribute('aria-expanded', String(isExpanded));
+
+    toggleButton.addEventListener('click', () => {
+      elements.sessions.dataset.expanded = String(!isExpanded);
+      buildSessions(course);
+    });
+
+    elements.sessions.appendChild(toggleButton);
   }
 
   function buildRelatedCourses(course, courses) {
