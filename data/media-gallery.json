@@ -1,0 +1,74 @@
+{   
+"gallery": [
+    {
+        "id": 1,
+        "category": "Forum",
+        "image": "assets/images/gallery/Forum/forum1.jpg"
+    },
+    {
+        "id": 2,
+        "category": "Forum",
+        "image": "assets/images/gallery/Forum/forum2.jpg"
+    },
+    {
+        "id": 3,
+        "category": "Forum",
+        "image": "assets/images/gallery/Forum/forum3.jpg"
+    },
+    {
+        "id": 4,
+        "category": "Forum",
+        "image": "assets/images/gallery/Forum/forum5.jpg"
+    }
+    {
+        "id": 5,
+        "category": "Events",
+        "image": "assets/images/gallery/Events/Event2.jpg"
+    },
+    {
+        "id": 3,
+        "category": "Events",
+        "image": "assets/images/gallery/Events/Event3.jpg"
+    },
+    {
+        "id": 3,
+        "category": "Events",
+        "image": "assets/images/gallery/Events/Event4.jpg"
+    },
+    {
+        "id": 3,
+        "category": "Events",
+        "image": "assets/images/gallery/Events/Event5.jpg"
+    },
+    {
+        "id": 3,
+        "category": "Events",
+        "image": "assets/images/gallery/Events/Event6.jpg"
+    },
+    {
+        "id": 3,
+        "category": "Events",
+        "image": "assets/images/gallery/Events/Event7.jpg"
+    },
+    {
+        "id": 3,
+        "category": "Events",
+        "image": "assets/images/gallery/Events/Event8.jpg"
+    },
+    {
+        "id": 3,
+        "category": "Events",
+        "image": "assets/images/gallery/Events/Event9.jpg"
+    },
+    {
+        "id": 3,
+        "category": "Events",
+        "image": "assets/images/gallery/Events/Event10.jpg"
+    },
+    {
+        "id": 3,
+        "category": "Events",
+        "image": "assets/images/gallery/Events/Event11.jpg"
+    }
+    ]
+}
