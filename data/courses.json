@@ -10,15 +10,24 @@
       "duration": "2 days",
       "thumbnail": "assets/images/courses/thumbnail/GenAI.png",
       "poster": "assets/images/courses/poster/GenAIBen.png",
-      "description": "Unlock growth with our Gen AI workshop — gain skills to build models, predict trends, and automate tasks.",
+      "description": "This two-day program is designed to enhance productivity through Generative AI, blending lectures with hands-on workshops and interactive Q&A sessions. Day 1 focuses on the fundamentals, covering the impact and practical applications of AI alongside practical exercises in prompt engineering. Day 2 advances into specialized tasks, including automated content classification, presentation creation, and image generation. Throughout the course, participants engage in advanced techniques and self-assessments, ultimately concluding with a review of learning objectives and a certificate presentation to prepare them for immediate implementation in their workflows.",
       "learningOutcomes": [
-        "Understand core ML concepts and workflows",
-        "Build and evaluate simple models (classification/regression)",
-        "Preprocess data and feature engineering",
-        "Use Python libraries (scikit-learn, pandas)",
-        "Deploy a basic model and interpret results"
+        "Understand multimodal Generative AI, its usage and be aware of potential misinformation",
+        "Demonstrate the ability to interact with AI by crafting clear, structured prompts and generating useful responses",
+        "Create written content, create recipes and plan travel itineraries using the Generative AI platform",
+        "Extract insights from data and create infographics using the Generative AI platform",
+        "Reducing Time to Write Lengthy/Time-Consuming Emails",
+        "Extracting Insights/ Contents from Lengthy Documents",
+        "Generating Voluminous Data for Testing",
+        "Presentations are faster with AI assistance",
+        "Automate content classification"
       ],
-      "targetAudience": "Beginners interested in data science, analysts, developers",
+      "targetAudience": [
+        "Beginners",
+        "Office Professionals",
+        "Managers",
+        "Lifelong Learners"
+      ],
       "trainer": "Ben Chan",
       "sessions": [
         {
@@ -80,7 +89,9 @@
         "Identify various types of cyber threats, such as phishing, malware, and ransomware",
         "Implement best practices for internet safety, including strong password management, safe browsing habits, and recognising suspicious activity"
       ],
-      "targetAudience": "IT and Non-IT who are interested",
+      "targetAudience": [
+        "IT and Non-IT who are interested"
+      ],
       "sessions": []
     },
     {
@@ -90,18 +101,24 @@
       "featured": true,
       "level": "Beginner",
       "price": "",
-      "duration": "3 days",
+      "duration": "2 days",
       "thumbnail": "assets/images/courses/thumbnail/ai-hr-management.png",
       "poster": "",
-      "description": "Transform your HR game with our AI in HR workshop — automate hiring, boost engagement, and make smarter decisions with data-driven tools.",
+      "description": "The AI in Human Resources Management workshop equips professionals with the essential technical and strategic skills needed to thrive in an AI-driven labor market. Participants will explore practical applications—such as recruitment automation, engagement analytics, and predictive planning—through real-world case studies and hands-on activities. By prioritizing data literacy, the program empowers HR practitioners to move beyond intuition, using empirical evidence to drive informed decision-making and organizational growth. Ultimately, this collaborative experience fosters a community of practice, leaving attendees with the strategic mindset and networking connections necessary to lead continuous improvement within their organizations.",
       "learningOutcomes": [
-        "Learn AI use-cases in recruitment and talent management",
-        "Apply automation to streamline HR workflows",
-        "Use people analytics to improve engagement",
-        "Understand ethical considerations and bias mitigation",
-        "Build simple ML prototypes for HR tasks"
+        "Understand the fundamental concepts of artificial intelligence and its applications in Human Resources Management",
+        "Identify key AI tools and technologies that can enhance recruitment, employee engagement, and performance management processes",
+        "Analyse case studies demonstrating the successful implementation of AI solutions in HR practices to improve decision-making efficiency",
+        "Evaluate ethical considerations and challenges associated with using AI in HR, including bias mitigation and data privacy issues",
+        "Develop a strategic plan for integrating AI into existing HR workflows to optimise talent acquisition and workforce management"
       ],
-      "targetAudience": "HR professionals, people managers, HR tech enthusiasts",
+      "targetAudience": [
+        "HR Managers",
+        "Recruiters",
+        "Employee Relations Specialists",
+        "Training & Development Coordinators",
+        "Data Analysts within HR"
+      ],
       "sessions": []
     },
     {
@@ -122,7 +139,13 @@
         "Recognize the importance of compliance with legal regulations and standards in cybersecurity practices within various industries",
         "Cultivate an awareness of best practices for maintaining a secure online presence through safe browsing habits and effective password management"
       ],
-      "targetAudience": "IT Professionals, Small Business Owners, Students in Computer Science or IT Programs, Healthcare Workers (especially IT staff), Government Employees (Cybersecurity Roles)",
+      "targetAudience": [
+        "IT Professionals",
+        "Small Business Owners",
+        "Students in Computer Science or IT Programs",
+        "Healthcare Workers (especially IT staff)",
+        "Government Employees (Cybersecurity Roles)"
+      ],
       "sessions": []
     },
     {
@@ -143,7 +166,11 @@
         "Measure impact and ROI of digital initiatives",
         "Plan small-scale digital projects"
       ],
-      "targetAudience": "Business owners, managers, operations staff",
+      "targetAudience": [
+        "Business owners",
+        "managers",
+        "operations staff"
+      ],
       "sessions": []
     },
     {
@@ -164,7 +191,13 @@
         "Explore real-world blockchain applications and limitations",
         "Assess security and regulatory considerations"
       ],
-      "targetAudience": "Financial Investors, Digital Pioneers, Corporate Leaders, Supply Chain Managers, Financial Analysts",
+      "targetAudience": [
+        "Financial Investors",
+        "Digital Pioneers",
+        "Corporate Leaders",
+        "Supply Chain Managers",
+        "Financial Analysts"
+      ],
       "trainer": "Dylan Ang Wee Chin",
       "sessions": []
     },
@@ -175,18 +208,24 @@
       "featured": false,
       "level": "Beginner",
       "price": "",
-      "duration": "3 days",
+      "duration": "2 days",
       "thumbnail": "assets/images/courses/thumbnail/big-data-analytics.png",
       "poster": "assets/images/courses/poster/alks.png",
-      "description": "Master the tools and techniques to analyse and visualise large datasets — uncover patterns, trends, and actionable insights from structured and unstructured data.",
+      "description": "The Foundations of Data Analytics workshop is designed to equip learners with essential skills that are increasingly in demand across various industries. In today’s data-driven world, organizations rely heavily on data analytics to inform decision-making processes and drive strategic initiatives. This workshop provides participants with a comprehensive understanding of fundamental concepts such as data collection, cleaning, analysis, and visualization. By engaging in hands-on activities and real-world case studies, learners will not only grasp theoretical knowledge but also develop practical skills that can be directly applied in the workplace.",
       "learningOutcomes": [
-        "Understand data architecture and storage solutions",
-        "Apply statistical methods to analyse large datasets",
-        "Visualise data with dashboards and reports",
-        "Implement machine learning algorithms for predictive analytics",
-        "Evaluate data quality and security measures"
+        "Understand the key concepts and terminology of data analytics, including types of data, data collection methods, and basic statistical principles",
+        "Develop skills in using common data analytics tools and software for data manipulation and visualization",
+        "Apply foundational techniques for analyzing datasets to derive meaningful insights and support decision making processes",
+        "Evaluate the ethical considerations surrounding data usage, including privacy concerns and responsible reporting practices",
+        "Demonstrate the ability to communicate analytical findings effectively through written reports and presentations tailored to various audiences"
       ],
-      "targetAudience": "Tech enthusiasts, finance professionals, entrepreneurs",
+      "targetAudience": [
+        "Data Analysts",
+        "Marketing Professionals",
+        "Business Managers",
+        "Human Resource Specialists",
+        "Students in Data Science or Related Fields"
+      ],
       "sessions": []
     },
     {
@@ -207,7 +246,11 @@
         "Develop skills to assess market trends and consumer behavior in the online marketplace using analytical tools and metrics for informed decision-making",
         "Create a basic business plan for an e-commerce venture that incorporates elements like target audience identification, product sourcing strategies, pricing models, and promotional tactics"
       ],
-      "targetAudience": "Business owners, managers, operations staff",
+      "targetAudience": [
+        "Business owners",
+        "managers",
+        "operations staff"
+      ],
       "sessions": []
     },
     {
@@ -222,7 +265,7 @@
       "poster": "",
       "description": "",
       "learningOutcomes": [],
-      "targetAudience": "",
+      "targetAudience": [],
       "trainer": "",
       "sessions": []
     },
@@ -242,7 +285,11 @@
         "Identify organisational challenges and areas for improvement using different frameworks",
         "Develop a tailored digitalisation implementation plan that aligns with their organisation's goals"
       ],
-      "targetAudience": "SME Business Leaders, Digital Initiative Managers, Operational Leaders",
+      "targetAudience": [
+        "SME Business Leaders",
+        "Digital Initiative Managers",
+        "Operational Leaders"
+      ],
       "trainer": "",
       "sessions": []
     },
@@ -256,9 +303,21 @@
       "duration": "",
       "thumbnail": "assets/images/courses/thumbnail/blockchain-smart-contract.png",
       "poster": "",
-      "description": "",
-      "learningOutcomes": [],
-      "targetAudience": "",
+      "description": "The Blockchain Applications and Smart Contracts workshop provides learners with the technical and strategic skills needed to excel in an increasingly decentralized labor market. Through hands-on development of decentralized applications (dApps) and smart contracts on platforms like Ethereum, participants gain the practical expertise required to implement secure and transparent business solutions. Beyond technical proficiency, the program emphasizes industry networking and mentorship, connecting attendees with professionals to enhance career prospects. By exploring current trends and emerging roles, participants leave equipped with the foundational knowledge and specialized expertise necessary to navigate and lead in the evolving digital economy.",
+      "learningOutcomes": [
+        "Understand Blockchain: Learn the basics of blockchain technology and its key components",
+        "Explore FinTech Changes: Discover how traditional banking has evolved with digital finance and future trends",
+        "Learn About Smart Contracts: Understand what smart contracts are and how they are used in finance",
+        "Know the Regulations: Identify key regulations affecting blockchain and FinTech",
+        "Study Real-World Examples: Analyze successful case studies of blockchain applications in finance"
+      ],
+      "targetAudience": [
+        "Business Leaders",
+        "Digital Project Managers",
+        "Finance Professionals",
+        "Compliance Officers",
+        "Tech Enthusiasts"
+      ],
       "trainer": "",
       "sessions": []
     },
@@ -280,7 +339,13 @@
         "Develop basic skills to interact with popular LLM APIs, enabling participants to create simple text generation projects",
         "Evaluate the performance of different generative models through hands-on exercises, fostering critical thinking about model selection based on specific tasks"
       ],
-      "targetAudience": "Content Creators, Customer Support Representatives, Data Analysts, Educators/Trainers, Marketing Professionals",
+      "targetAudience": [
+        "Content Creators",
+        "Customer Support Representatives",
+        "Data Analysts",
+        "Educators/Trainers",
+        "Marketing Professionals"
+      ],
       "trainer": "",
       "sessions": []
     },
@@ -302,7 +367,13 @@
         "Identify emerging trends in digital currencies, blockchain technology, and their potential effects on global markets",
         "Develop critical thinking skills to assess the ethical considerations surrounding privacy, security, and regulation in the context of digital economics"
       ],
-      "targetAudience": "Small Business Owners, Freelancers and Gig Workers, Students and Recent Graduates, Marketing Professionals, Non-Profit Organizations Staff",
+      "targetAudience": [
+        "Small Business Owners",
+        "Freelancers and Gig Workers",
+        "Students and Recent Graduates",
+        "Marketing Professionals",
+        "Non-Profit Organizations Staff"
+      ],
       "trainer": "",
       "sessions": []
     },
@@ -324,7 +395,13 @@
         "Evaluate the impact of data analytics and artificial intelligence on decision-making processes within the real estate sector",
         "Develop a strategic plan for integrating Proptech solutions into existing real estate operations to improve efficiency and customer engagement"
       ],
-      "targetAudience": "Real Estate Agents, Property Managers, Investors in Real Estate, Developers/Builders, Tech Entrepreneurs focusing on Real Estate Solutions",
+      "targetAudience": [
+        "Real Estate Agents",
+        "Property Managers",
+        "Investors in Real Estate",
+        "Developers/Builders",
+        "Tech Entrepreneurs focusing on Real Estate Solutions"
+      ],
       "trainer": "",
       "sessions": []
     },
@@ -346,7 +423,13 @@
         "Evaluate best practices for implementing effective governance structures in decentralized organizations using blockchain technology",
         "Develop strategies to ensure compliance with legal requirements while leveraging the benefits of blockchain innovations"
       ],
-      "targetAudience": "Compliance Officers, Legal Advisors, IT Security Professionals, Financial Analysts, Project Managers in Tech Firms",
+      "targetAudience": [
+        "Compliance Officers",
+        "Legal Advisors",
+        "IT Security Professionals",
+        "Financial Analysts",
+        "Project Managers in Tech Firms"
+      ],
       "trainer": "",
       "sessions": []
     },
@@ -368,7 +451,13 @@
         "Evaluate real-world case studies demonstrating successful integration of blockchain technology within financial institutions",
         "Develop a strategic framework for assessing potential blockchain projects tailored to specific financial business needs"
       ],
-      "targetAudience": "Financial Analysts, Accountants, Compliance Officers, Investment Bankers, Fintech Entrepreneurs",
+      "targetAudience": [
+        "Financial Analysts",
+        "Accountants",
+        "Compliance Officers",
+        "Investment Bankers",
+        "Fintech Entrepreneurs"
+      ],
       "trainer": "",
       "sessions": []
     }
