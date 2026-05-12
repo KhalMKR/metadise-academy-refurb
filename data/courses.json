@@ -513,6 +513,39 @@
       ],
       "trainer": "",
       "sessions": []
+    },
+    {
+      "id": "course-022",
+      "name": "Practical AI Skills For Work and Study",
+      "category": "AI",
+      "featured": false,
+      "level": "Beginner",
+      "price": 299,
+      "duration": "1 day",
+      "thumbnail": "assets/images/courses/thumbnail/PracticalAI.png",
+      "poster": "assets/images/courses/poster/AIBootcamp.png",
+      "description": "The Practical AI Skills For Work and Study workshop is designed to equip learners with a comprehensive understanding of how AI technology can be leveraged within various professional and academic settings. As AI continues to transform industries, knowledge of its applications becomes essential for professionals seeking to remain competitive. This workshop will cover fundamental concepts such as machine learning, natural language processing, and computer vision, providing participants with a solid foundation that aligns with current market demands. By engaging in hands-on activities and real-world case studies, learners will not only grasp theoretical aspects but also develop practical skills that are directly applicable in various roles.",
+      "learningOutcomes": [
+        "Understand the fundamental principles of AI technology and its relevance to work and study",
+        "Identify various use cases of AI applications in different industries, including healthcare, finance, and education",
+        "Analyze the benefits and challenges associated with implementing AI solutions in traditional business systems",
+        "Evaluate real-world case studies demonstrating successful integration of AI technology within organizations",
+        "Develop a strategic framework for assessing potential AI projects tailored to specific professional and academic needs"
+      ],
+      "targetAudience": [
+        "Beginners",
+        "Students",
+        "Office Professionals",
+        "Managers"
+      ],
+      "trainer": "Ben Chan",
+      "sessions": [
+        {
+          "month": "May",
+          "startDate": "2026-05-19",
+          "endDate": "2026-05-19"
+        }
+      ]
     }
   ]
 }
