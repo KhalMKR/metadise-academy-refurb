@@ -886,3 +886,14 @@ section {
     height: 280px;
   }
 }
+
+/* ===================== STICKY FOOTER ===================== */
+html, body {
+  height: 100%;
+}
+
+/* Make the main page content grow to push footer down. 
+   Include common main selectors and the calendar page. */
+main, .site-main, .calendar-page {
+  flex: 1 0 auto;
+}
