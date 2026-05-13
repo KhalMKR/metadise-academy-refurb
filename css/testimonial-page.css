@@ -52,20 +52,18 @@
 }
 
 .testimonial__grid {
-  display: grid;
-  /* allow the grid to adapt to available space; items will wrap
-     and the last row will be centered when it has fewer items */
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   padding: 2rem 0 0 0;
-  justify-items: center;
-  justify-content: center; /* center the whole grid and short last rows */
   align-items: start;
   max-width: 1280px;
   margin: 0 auto;
 }
 
 .testimonial__image {
+  flex: 0 1 calc((100% - 2rem) / 3);
   width: 100%;
   max-width: 400px;
   height: auto;
@@ -83,7 +81,7 @@
     }
 
     .testimonial__grid {
-        grid-template-columns: 1fr;
-        justify-items: center;
+      flex-direction: column;
+      align-items: center;
     }
 }
