@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const GALLERY_SOURCE = "data/media-gallery.json";
 
   let galleryLightbox = null;
+  let galleryCache = null;
+  let galleryRenderToken = 0;
 
   initMediaTabs();
   initAOS();
@@ -21,12 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ===================== RESIZE HANDLER ===================== */
 
+  let resizeTimer;
+
   window.addEventListener("resize", () => {
-    if (galleryLightbox && galleryLightbox.activeSlide) {
-      setTimeout(() => {
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+      if (galleryLightbox && galleryLightbox.activeSlide) {
         galleryLightbox.reload();
-      }, 100);
-    }
+      }
+    }, 150);
   });
 
 
@@ -58,9 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (target === "gallery") {
           setTimeout(() => {
-            initLightbox();
             initGalleryCategoryView(GALLERY_SOURCE);
-            window.dispatchEvent(new Event("resize"));
           }, 100);
         }
       });
@@ -82,9 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function initLightbox() {
     if (typeof GLightbox !== "function") return;
 
-    if (galleryLightbox) {
-      galleryLightbox.destroy();
-    }
+    destroyLightbox();
 
     galleryLightbox = GLightbox({
       selector: ".glightbox",
@@ -96,6 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
       height: "auto",
       autosize: true
     });
+  }
+
+  function destroyLightbox() {
+    if (galleryLightbox) {
+      galleryLightbox.destroy();
+      galleryLightbox = null;
+    }
   }
 
 
@@ -217,16 +226,37 @@ document.addEventListener("DOMContentLoaded", () => {
       backButton.dataset.galleryListenerAttached = "true";
 
       backButton.addEventListener("click", () => {
+        galleryRenderToken++;
+
         selectedSection.classList.add("is-hidden");
         categoryContainer.classList.remove("is-hidden");
         imageGrid.innerHTML = "";
 
-        if (galleryLightbox) {
-          galleryLightbox.destroy();
-          galleryLightbox = null;
-        }
+        destroyLightbox();
       });
     }
+  }
+
+  async function getGalleryData(source) {
+    if (galleryCache) {
+      return galleryCache;
+    }
+
+    const response = await fetch(source, {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to load gallery: ${response.status}`);
+    }
+
+    const payload = await response.json();
+
+    galleryCache = Array.isArray(payload.gallery)
+      ? payload.gallery
+      : [];
+
+    return galleryCache;
   }
 
   async function loadGalleryImages(source, category) {
@@ -239,28 +269,28 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    const currentToken = ++galleryRenderToken;
+
     try {
-      const response = await fetch(source, {
-        cache: "no-store"
-      });
+      selectedTitle.textContent = category;
+      categoryContainer.classList.add("is-hidden");
+      selectedSection.classList.remove("is-hidden");
 
-      if (!response.ok) {
-        throw new Error(`Failed to load gallery: ${response.status}`);
-      }
+      imageGrid.innerHTML = `
+        <p class="media-loading">
+          Loading ${escapeHTML(category)} gallery...
+        </p>
+      `;
 
-      const payload = await response.json();
+      destroyLightbox();
 
-      const galleryItems = Array.isArray(payload.gallery)
-        ? payload.gallery
-        : [];
+      const galleryItems = await getGalleryData(source);
+
+      if (currentToken !== galleryRenderToken) return;
 
       const filteredImages = galleryItems.filter((item) => {
         return normalizeText(item.category) === normalizeText(category);
       });
-
-      selectedTitle.textContent = category;
-      categoryContainer.classList.add("is-hidden");
-      selectedSection.classList.remove("is-hidden");
 
       if (!filteredImages.length) {
         imageGrid.innerHTML = `
@@ -271,32 +301,21 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      imageGrid.innerHTML = filteredImages
-        .map((item, index) => {
-          const image = escapeHTML(item.image || "");
-          const title = escapeHTML(`${category} Gallery Image ${index + 1}`);
+      imageGrid.innerHTML = "";
 
-          if (!image) return "";
+      await renderGalleryInBatches({
+        container: imageGrid,
+        items: filteredImages,
+        category,
+        batchSize: 4,
+        token: currentToken
+      });
 
-          return `
-            <a
-              class="media-gallery__link glightbox"
-              href="${image}"
-              data-gallery="media-gallery-${escapeHTML(category)}"
-              data-title="${title}"
-            >
-              <img
-                class="media-gallery__item"
-                src="${image}"
-                alt="${title}"
-                loading="lazy"
-              />
-            </a>
-          `;
-        })
-        .join("");
+      if (currentToken !== galleryRenderToken) return;
 
-      initLightbox();
+      requestAnimationFrame(() => {
+        initLightbox();
+      });
     } catch (error) {
       console.error("Gallery loading error:", error);
 
@@ -310,6 +329,57 @@ document.addEventListener("DOMContentLoaded", () => {
         </p>
       `;
     }
+  }
+
+  async function renderGalleryInBatches({ container, items, category, batchSize, token }) {
+    container.innerHTML = "";
+
+    for (let i = 0; i < items.length; i += batchSize) {
+      if (token !== galleryRenderToken) return;
+
+      const batch = items.slice(i, i + batchSize);
+      const fragment = document.createDocumentFragment();
+
+      batch.forEach((item, batchIndex) => {
+        const index = i + batchIndex;
+
+        const fullImage = item.image || "";
+        const thumbnail = item.thumbnail || item.image || "";
+
+        if (!fullImage || !thumbnail) return;
+
+        const title = item.title || `${category} Gallery Image ${index + 1}`;
+
+        const link = document.createElement("a");
+        link.className = "media-gallery__link glightbox";
+        link.href = fullImage;
+        link.dataset.gallery = `media-gallery-${normalizeText(category)}`;
+        link.dataset.title = title;
+
+        const img = document.createElement("img");
+        img.className = "media-gallery__item";
+        img.src = thumbnail;
+        img.alt = title;
+        img.loading = "lazy";
+        img.decoding = "async";
+        img.fetchPriority = index < 4 ? "high" : "low";
+
+        link.appendChild(img);
+        fragment.appendChild(link);
+      });
+
+      container.appendChild(fragment);
+
+      await waitForNextFrame();
+    }
+  }
+
+  function waitForNextFrame() {
+    return new Promise((resolve) => {
+      requestAnimationFrame(() => {
+        setTimeout(resolve, 0);
+      });
+    });
   }
 
 
@@ -340,7 +410,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <a class="media-list__item media-news-card" href="${href}"${externalAttrs}>
         ${
           thumbnail
-            ? `<img class="media-news-card__image" src="${escapeHTML(thumbnail)}" alt="${title}" loading="lazy">`
+            ? `<img class="media-news-card__image" src="${escapeHTML(thumbnail)}" alt="${title}" loading="lazy" decoding="async">`
             : ""
         }
 
