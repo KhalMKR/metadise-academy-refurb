@@ -1,7 +1,8 @@
 .why-section {
   position: relative;
   overflow: hidden;
-  padding-block: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
   color: var(--color-text);
   background: rgba(255, 255, 255, 0.8);
 }
