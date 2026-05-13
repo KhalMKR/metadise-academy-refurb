@@ -329,6 +329,10 @@
     padding-block: 4rem;
   }
 
+  .about-history__content p {
+  text-align: justify;
+  }
+
   .metadise-marquee h2 {
     margin-bottom: 2rem;
   }
