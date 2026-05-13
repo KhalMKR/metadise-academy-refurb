@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/testimonial-page.css?v=1.0.1" />
+  <link rel="stylesheet" href="css/Impact.css?v=1.0.2" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -24,6 +25,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
     rel="stylesheet"
@@ -35,8 +37,8 @@
   <!-- HEADER -->
   <div data-component data-src="components/header.html"></div>
 
-  <!-- TESTIMONIALS -->
-    <section class="testimonial-hero" aria-labelledby="testimonial-hero-title">
+  <!-- TESTIMONIAL HERO -->
+  <section class="testimonial-hero" aria-labelledby="testimonial-hero-title">
     <div class="testimonial-hero__overlay"></div>
 
     <div class="testimonial-hero__content">
@@ -46,43 +48,55 @@
     </div>
   </section>
 
-    
-  
-  <div class="testimonial-page">
-      <h2 id="testimonial-title" class="section-title" data-aos="fade-up" data-aos-delay="200">
-        What Our Customers Say
-      </h2>
+  <!-- TESTIMONIAL PAGE -->
+  <main class="testimonial-page">
 
+    <h2
+      id="testimonial-title"
+      class="section-title"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      What Our Customers Say
+    </h2>
 
-      <div class="testimonial__grid">
-        
-        <div class="testimonial__image">
-          <img src="assets/images/testimonials-page/1.png" alt="Simon testimonial poster" />
-        </div>
-        <div class="testimonial__image">
-          <img src="assets/images/testimonials-page/2.png" alt="Irene testimonial poster" />
-        </div>
-        <div class="testimonial__image">
-          <img src="assets/images/testimonials-page/3.png" alt="Customer testimonial poster" />
-        </div>
-        <div class="testimonial__image">
-          <img src="assets/images/testimonials-page/4.png" alt="Miszalleh testimonial poster" />
-        </div>
-        <div class="testimonial__image">
-          <img src="assets/images/testimonials-page/5.png" alt="Eugene testimonial poster" />
-        </div>
-        
+    <div class="testimonial__grid">
+
+      <div class="testimonial__image">
+        <img src="assets/images/testimonials-page/1.png" alt="Simon testimonial poster" />
+      </div>
+
+      <div class="testimonial__image">
+        <img src="assets/images/testimonials-page/2.png" alt="Irene testimonial poster" />
+      </div>
+
+      <div class="testimonial__image">
+        <img src="assets/images/testimonials-page/3.png" alt="Customer testimonial poster" />
+      </div>
+
+      <div class="testimonial__image">
+        <img src="assets/images/testimonials-page/4.png" alt="Miszalleh testimonial poster" />
+      </div>
+
+      <div class="testimonial__image">
+        <img src="assets/images/testimonials-page/5.png" alt="Eugene testimonial poster" />
       </div>
 
     </div>
 
+  <!-- TRAINING IMPACT COMPONENT -->
+  <div data-component data-src="components/Impact.html"></div>
+
+  </main>
+
+
+
   <!-- FOOTER -->
   <div data-component data-src="components/footer.html"></div>
-
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
-
-  <script src="js/main.js?v=2026.05.12.2" defer></script>
   <script src="js/testimonials.js" defer></script>
-
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="js/main.js?v=2026.05.12.2" defer></script>
+  <script src="js/Impact.js?v=1.0.6" defer></script>
+  
 </body>
 </html>
