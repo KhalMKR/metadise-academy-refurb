@@ -757,6 +757,7 @@ body.glightbox-open {
   }
 
   .media-gallery__item {
-    height: 220px;
-  }
+  content-visibility: auto;
+  contain-intrinsic-size: 230px;
+}
 }

@@ -19,56 +19,181 @@
         "id": 4,
         "category": "Forum",
         "image": "assets/images/gallery/Forum/forum5.jpg"
-    }
+    },
     {
         "id": 5,
         "category": "Events",
         "image": "assets/images/gallery/Events/Event2.jpg"
     },
     {
-        "id": 3,
+        "id": 6,
         "category": "Events",
         "image": "assets/images/gallery/Events/Event3.jpg"
     },
     {
-        "id": 3,
+        "id": 7,
         "category": "Events",
         "image": "assets/images/gallery/Events/Event4.jpg"
     },
     {
-        "id": 3,
+        "id": 8,
         "category": "Events",
         "image": "assets/images/gallery/Events/Event5.jpg"
     },
     {
-        "id": 3,
+        "id": 9,
         "category": "Events",
         "image": "assets/images/gallery/Events/Event6.jpg"
     },
     {
-        "id": 3,
+        "id": 10,
         "category": "Events",
         "image": "assets/images/gallery/Events/Event7.jpg"
     },
     {
-        "id": 3,
+        "id": 11,
         "category": "Events",
         "image": "assets/images/gallery/Events/Event8.jpg"
     },
     {
-        "id": 3,
+        "id": 12,
         "category": "Events",
         "image": "assets/images/gallery/Events/Event9.jpg"
     },
     {
-        "id": 3,
+        "id": 13,
         "category": "Events",
         "image": "assets/images/gallery/Events/Event10.jpg"
     },
     {
-        "id": 3,
+        "id": 14,
         "category": "Events",
         "image": "assets/images/gallery/Events/Event11.jpg"
+    },
+    {
+        "id": 15,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining2.jpg"
+    },
+    {
+        "id": 16,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining3.jpg"
+    },
+    {
+        "id": 17,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining3.jpg"
+    },
+    {
+        "id": 18,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining4.jpg"
+    },
+    {
+        "id": 19,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining5.jpg"
+    },
+    {
+        "id": 20,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining6.jpg"
+    },
+    {
+        "id": 21,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining7.jpg"
+    },
+    {
+        "id": 22,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining8.jpg"
+    },
+    {
+        "id": 23,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining9.jpg"
+    },
+    {
+        "id": 24,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining10.jpg"
+    },
+    {
+        "id": 25,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining11.jpg"
+    },
+    {
+        "id": 26,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining12.jpg"
+    },
+    {
+        "id": 27,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining13.jpg"
+    },
+    {
+        "id": 28,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining14.jpg"
+    },
+    {
+        "id": 29,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining15.jpg"
+    },
+    {
+        "id": 30,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining16.jpg"
+    },
+    {
+        "id": 31,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining17.jpg"
+    },
+    {
+        "id": 32,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining18.jpg"
+    },
+    {
+        "id": 33,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining19.jpg"
+    },
+    {
+        "id": 34,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining20.jpg"
+    },
+    {
+        "id": 35,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining21.jpg"
+    },
+    {
+        "id": 36,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining22.jpg"
+    },
+    {
+        "id": 37,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining23.jpg"
+    },
+    {
+        "id": 38,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining24.jpg"
+    },
+    {
+        "id": 39,
+        "category": "Public",
+        "image": "assets/images/gallery/PublicTraining/PublicTraining25.jpg"
     }
     ]
 }
