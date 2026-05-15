@@ -159,6 +159,13 @@
   gap: 1.75rem;
 }
 
+.team-grid_1 {
+  display: grid;
+  grid-template-columns: repeat(2, 320px);
+  justify-content: center;
+  gap: 1.75rem;
+}
+
 .team-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -354,5 +361,19 @@
   .metadise-marquee__wrapper::before,
   .metadise-marquee__wrapper::after {
     width: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .team-grid_1 {
+    grid-template-columns: repeat(2, 300px);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid_1 {
+    grid-template-columns: 1fr;
+    justify-content: center;
   }
 }
