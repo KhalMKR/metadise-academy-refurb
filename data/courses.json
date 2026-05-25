@@ -9,7 +9,7 @@
       "price": 2500,
       "duration": "2 days",
       "thumbnail": "assets/images/courses/thumbnail/GenAI.png",
-      "poster": "assets/images/courses/poster/GenAIBen.png",
+      "poster": "assets/images/courses/poster/GenAIBen.jpg",
       "description": "This two-day program is designed to enhance productivity through Generative AI, blending lectures with hands-on workshops and interactive Q&A sessions. Day 1 focuses on the fundamentals, covering the impact and practical applications of AI alongside practical exercises in prompt engineering. Day 2 advances into specialized tasks, including automated content classification, presentation creation, and image generation. Throughout the course, participants engage in advanced techniques and self-assessments, ultimately concluding with a review of learning objectives and a certificate presentation to prepare them for immediate implementation in their workflows.",
       "learningOutcomes": [
         "Understand multimodal Generative AI, its usage and be aware of potential misinformation",
@@ -130,7 +130,7 @@
       "price": "",
       "duration": "2 days",
       "thumbnail": "assets/images/courses/thumbnail/cybersec-essentials.png",
-      "poster": "assets/images/course-cybersec-poster.jpg",
+      "poster": "",
       "description": "The Cybersecurity workshop is designed to equip learners with essential skills that are increasingly in demand within the labor market. As cyber threats continue to evolve, organizations across various sectors are prioritizing cybersecurity measures to protect their sensitive data and maintain operational integrity. This workshop provides participants with a comprehensive understanding of core cybersecurity principles, including risk management, threat analysis, and incident response strategies. By engaging in hands-on activities and real-world scenarios, learners will gain practical experience that enhances their ability to identify vulnerabilities and implement effective security protocols.",
       "learningOutcomes": [
         "Understand the key concepts and terminology related to cybersecurity, including threats, vulnerabilities, and risk management",
@@ -157,7 +157,7 @@
       "price": "",
       "duration": "2 days",
       "thumbnail": "assets/images/courses/thumbnail/Bitcoin101.png",
-      "poster": "assets/images/courses/poster/Bitcoin.png",
+      "poster": "assets/images/courses/poster/Bitcoin.jpg",
       "description": "Learn the basics of Bitcoin and blockchain, including how they work, why they matter, and where they are used in the real world.",
       "learningOutcomes": [
         "Explain how blockchain and Bitcoin work at a technical level",
@@ -255,46 +255,7 @@
       ],
       "trainer": "",
       "sessions": [
-        {
-          "month": "May",
-          "startDate": "2026-05-20",
-          "endDate": "2026-05-21"
-        },
-        {
-          "month": "June",
-          "startDate": "2026-06-10",
-          "endDate": "2026-06-11"
-        },
-        {
-          "month": "July",
-          "startDate": "2026-07-15",
-          "endDate": "2026-07-16"
-        },
-        {
-          "month": "August",
-          "startDate": "2026-08-19",
-          "endDate": "2026-08-20"
-        },
-        {
-          "month": "September",
-          "startDate": "2026-09-09",
-          "endDate": "2026-09-10"
-        },
-        {
-          "month": "October",
-          "startDate": "2026-10-21",
-          "endDate": "2026-10-22"
-        },
-        {
-          "month": "November",
-          "startDate": "2026-11-11",
-          "endDate": "2026-11-12"
-        },
-        {
-          "month": "December",
-          "startDate": "2026-12-02",
-          "endDate": "2026-12-03"
-        }
+  
       ]
     },
     {
@@ -303,7 +264,7 @@
       "category": "Digital Literacy",
       "featured": true,
       "level": "Intermediate",
-      "price": "",
+      "price": 3500,
       "duration": "3 days",
       "thumbnail": "assets/images/courses/thumbnail/Digitalisation.png",
       "poster": "",
