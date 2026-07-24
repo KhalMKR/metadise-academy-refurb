@@ -47,7 +47,6 @@
 	transform: translateY(-12px);
 	border: none;
 	border-radius: 14px;
-	background: #fff;
 	color: var(--color-text);
 	font-weight: 800;
 	letter-spacing: 0.08em;
@@ -69,6 +68,43 @@
 	width: auto;
 	height: auto;
 	object-fit: contain;
+}
+
+/* Main parent container (Vertical layout) */
+.ecosystem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.ecosystem h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: black;
+}
+
+/* Logos container (Horizontal side-by-side layout) */
+.ecosystem-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Adjust horizontal spacing between the two logos */
+    flex-wrap: wrap; /* Allows wrapping on very small screen sizes */
+}
+
+.ecosystem-logos a img {
+    max-width: 130px; /* Controls image sizing consistently */
+    height: auto;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.ecosystem-logos a img:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
 }
 
 .footer__socials {
