@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (!visibleEvents.length) {
-      calendarGrid.innerHTML = '<div class="calendar-agenda__empty">No course sessions found for this month.</div>';
+      calendarGrid.innerHTML = '<div class="calendar-agenda__empty">Course Sessions For This Month To Be Announced!</div>';
     } else {
       const agendaRows = visibleEvents
         .sort((a, b) => a.startDate - b.startDate)
