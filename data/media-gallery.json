@@ -189,6 +189,26 @@
         "id": 38,
         "category": "Public",
         "image": "assets/images/gallery/Publictraining/PublicTraining25.jpg"
+    },
+    {
+        "id": 39,
+        "category": "In-House",
+        "image": "assets/images/gallery/InHouse/in-house.jpeg"
+    },
+    {
+        "id": 39,
+        "category": "In-House",
+        "image": "assets/images/gallery/InHouse/in-house2.jpeg"
+    },
+    {
+        "id": 39,
+        "category": "In-House",
+        "image": "assets/images/gallery/InHouse/in-house3.jpeg"
+    },
+    {
+        "id": 39,
+        "category": "In-House",
+        "image": "assets/images/gallery/InHouse/in-house4.jpeg"
     }
     ]
 }

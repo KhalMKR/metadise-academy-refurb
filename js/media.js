@@ -275,6 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
       selectedTitle.textContent = category;
       categoryContainer.classList.add("is-hidden");
       selectedSection.classList.remove("is-hidden");
+      selectedSection.scrollIntoView({ behavior: "smooth", block: "start" });
 
       imageGrid.innerHTML = `
         <p class="media-loading">
